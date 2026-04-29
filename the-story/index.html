@@ -48,7 +48,10 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .team{padding:clamp(60px,8vw,100px) var(--pad);}
 .team-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}
-.team-img{width:100%;aspect-ratio:3/4;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:24px;display:flex;align-items:flex-end;padding:20px;}
+.team-img{width:100%;aspect-ratio:3/4;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:24px;position:relative;overflow:hidden;}
+.team-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.story-image-band{width:100%;height:clamp(280px,40vw,500px);overflow:hidden;}
+.story-image-band img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.7);display:block;}
 .team-img-ph{font-size:9px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.08);}
 .team-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:.03em;margin-bottom:4px;}
 .team-role{font-size:10px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:16px;}
@@ -106,6 +109,9 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <p>Based in Glasgow and Edinburgh. Available throughout the UK and internationally.</p>
   </div>
 </section>
+<div class="story-image-band">
+  <img src="/images/ABOUT/about-orchestra.jpg" alt="Orchestra recording session with Zip Tie Studio" loading="lazy">
+</div>
 <section class="stats">
   <div class="stat sr"><div class="stat-n">2023</div><p class="stat-label">Founded</p></div>
   <div class="stat sr d1"><div class="stat-n">6+</div><p class="stat-label">Label Clients</p></div>
@@ -116,13 +122,13 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   <p class="team-label sr">The Team</p>
   <div class="team-grid">
     <article class="team-card sr">
-      <div class="team-img"><div class="team-img-ph">Portrait coming soon</div></div>
+      <div class="team-img"><img src="/images/TEAM/team-campbell-1.jpg" alt="Campbell Parker, Director and Audio & Video Producer at Zip Tie Studio" loading="lazy"></div>
       <h3 class="team-name">Campbell Parker</h3>
       <p class="team-role">Director · Audio & Video Producer</p>
       <p class="team-bio">Trained as a classical musician at the Royal Conservatoire of Scotland. Campbell leads all Zip Tie Studio productions, combining a background in orchestral performance with professional filmmaking and audio engineering. He is also Assistant Orchestra Manager at the Scottish Chamber Orchestra.</p>
     </article>
     <article class="team-card sr d1">
-      <div class="team-img"><div class="team-img-ph">Portrait coming soon</div></div>
+      <div class="team-img"><img src="/images/TEAM/team-matthew-1.jpg" alt="Matthew Birch, Audio Engineer and Producer at Zip Tie Studio" loading="lazy"></div>
       <h3 class="team-name">Matthew Birch</h3>
       <p class="team-role">Audio Engineer & Producer</p>
       <p class="team-bio">Matthew brings broadcast and studio experience across classical, contemporary and live settings. His work with Zip Tie Studio spans album sessions, live concert recording and post-production — with an ear trained by years of professional performance as well as behind the console.</p>

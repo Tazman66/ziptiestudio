@@ -43,6 +43,8 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .work-card-img{width:100%;aspect-ratio:16/10;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);overflow:hidden;position:relative;transition:border-color .3s;}
 .work-card:hover .work-card-img{border-color:rgba(238,236,232,.2);}
 .work-card-img .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.08);}
+.work-card-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.23,1,.32,1);}
+.work-card:hover .work-card-img img{transform:scale(1.04);}
 .work-card.tall .work-card-img{aspect-ratio:4/5;}
 .work-meta{padding:16px 0 0;}
 .work-client{font-size:9px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:6px;}
@@ -97,35 +99,35 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <section class="work-section">
   <div class="work-masonry" id="work-grid">
     <div class="work-card tall" data-type="label audio">
-      <div class="work-card-img"><div class="ph">Pentatone · Album Recording</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-1.jpg" alt="Pentatone album recording session" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">Pentatone</p><h2 class="work-title">Chamber Works Recording</h2><p class="work-type">Studio Recording · Editing · Mastering</p></div>
     </div>
     <div class="work-card" data-type="live video">
-      <div class="work-card-img"><div class="ph">Southbank Centre · Concert Film</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-beth-taylor-1.jpg" alt="Southbank Centre concert film" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">Southbank Centre</p><h2 class="work-title">Royal Festival Hall Coverage</h2><p class="work-type">Concert Film · Multi-camera</p></div>
     </div>
     <div class="work-card" data-type="audio live">
-      <div class="work-card-img"><div class="ph">Scottish Ensemble · Live Recording</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-1.jpg" alt="Scottish Ensemble live recording" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">Scottish Ensemble</p><h2 class="work-title">Season Concert Series</h2><p class="work-type">Live Recording · Post-production</p></div>
     </div>
     <div class="work-card tall" data-type="video label">
-      <div class="work-card-img"><div class="ph">Dunedin Consort · Promo Film</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-2.jpg" alt="Dunedin Consort promo film" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">Dunedin Consort</p><h2 class="work-title">Artist & Release Campaign</h2><p class="work-type">Promo Film · Press Photography</p></div>
     </div>
     <div class="work-card" data-type="audio label">
-      <div class="work-card-img"><div class="ph">ABRSM · Educational Recording</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-zts-1.jpg" alt="ABRSM educational recording session" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">ABRSM</p><h2 class="work-title">Grade Syllabus Recording</h2><p class="work-type">Studio Recording · Editing</p></div>
     </div>
     <div class="work-card" data-type="audio live">
-      <div class="work-card-img"><div class="ph">NYOS · Live Recording</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-2.jpg" alt="National Youth Orchestra Scotland live recording" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">NYOS</p><h2 class="work-title">National Youth Orchestra Scotland</h2><p class="work-type">Live Recording · Livestream</p></div>
     </div>
     <div class="work-card tall" data-type="video live">
-      <div class="work-card-img"><div class="ph">University of Glasgow · Event</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-zts-2.jpg" alt="University of Glasgow ceremonial and live events" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">University of Glasgow</p><h2 class="work-title">Ceremonial & Live Events</h2><p class="work-type">Multi-camera · Livestream</p></div>
     </div>
     <div class="work-card" data-type="video label">
-      <div class="work-card-img"><div class="ph">Sean Shibe · Artist Film</div></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-3.jpg" alt="Sean Shibe artist documentary film" loading="lazy"></div>
       <div class="work-meta"><p class="work-client">Sean Shibe</p><h2 class="work-title">Artist Documentary Film</h2><p class="work-type">Documentary · Artist Film</p></div>
     </div>
   </div>
