@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Zip Tie Studio</title>
+<meta name="description" content="Get in touch with Zip Tie Studio. Tell us about your project and we'll respond within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,section,div,article,header,footer,main,aside,nav{background-color:transparent;}
+html,body{background-color:#000!important;color:#eeece8!important;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{--off:#eeece8;--pad:clamp(20px,5vw,60px);}
+body{background:#000;color:#eeece8;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px var(--pad);transition:padding .4s;}
+nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.07em;color:#eeece8;text-decoration:none;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#eeece8;}
+.nav-cta{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:9px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:#eeece8;color:#000;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
+.mob-nav.open{opacity:1;}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
+.contact-wrap{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px;}
+.contact-left{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);border-right:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;justify-content:space-between;}
+.contact-right{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);}
+.contact-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.contact-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,110px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
+.contact-info-item{margin-bottom:32px;}
+.contact-info-label{font-size:9px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
+.contact-info-value{font-size:14px;color:rgba(238,236,232,.7);}
+.contact-info-value a{color:rgba(238,236,232,.7);text-decoration:none;transition:color .2s;}
+.contact-info-value a:hover{color:#eeece8;}
+.contact-note{font-size:11px;line-height:1.8;color:rgba(238,236,232,.28);max-width:320px;}
+.form-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,44px);letter-spacing:.02em;margin-bottom:clamp(32px,4vw,52px);}
+.form-group{margin-bottom:32px;}
+.form-label{font-size:9px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);display:block;margin-bottom:10px;}
+.form-input,.form-textarea,.form-select{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(238,236,232,.2);color:#eeece8;font-family:'Outfit',sans-serif;font-size:14px;font-weight:300;padding:10px 0;outline:none;transition:border-color .2s;appearance:none;}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(238,236,232,.2);}
+.form-input:focus,.form-textarea:focus,.form-select:focus{border-bottom-color:rgba(238,236,232,.7);}
+.form-textarea{resize:none;min-height:120px;line-height:1.7;}
+.form-select option{background:#0a0a0a;color:#eeece8;}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.form-submit{font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;border:none;padding:18px 48px;cursor:pointer;transition:opacity .2s;margin-top:8px;width:100%;}
+.form-submit:hover{opacity:.82;}
+.form-success{display:none;text-align:center;padding:48px 0;}
+.form-success-hl{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:.02em;margin-bottom:12px;}
+.form-success-sub{font-size:13px;color:rgba(238,236,232,.4);}
+footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
+.ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.ft-nav a{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a:hover{color:#eeece8;}
+.ft-copy{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.ham{display:flex;}.contact-wrap{grid-template-columns:1fr;}.contact-left{border-right:none;border-bottom:1px solid rgba(238,236,232,.1);}.form-row{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/Zip-Tie-Studio/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/">About</a></li>
+  </ul>
+  <a href="/Zip-Tie-Studio/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="/Zip-Tie-Studio/work/" class="mob-l">Work</a>
+  <a href="/Zip-Tie-Studio/recording-services/" class="mob-l">Services</a>
+  <a href="/Zip-Tie-Studio/the-story/" class="mob-l">About</a>
+  <a href="/Zip-Tie-Studio/contact/" class="mob-l">Start a Project</a>
+</div>
+<main id="main">
+<div class="contact-wrap">
+  <div class="contact-left">
+    <div>
+      <p class="contact-label sr">Get in Touch</p>
+      <h1 class="contact-hl sr d1">Start<br>Your<br>Project.</h1>
+    </div>
+    <div class="sr d2">
+      <div class="contact-info-item">
+        <p class="contact-info-label">Email</p>
+        <p class="contact-info-value"><a href="mailto:hello@ziptiestudio.co.uk">hello@ziptiestudio.co.uk</a></p>
+      </div>
+      <div class="contact-info-item">
+        <p class="contact-info-label">Based</p>
+        <p class="contact-info-value">Glasgow &amp; Edinburgh, Scotland</p>
+      </div>
+      <div class="contact-info-item">
+        <p class="contact-info-label">Working</p>
+        <p class="contact-info-value">UK &amp; International</p>
+      </div>
+      <div class="contact-info-item">
+        <p class="contact-info-label">Response time</p>
+        <p class="contact-info-value">Within 24 hours</p>
+      </div>
+      <p class="contact-note">Tell us what you're planning — even a rough outline helps. We'll come back with a clear proposal tailored to your project.</p>
+    </div>
+  </div>
+  <div class="contact-right">
+    <h2 class="form-title sr">Tell Us About<br>Your Project.</h2>
+    <form id="contact-form" class="sr d1" novalidate>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label" for="name">Your Name</label>
+          <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="org">Organisation</label>
+          <input class="form-input" type="text" id="org" name="org" placeholder="Your organisation">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="email">Email Address</label>
+        <input class="form-input" type="email" id="email" name="email" placeholder="hello@organisation.co.uk" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="service">What Are You Looking For?</label>
+        <select class="form-select" id="service" name="service">
+          <option value="" disabled selected>Select a service</option>
+          <option value="live-recording">Live Concert Recording</option>
+          <option value="album">CD &amp; Album Production</option>
+          <option value="audition">Audition Recording</option>
+          <option value="film">Concert Film &amp; Video</option>
+          <option value="press">Artist Press Kit &amp; Promo</option>
+          <option value="livestream">Livestreaming</option>
+          <option value="other">Something else</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="date">Approximate Date or Timeframe</label>
+        <input class="form-input" type="text" id="date" name="date" placeholder="e.g. March 2026 or flexible">
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="message">Tell Us More</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Venue, repertoire, number of players, any other details..." required></textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Enquiry</button>
+    </form>
+    <div class="form-success" id="form-success">
+      <h2 class="form-success-hl">Thank You.</h2>
+      <p class="form-success-sub">We'll be in touch within 24 hours.</p>
+    </div>
+  </div>
+</div>
+</main>
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/">About</a></li>
+    <li><a href="/Zip-Tie-Studio/contact/">Contact</a></li>
+  </ul>
+  <p class="ft-copy">© 2025 Zip Tie Studio · UK &amp; International</p>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
+let open=false;
+function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);mob.style.display=open?'flex':'none';requestAnimationFrame(()=>mob.classList.toggle('open',open));document.body.style.overflow=open?'hidden':'';}
+ham.addEventListener('click',()=>toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
+document.getElementById('contact-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const msg=document.getElementById('message').value;
+  const service=document.getElementById('service').value;
+  this.style.display='none';
+  document.getElementById('form-success').style.display='block';
+  setTimeout(()=>{window.location.href=`mailto:hello@ziptiestudio.co.uk?subject=Project Enquiry — ${service}&body=From: ${name} (${email})%0A%0A${msg}`;},1200);
+});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Story | Zip Tie Studio</title>
+<meta name="description" content="Zip Tie Studio — broadcast-quality classical music production built by musicians. Based in Glasgow & Edinburgh, working across the UK and internationally since 2023.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,section,div,article,header,footer,main,aside,nav{background-color:transparent;}
+html,body{background-color:#000!important;color:#eeece8!important;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{--off:#eeece8;--pad:clamp(20px,5vw,60px);}
+body{background:#000;color:#eeece8;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px var(--pad);transition:padding .4s;}
+nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.07em;color:#eeece8;text-decoration:none;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#eeece8;}
+.nav-cta{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:9px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:#eeece8;color:#000;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
+.mob-nav.open{opacity:1;}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
+.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;}
+.page-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,10vw,130px);letter-spacing:.01em;line-height:.88;}
+.header-intro{font-size:15px;line-height:1.85;color:rgba(238,236,232,.5);padding-bottom:8px;}
+.story{padding:clamp(60px,8vw,100px) var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,8vw,100px);}
+.story-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.02em;line-height:.92;position:sticky;top:120px;height:fit-content;}
+.story-text p{font-size:14px;line-height:1.9;color:rgba(238,236,232,.5);}
+.story-text p+p{margin-top:20px;}
+.story-text strong{color:rgba(238,236,232,.8);font-weight:400;}
+.stats{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:repeat(4,1fr);}
+.stat{padding:clamp(28px,4vw,48px) clamp(20px,3vw,40px);border-right:1px solid rgba(238,236,232,.1);}
+.stat:last-child{border-right:none;}
+.stat-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,80px);letter-spacing:.02em;line-height:1;}
+.stat-label{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:8px;}
+.team{padding:clamp(60px,8vw,100px) var(--pad);}
+.team-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}
+.team-img{width:100%;aspect-ratio:3/4;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:24px;display:flex;align-items:flex-end;padding:20px;}
+.team-img-ph{font-size:9px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.08);}
+.team-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,36px);letter-spacing:.03em;margin-bottom:4px;}
+.team-role{font-size:10px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:16px;}
+.team-bio{font-size:13px;line-height:1.85;color:rgba(238,236,232,.4);}
+.clients{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
+.clients-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
+.client-list{display:flex;flex-wrap:wrap;border-left:1px solid rgba(238,236,232,.1);border-top:1px solid rgba(238,236,232,.1);}
+.client-item{width:25%;padding:clamp(20px,3vw,32px);border-right:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);font-family:'Bebas Neue',sans-serif;font-size:clamp(14px,2vw,20px);letter-spacing:.04em;color:rgba(238,236,232,.4);transition:color .2s;}
+.client-item:hover{color:#eeece8;}
+footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
+.ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.ft-nav a{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a:hover{color:#eeece8;}
+.ft-copy{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.ham{display:flex;}.page-header{grid-template-columns:1fr;}.story{grid-template-columns:1fr;}.story-hl{position:static;}.stats{grid-template-columns:1fr 1fr;}.stat{border-right:none;border-bottom:1px solid rgba(238,236,232,.1);}.team-grid{grid-template-columns:1fr;}.client-item{width:50%;}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/Zip-Tie-Studio/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/" class="active">About</a></li>
+  </ul>
+  <a href="/Zip-Tie-Studio/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="/Zip-Tie-Studio/work/" class="mob-l">Work</a>
+  <a href="/Zip-Tie-Studio/recording-services/" class="mob-l">Services</a>
+  <a href="/Zip-Tie-Studio/the-story/" class="mob-l">About</a>
+  <a href="/Zip-Tie-Studio/contact/" class="mob-l">Start a Project</a>
+</div>
+<main id="main">
+<header class="page-header">
+  <div>
+    <p class="page-label sr">About Zip Tie Studio</p>
+    <h1 class="page-title sr d1">The<br>Story.</h1>
+  </div>
+  <div class="header-intro sr d2">
+    <p>Zip Tie Studio is a classical music production company built by musicians. We exist because the people who make recordings for a living should also understand the music from the inside.</p>
+  </div>
+</header>
+<section class="story">
+  <h2 class="story-hl sr">Why We<br>Exist.</h2>
+  <div class="story-text sr d1">
+    <p>Most recording sessions involve two separate teams — one for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. The audio team doesn't know why the cameras are positioned where they are. The video team doesn't know why the microphones are where they are.</p>
+    <p>We handle both. <strong>Microphone placement and camera angle are decided in the same conversation.</strong> The result sounds and looks like it belongs together, because it was made that way.</p>
+    <p>Zip Tie Studio was founded in 2023 by musicians trained at the Royal Conservatoire of Scotland. We understand the repertoire, the way sessions run, and what a final result needs to sound and look like.</p>
+    <p>Based in Glasgow and Edinburgh. Available throughout the UK and internationally.</p>
+  </div>
+</section>
+<section class="stats">
+  <div class="stat sr"><div class="stat-n">2023</div><p class="stat-label">Founded</p></div>
+  <div class="stat sr d1"><div class="stat-n">6+</div><p class="stat-label">Label Clients</p></div>
+  <div class="stat sr d2"><div class="stat-n">UK &amp;<br>Intl</div><p class="stat-label">Area Served</p></div>
+  <div class="stat sr d3"><div class="stat-n">100%</div><p class="stat-label">Musician-Led</p></div>
+</section>
+<section class="team">
+  <p class="team-label sr">The Team</p>
+  <div class="team-grid">
+    <article class="team-card sr">
+      <div class="team-img"><div class="team-img-ph">Portrait coming soon</div></div>
+      <h3 class="team-name">Campbell Parker</h3>
+      <p class="team-role">Director · Audio & Video Producer</p>
+      <p class="team-bio">Trained as a classical musician at the Royal Conservatoire of Scotland. Campbell leads all Zip Tie Studio productions, combining a background in orchestral performance with professional filmmaking and audio engineering. He is also Assistant Orchestra Manager at the Scottish Chamber Orchestra.</p>
+    </article>
+    <article class="team-card sr d1">
+      <div class="team-img"><div class="team-img-ph">Portrait coming soon</div></div>
+      <h3 class="team-name">Matthew Birch</h3>
+      <p class="team-role">Audio Engineer & Producer</p>
+      <p class="team-bio">Matthew brings broadcast and studio experience across classical, contemporary and live settings. His work with Zip Tie Studio spans album sessions, live concert recording and post-production — with an ear trained by years of professional performance as well as behind the console.</p>
+    </article>
+  </div>
+</section>
+<section class="clients">
+  <p class="clients-label sr">Who We've Worked With</p>
+  <div class="client-list sr d1">
+    <div class="client-item">Pentatone</div>
+    <div class="client-item">Southbank Centre</div>
+    <div class="client-item">Scottish Ensemble</div>
+    <div class="client-item">Dunedin Consort</div>
+    <div class="client-item">ABRSM</div>
+    <div class="client-item">NYOS</div>
+    <div class="client-item">University of Glasgow</div>
+    <div class="client-item">Sean Shibe</div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/">About</a></li>
+    <li><a href="/Zip-Tie-Studio/contact/">Contact</a></li>
+  </ul>
+  <p class="ft-copy">© 2025 Zip Tie Studio · UK &amp; International</p>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
+let open=false;
+function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);mob.style.display=open?'flex':'none';requestAnimationFrame(()=>mob.classList.toggle('open',open));document.body.style.overflow=open?'hidden':'';}
+ham.addEventListener('click',()=>toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>

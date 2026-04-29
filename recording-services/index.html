@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Zip Tie Studio</title>
+<meta name="description" content="Audio recording, video production, audition recordings, livestreaming and more — broadcast-quality classical music production across the UK and internationally.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,section,div,article,header,footer,main,aside,nav{background-color:transparent;}
+html,body{background-color:#000!important;color:#eeece8!important;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{--off:#eeece8;--pad:clamp(20px,5vw,60px);}
+body{background:#000;color:#eeece8;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px var(--pad);transition:padding .4s;}
+nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.07em;color:#eeece8;text-decoration:none;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#eeece8;}
+.nav-cta{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:9px 22px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:#eeece8;color:#000;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
+.mob-nav.open{opacity:1;}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
+.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);}
+.page-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,10vw,130px);letter-spacing:.01em;line-height:.88;}
+.services-wrap{padding:clamp(60px,8vw,100px) var(--pad);}
+.services-intro{max-width:560px;margin-bottom:clamp(60px,8vw,100px);}
+.services-intro p{font-size:15px;line-height:1.85;color:rgba(238,236,232,.5);}
+.svc-list{border-top:1px solid rgba(238,236,232,.1);}
+.svc-row{display:grid;grid-template-columns:60px 1fr auto;gap:24px;align-items:start;padding:clamp(28px,4vw,48px) 0;border-bottom:1px solid rgba(238,236,232,.1);transition:padding-left .3s;}
+.svc-row:hover{padding-left:12px;}
+.svc-n{font-size:10px;font-weight:300;letter-spacing:.15em;color:rgba(238,236,232,.18);padding-top:6px;}
+.svc-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);letter-spacing:.02em;margin-bottom:12px;}
+.svc-body{font-size:13px;line-height:1.85;color:rgba(238,236,232,.4);max-width:500px;}
+.svc-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
+.svc-tag{font-size:9px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);border:1px solid rgba(238,236,232,.12);padding:5px 10px;}
+.svc-link{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.28);text-decoration:none;white-space:nowrap;padding-top:6px;transition:color .2s;}
+.svc-link:hover{color:#eeece8;}
+.rates-band{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.rates-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.02em;line-height:.92;}
+.rates-copy{font-size:13px;line-height:1.85;color:rgba(238,236,232,.4);}
+.rates-copy p+p{margin-top:12px;}
+.rates-cta{display:inline-block;margin-top:28px;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 40px;text-decoration:none;transition:opacity .2s;}
+.rates-cta:hover{opacity:.82;}
+footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
+.ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.ft-nav a{font-size:10px;font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a:hover{color:#eeece8;}
+.ft-copy{font-size:10px;font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}.d5{transition-delay:.39s}
+@media(max-width:768px){.nav-links,.nav-cta{display:none;}.ham{display:flex;}.svc-row{grid-template-columns:36px 1fr;}.svc-link{display:none;}.rates-band{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/Zip-Tie-Studio/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/" class="active">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/">About</a></li>
+  </ul>
+  <a href="/Zip-Tie-Studio/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="/Zip-Tie-Studio/work/" class="mob-l">Work</a>
+  <a href="/Zip-Tie-Studio/recording-services/" class="mob-l">Services</a>
+  <a href="/Zip-Tie-Studio/the-story/" class="mob-l">About</a>
+  <a href="/Zip-Tie-Studio/contact/" class="mob-l">Start a Project</a>
+</div>
+<main id="main">
+<header class="page-header">
+  <p class="page-label sr">What We Do</p>
+  <h1 class="page-title sr d1">Recording<br>Services.</h1>
+</header>
+<section class="services-wrap">
+  <div class="services-intro sr">
+    <p>We handle audio and video as a single integrated service — not two separate productions bolted together. Every session is designed so that microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
+  </div>
+  <div class="svc-list">
+    <article class="svc-row sr">
+      <span class="svc-n">01</span>
+      <div class="svc-content">
+        <h2 class="svc-title">Live Concert Recording</h2>
+        <p class="svc-body">Multi-microphone capture placed before the audience arrives. High-quality condenser arrays designed around the acoustic profile of your venue — cathedral, concert hall, or church in the Highlands. Minimal processing, maximum transparency.</p>
+        <div class="svc-tags"><span class="svc-tag">Stereo & Surround</span><span class="svc-tag">Multi-channel</span><span class="svc-tag">Live Mixing</span><span class="svc-tag">Post-production</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+    <article class="svc-row sr d1">
+      <span class="svc-n">02</span>
+      <div class="svc-content">
+        <h2 class="svc-title">CD & Album Production</h2>
+        <p class="svc-body">Full session recording from first take through to label-ready masters. We work across churches, concert halls and studios, handling editing, mixing and mastering in-house so the chain of custody stays short and communication stays direct.</p>
+        <div class="svc-tags"><span class="svc-tag">Studio Sessions</span><span class="svc-tag">Editing & Mixing</span><span class="svc-tag">Mastering</span><span class="svc-tag">Label Delivery</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+    <article class="svc-row sr d2">
+      <span class="svc-n">03</span>
+      <div class="svc-content">
+        <h2 class="svc-title">Audition Recording</h2>
+        <p class="svc-body">Clean, expressive, unhurried. Used by orchestral players, soloists, and chamber musicians targeting conservatoire places, international competitions, and principal auditions.</p>
+        <div class="svc-tags"><span class="svc-tag">Orchestral Auditions</span><span class="svc-tag">Competition Tapes</span><span class="svc-tag">Conservatoire</span><span class="svc-tag">Quick Turnaround</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+    <article class="svc-row sr d3">
+      <span class="svc-n">04</span>
+      <div class="svc-content">
+        <h2 class="svc-title">Concert Filming & Video</h2>
+        <p class="svc-body">Cinematic multi-camera coverage of concerts and recitals designed with your social, press, and archive needs in mind. We know how to capture a performance without disrupting it.</p>
+        <div class="svc-tags"><span class="svc-tag">Multi-camera</span><span class="svc-tag">4K</span><span class="svc-tag">Broadcast Format</span><span class="svc-tag">Social Cuts</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+    <article class="svc-row sr d4">
+      <span class="svc-n">05</span>
+      <div class="svc-content">
+        <h2 class="svc-title">Artist Press Kit & Promo</h2>
+        <p class="svc-body">Portrait sessions, artist films, and promotional trailers built to work across streaming platforms, press packs, and social channels. We've produced for labels including Pentatone and institutions including the Southbank Centre.</p>
+        <div class="svc-tags"><span class="svc-tag">Artist Portraits</span><span class="svc-tag">Promo Films</span><span class="svc-tag">Press Packs</span><span class="svc-tag">Social Content</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+    <article class="svc-row sr d5">
+      <span class="svc-n">06</span>
+      <div class="svc-content">
+        <h2 class="svc-title">Livestreaming</h2>
+        <p class="svc-body">Broadcast-quality live streaming for concerts and events. Encoding, delivery, and monitoring with optional multi-camera switching and live audio mixing. Delivered to any platform.</p>
+        <div class="svc-tags"><span class="svc-tag">Live Broadcast</span><span class="svc-tag">YouTube / Vimeo</span><span class="svc-tag">Private Streams</span><span class="svc-tag">Multi-camera</span></div>
+      </div>
+      <a href="/Zip-Tie-Studio/contact/" class="svc-link">Enquire →</a>
+    </article>
+  </div>
+</section>
+<section class="rates-band sr">
+  <div><h2 class="rates-hl">Rates &<br>Availability.</h2></div>
+  <div>
+    <div class="rates-copy">
+      <p>We work on a project basis — every session is priced according to its actual requirements. Tell us what you're planning and we'll come back with a clear proposal.</p>
+      <p>Based in Glasgow and Edinburgh, available throughout the UK and internationally. Most projects confirmed 4–6 weeks in advance.</p>
+    </div>
+    <a href="/Zip-Tie-Studio/contact/" class="rates-cta">Get in Touch</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/Zip-Tie-Studio/work/">Work</a></li>
+    <li><a href="/Zip-Tie-Studio/recording-services/">Services</a></li>
+    <li><a href="/Zip-Tie-Studio/the-story/">About</a></li>
+    <li><a href="/Zip-Tie-Studio/contact/">Contact</a></li>
+  </ul>
+  <p class="ft-copy">© 2025 Zip Tie Studio · UK &amp; International</p>
+</footer>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
+let open=false;
+function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);mob.style.display=open?'flex':'none';requestAnimationFrame(()=>mob.classList.toggle('open',open));document.body.style.overflow=open?'hidden':'';}
+ham.addEventListener('click',()=>toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
