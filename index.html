@@ -286,6 +286,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .wi:nth-child(2) { transition-delay: .1s; }
 .wi:nth-child(3) { transition-delay: .2s; }
 .wi:nth-child(4) { transition-delay: .1s; }
+.wi:nth-child(5) { transition-delay: .2s; }
 
 .wi:hover img { transform:scale(1.06); filter:brightness(.4); }
 .wi-label {
@@ -453,7 +454,7 @@ footer {
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
 }
 @media (max-width:480px) {
-  .work-grid { grid-template-columns:1fr; grid-template-rows:repeat(4,210px); }
+  .work-grid { grid-template-columns:1fr; grid-template-rows:repeat(5,210px); }
   .wi:first-child { grid-column:1; grid-row:1; }
   .cl-grid { grid-template-columns:repeat(2,1fr); }
   .cl-cell:nth-child(2n) { border-right:none; }
@@ -618,18 +619,7 @@ if (VIDEO_ID) {
   </div>
 
   <div class="work-grid" role="list">
-    <!-- FEATURE, tall left slot: xx,Lotte wide rehearsal shot, atmospheric -->
-    <div class="wi" role="listitem" tabindex="0"
-      data-img="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp">
-      <img src="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp"
-        alt="xx, Lotte, album recording session at Stockbridge Church, Edinburgh" loading="lazy" onerror="this.style.display='none'">
-      <div class="wi-label">
-        <div class="wi-client">xx, Lotte</div>
-        <div class="wi-type">CD Recording &amp; Music Video · Stockbridge Church, Edinburgh</div>
-      </div>
-    </div>
-
-    <!-- TOP RIGHT, Sean Shibe intimate portrait -->
+    <!-- FEATURE, tall left slot: Sean Shibe -->
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/work-sean-1.jpg">
       <img src="/images/WORK/work-sean-1.jpg"
@@ -640,7 +630,29 @@ if (VIDEO_ID) {
       </div>
     </div>
 
-    <!-- MID RIGHT, Glasgow Barons, Inscriptions in Granite -->
+    <!-- TOP MID: Scottish Ensemble -->
+    <div class="wi" role="listitem" tabindex="0"
+      data-img="/images/TEAM/team-campbell-4.jpg">
+      <img src="/images/TEAM/team-campbell-4.jpg"
+        alt="Scottish Ensemble, live concert recording" loading="lazy" onerror="this.style.display='none'">
+      <div class="wi-label">
+        <div class="wi-client">Scottish Ensemble</div>
+        <div class="wi-type">Live Concert Recording · Multicam &amp; Microphone Capture</div>
+      </div>
+    </div>
+
+    <!-- TOP RIGHT: Beth Taylor -->
+    <div class="wi" role="listitem" tabindex="0"
+      data-img="/images/WORK/work-beth-taylor-1.jpg">
+      <img src="/images/WORK/work-beth-taylor-1.jpg"
+        alt="Beth Taylor, artist film for Outhere Music" loading="lazy" onerror="this.style.display='none'">
+      <div class="wi-label">
+        <div class="wi-client">Beth Taylor</div>
+        <div class="wi-type">Outhere Music · Artist Film</div>
+      </div>
+    </div>
+
+    <!-- BOTTOM MID: Inscriptions in Granite -->
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/ZIPTIEGB-1.jpg">
       <img src="/images/WORK/ZIPTIEGB-1.jpg"
@@ -651,14 +663,14 @@ if (VIDEO_ID) {
       </div>
     </div>
 
-    <!-- BOTTOM RIGHT, live concert hall wide shot -->
+    <!-- BOTTOM RIGHT: Lotte XX -->
     <div class="wi" role="listitem" tabindex="0"
-      data-img="/images/TEAM/team-campbell-4.jpg">
-      <img src="/images/TEAM/team-campbell-4.jpg"
-        alt="Live concert recording, multi-microphone capture" loading="lazy" onerror="this.style.display='none'">
+      data-img="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp">
+      <img src="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp"
+        alt="xx, Lotte, album recording session at Stockbridge Church, Edinburgh" loading="lazy" onerror="this.style.display='none'">
       <div class="wi-label">
-        <div class="wi-client">Scottish Ensemble</div>
-        <div class="wi-type">Live Concert Recording · Multicam &amp; Microphone Capture</div>
+        <div class="wi-client">xx, Lotte</div>
+        <div class="wi-type">CD Recording &amp; Music Video · Stockbridge Church, Edinburgh</div>
       </div>
     </div>
   </div>
