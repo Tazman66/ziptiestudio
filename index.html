@@ -190,23 +190,6 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 }
 .scroll-pip-line { width:1px; height:52px; background:linear-gradient(to bottom,rgba(238,236,232,.4),transparent); animation:pipPulse 2.8s ease-in-out infinite; }
 
-/* ─── MARQUEE DIVIDER ─── */
-.marquee {
-  padding: 18px 0; overflow: hidden;
-  border-top: 1px solid rgba(238,236,232,.1);
-  border-bottom: 1px solid rgba(238,236,232,.1);
-}
-.marquee-track { display:flex; animation:marq 32s linear infinite; white-space:nowrap; }
-.marquee-track:hover { animation-play-state: paused; }
-.m-item {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(13px,1.6vw,18px);
-  letter-spacing: .12em;
-  color: rgba(238,236,232,.18);
-  padding: 0 clamp(24px,4vw,56px);
-  flex-shrink: 0;
-}
-.m-sep { color: rgba(238,236,232,.08); padding: 0 8px; }
 
 /* ─── STATEMENT ─── */
 .statement {
@@ -235,26 +218,6 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .st-text { font-size:14px; line-height:1.9; color:rgba(238,236,232,.4); }
 .st-text strong { color:#eeece8; font-weight:400; }
 
-/* ─── FULL-WIDTH TEXT BAND ─── */
-.text-band {
-  padding: clamp(56px,8vw,100px) 0;
-  overflow: hidden;
-}
-.tb-inner {
-  display: flex; gap: 0;
-  animation: marqR 50s linear infinite;
-  white-space: nowrap;
-}
-.tb-word {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(80px,14vw,180px);
-  letter-spacing: .02em;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(238,236,232,.1);
-  padding: 0 clamp(32px,5vw,80px);
-  flex-shrink: 0;
-  line-height: 1;
-}
 
 /* ─── STATEMENT IMAGE ─── */
 .st-img-wrap {
@@ -467,8 +430,6 @@ footer {
 @keyframes liftUp { from{transform:translateY(115%)} to{transform:translateY(0)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
 @keyframes pipPulse { 0%,100%{opacity:.3} 50%{opacity:.9} }
-@keyframes marq  { from{transform:translateX(0)} to{transform:translateX(-50%)} }
-@keyframes marqR { from{transform:translateX(-50%)} to{transform:translateX(0)} }
 
 /* scroll reveal (non-image) */
 .sr { opacity:0; transform:translateY(24px); transition:opacity .8s ease, transform .8s ease; }
@@ -590,25 +551,6 @@ footer {
   </div>
 </section>
 
-<!-- ── MARQUEE ── -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span class="m-item">Live Concert Recording<span class="m-sep"> · </span></span>
-    <span class="m-item">CD &amp; Album Production<span class="m-sep"> · </span></span>
-    <span class="m-item">Audition Recordings<span class="m-sep"> · </span></span>
-    <span class="m-item">Press Kit &amp; Video<span class="m-sep"> · </span></span>
-    <span class="m-item">Live Streaming<span class="m-sep"> · </span></span>
-    <span class="m-item">Sound Reinforcement<span class="m-sep"> · </span></span>
-    <span class="m-item">UK &amp; International<span class="m-sep"> · </span></span>
-    <span class="m-item">Live Concert Recording<span class="m-sep"> · </span></span>
-    <span class="m-item">CD &amp; Album Production<span class="m-sep"> · </span></span>
-    <span class="m-item">Audition Recordings<span class="m-sep"> · </span></span>
-    <span class="m-item">Press Kit &amp; Video<span class="m-sep"> · </span></span>
-    <span class="m-item">Live Streaming<span class="m-sep"> · </span></span>
-    <span class="m-item">Sound Reinforcement<span class="m-sep"> · </span></span>
-    <span class="m-item">UK &amp; International<span class="m-sep"> · </span></span>
-  </div>
-</div>
 
 
 <!-- ── VIDEO REEL ── -->
@@ -660,24 +602,6 @@ if (VIDEO_ID) {
       loading="lazy">
   </div>
 </section>
-
-<!-- ── TEXT BAND ── -->
-<div class="text-band" aria-hidden="true">
-  <div class="tb-inner">
-    <span class="tb-word">Audio</span>
-    <span class="tb-word">Video</span>
-    <span class="tb-word">Scotland</span>
-    <span class="tb-word">Classical</span>
-    <span class="tb-word">Live</span>
-    <span class="tb-word">Studio</span>
-    <span class="tb-word">Audio</span>
-    <span class="tb-word">Video</span>
-    <span class="tb-word">Scotland</span>
-    <span class="tb-word">Classical</span>
-    <span class="tb-word">Live</span>
-    <span class="tb-word">Studio</span>
-  </div>
-</div>
 
 <!-- ── SERVICES ── -->
 <section class="services" id="services">
