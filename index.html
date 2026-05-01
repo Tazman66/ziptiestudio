@@ -301,10 +301,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .wi-type { font-size:clamp(10px,1.2vw,13px); font-weight:300; letter-spacing:.15em; text-transform:uppercase; color:rgba(238,236,232,.4); margin-top:3px; }
 
 /* ─── CLIENTS ─── */
-.clients { padding: clamp(24px,3vw,40px) clamp(20px,5vw,60px) clamp(56px,8vw,100px); }
-.cl-hd { margin-bottom: clamp(32px,5vw,56px); }
-.cl-title { font-family:'Bebas Neue', sans-serif; font-size:clamp(36px,6vw,80px); letter-spacing:.03em; margin-bottom:12px; }
-.cl-sub { font-size:clamp(15px,1.6vw,18px); font-weight:300; color:rgba(238,236,232,.28); letter-spacing:.06em; max-width:480px; line-height:1.7; }
+.clients { padding: clamp(20px,2.5vw,36px) clamp(20px,5vw,60px) clamp(28px,3.5vw,48px); }
+.cl-hd { display:flex; justify-content:space-between; align-items:center; margin-bottom:clamp(20px,2.5vw,32px); }
+.cl-title { font-family:'Bebas Neue', sans-serif; font-size:clamp(36px,6vw,80px); letter-spacing:.03em; }
+.cl-sub { font-size:clamp(13px,1.4vw,16px); font-weight:300; color:rgba(238,236,232,.28); letter-spacing:.06em; line-height:1.7; text-align:right; }
 .cl-grid {
   display: grid; grid-template-columns: repeat(7,1fr);
   border-top: 1px solid rgba(238,236,232,.1);
@@ -396,11 +396,11 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .cta-note { font-size:10px; font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.2); }
 
 /* ─── LOGO GRID ─── */
-.logo-grid { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px; padding:clamp(32px,4vw,56px) 0; border-top:1px solid rgba(238,236,232,.1); }
-.logo-item { display:flex; align-items:center; opacity:0.45; transition:opacity 0.3s ease, filter 0.3s ease; filter:grayscale(100%) brightness(2); }
+.logo-grid { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px; padding:clamp(20px,2.5vw,36px) 0; border-top:1px solid rgba(238,236,232,.1); }
+.logo-item { display:flex; align-items:center; opacity:0.45; transition:opacity 0.3s ease, filter 0.3s ease; filter:grayscale(100%) brightness(3); }
 .logo-item:hover { opacity:1; filter:grayscale(0%) brightness(1); }
-.logo-item img { max-height:36px; width:auto; object-fit:contain; }
-.logo-item--white-bg img { background:white; padding:6px 10px; border-radius:4px; }
+.logo-item img { max-height:56px; width:auto; object-fit:contain; }
+.logo-item--white-bg img { background:none; padding:0; border-radius:0; }
 
 /* ─── FOOTER ─── */
 footer {
