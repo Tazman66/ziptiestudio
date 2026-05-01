@@ -301,18 +301,18 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .wi-type { font-size:clamp(10px,1.2vw,13px); font-weight:300; letter-spacing:.15em; text-transform:uppercase; color:rgba(238,236,232,.4); margin-top:3px; }
 
 /* ─── CLIENTS ─── */
-.clients { padding: clamp(56px,8vw,100px) clamp(20px,5vw,60px); }
+.clients { padding: clamp(24px,3vw,40px) clamp(20px,5vw,60px) clamp(56px,8vw,100px); }
 .cl-hd { margin-bottom: clamp(32px,5vw,56px); }
 .cl-title { font-family:'Bebas Neue', sans-serif; font-size:clamp(36px,6vw,80px); letter-spacing:.03em; margin-bottom:12px; }
 .cl-sub { font-size:clamp(15px,1.6vw,18px); font-weight:300; color:rgba(238,236,232,.28); letter-spacing:.06em; max-width:480px; line-height:1.7; }
 .cl-grid {
-  display: grid; grid-template-columns: repeat(6,1fr);
+  display: grid; grid-template-columns: repeat(7,1fr);
   border-top: 1px solid rgba(238,236,232,.1);
 }
 .cl-cell {
-  padding: 26px 12px;
+  padding: clamp(24px,3vw,40px) 12px;
   border-right: 1px solid rgba(238,236,232,.1);
-  font-size: 10px; font-weight: 300;
+  font-size: clamp(14px,1.8vw,22px); font-weight: 300;
   letter-spacing: .16em; text-transform: uppercase;
   color: rgba(238,236,232,.22);
   text-align: center; line-height: 1.6;
@@ -320,7 +320,8 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   display: flex; align-items: center; justify-content: center;
 }
 .cl-cell:last-child { border-right: none; }
-.cl-cell:hover { color: #eeece8; }
+.cl-cell a { color: inherit; text-decoration: none; transition: color .25s; }
+.cl-cell:hover, .cl-cell a:hover { color: #eeece8; }
 
 /* ─── WHY ─── */
 .why { padding: clamp(60px,8vw,100px) clamp(20px,5vw,60px); }
@@ -441,7 +442,7 @@ footer {
   .wi-label { opacity:1; transform:none; }
 
   .cl-grid { grid-template-columns:repeat(3,1fr); }
-  .cl-cell:nth-child(3n) { border-right:none; }
+  .cl-cell:nth-child(3n):not(:last-child) { border-right:none; }
   .cl-cell:nth-child(n+4) { border-top:1px solid rgba(238,236,232,.1); }
 
   .why-inner { grid-template-columns:1fr; gap:40px; }
@@ -683,12 +684,13 @@ if (VIDEO_ID) {
     <p class="cl-sub">Artists, ensembles, and labels who care about the details.</p>
   </div>
   <ul class="cl-grid" aria-label="Client list">
-    <li class="cl-cell sr d1">Pentatone</li>
-    <li class="cl-cell sr d2">Southbank Centre</li>
-    <li class="cl-cell sr d3">Scottish Ensemble</li>
-    <li class="cl-cell sr d4">Dunedin Consort</li>
-    <li class="cl-cell sr d5">ABRSM</li>
-    <li class="cl-cell sr d6">NYOS</li>
+    <li class="cl-cell sr d1"><a href="https://www.pentatone.com" target="_blank" rel="noopener">Pentatone</a></li>
+    <li class="cl-cell sr d2"><a href="https://www.southbankcentre.co.uk" target="_blank" rel="noopener">Southbank Centre</a></li>
+    <li class="cl-cell sr d3"><a href="https://www.scottishensemble.co.uk" target="_blank" rel="noopener">Scottish Ensemble</a></li>
+    <li class="cl-cell sr d4"><a href="https://www.dunedin-consort.org.uk" target="_blank" rel="noopener">Dunedin Consort</a></li>
+    <li class="cl-cell sr d5"><a href="https://www.rcs.ac.uk" target="_blank" rel="noopener">Royal Conservatoire of Scotland</a></li>
+    <li class="cl-cell sr d6"><a href="https://www.gla.ac.uk" target="_blank" rel="noopener">University of Glasgow</a></li>
+    <li class="cl-cell sr"><a href="https://www.outhere-music.com" target="_blank" rel="noopener">Outhere Music</a></li>
   </ul>
 </section>
 
