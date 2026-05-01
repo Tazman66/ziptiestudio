@@ -19,9 +19,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.07em;color:#eeece8;text-decoration:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#eeece8;}
-.nav-cta{font-size:10px;font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:9px 22px;transition:background .2s,color .2s;}
+.nav-cta{font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:9px 22px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
 .ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
 .ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
@@ -34,7 +34,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .contact-wrap{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px;}
 .contact-left{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);border-right:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;justify-content:space-between;}
 .contact-right{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);}
-.contact-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.contact-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
 .contact-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,110px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
 .contact-info-item{margin-bottom:32px;}
 .contact-info-label{font-size:9px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
