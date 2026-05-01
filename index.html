@@ -395,6 +395,13 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .cta-btn:hover { opacity:.82; }
 .cta-note { font-size:10px; font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.2); }
 
+/* ─── LOGO GRID ─── */
+.logo-grid { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:32px; padding:clamp(32px,4vw,56px) 0; border-top:1px solid rgba(238,236,232,.1); }
+.logo-item { display:flex; align-items:center; opacity:0.45; transition:opacity 0.3s ease, filter 0.3s ease; filter:grayscale(100%) brightness(2); }
+.logo-item:hover { opacity:1; filter:grayscale(0%) brightness(1); }
+.logo-item img { max-height:36px; width:auto; object-fit:contain; }
+.logo-item--white-bg img { background:white; padding:6px 10px; border-radius:4px; }
+
 /* ─── FOOTER ─── */
 footer {
   padding: clamp(20px,3vw,32px) clamp(20px,5vw,60px);
@@ -683,15 +690,23 @@ if (VIDEO_ID) {
     <h2 class="cl-title" id="cl-title">Trusted By</h2>
     <p class="cl-sub">Artists, ensembles, and labels who care about the details.</p>
   </div>
-  <ul class="cl-grid" aria-label="Client list">
-    <li class="cl-cell sr d1"><a href="https://www.pentatone.com" target="_blank" rel="noopener">Pentatone</a></li>
-    <li class="cl-cell sr d2"><a href="https://www.southbankcentre.co.uk" target="_blank" rel="noopener">Southbank Centre</a></li>
-    <li class="cl-cell sr d3"><a href="https://www.scottishensemble.co.uk" target="_blank" rel="noopener">Scottish Ensemble</a></li>
-    <li class="cl-cell sr d4"><a href="https://www.dunedin-consort.org.uk" target="_blank" rel="noopener">Dunedin Consort</a></li>
-    <li class="cl-cell sr d5"><a href="https://www.rcs.ac.uk" target="_blank" rel="noopener">Royal Conservatoire of Scotland</a></li>
-    <li class="cl-cell sr d6"><a href="https://www.gla.ac.uk" target="_blank" rel="noopener">University of Glasgow</a></li>
-    <li class="cl-cell sr"><a href="https://www.outhere-music.com" target="_blank" rel="noopener">Outhere Music</a></li>
-  </ul>
+  <div class="logo-grid">
+    <a href="https://www.pentatone.com" target="_blank" rel="noopener" class="logo-item">
+      <img src="/images/logos/PENTATONE_HORIZONTAL_BLACK.png.webp" alt="Pentatone">
+    </a>
+    <a href="https://www.southbankcentre.co.uk" target="_blank" rel="noopener" class="logo-item">
+      <img src="/images/logos/Southbank_Centre_Logo.png.webp" alt="Southbank Centre">
+    </a>
+    <a href="https://www.scottishensemble.co.uk" target="_blank" rel="noopener" class="logo-item">
+      <img src="/images/logos/SYMC-Logo.png.webp" alt="Scottish Ensemble">
+    </a>
+    <a href="https://www.outhere-music.com" target="_blank" rel="noopener" class="logo-item">
+      <img src="/images/logos/OuthereMusic.png.webp" alt="Outhere Music">
+    </a>
+    <a href="https://www.gla.ac.uk" target="_blank" rel="noopener" class="logo-item logo-item--white-bg">
+      <img src="/images/logos/Glasgowuni.png.webp" alt="University of Glasgow">
+    </a>
+  </div>
 </section>
 
 <!-- ── WHY ── -->
