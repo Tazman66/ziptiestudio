@@ -354,8 +354,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 
 /* ─── CTA ─── */
 .cta {
-  padding: clamp(32px,4vw,56px) clamp(20px,5vw,60px) clamp(60px,8vw,100px);
+  padding: clamp(60px,8vw,100px) clamp(20px,5vw,60px);
   position: relative; overflow: hidden;
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center;
 }
 .cta::before {
   content:'';
@@ -371,11 +373,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   font-size: clamp(52px,9vw,120px);
   letter-spacing: .01em;
   line-height: .88;
-  margin-bottom: clamp(32px,4vw,52px);
+  margin-bottom: clamp(24px,3vw,40px);
 }
-.cta-foot { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:32px; }
-.cta-sub { font-size:clamp(15px,1.6vw,18px); font-weight:300; line-height:1.75; color:rgba(238,236,232,.4); }
-.cta-actions { display:flex; align-items:center; gap:clamp(16px,3vw,32px); flex-wrap:wrap; }
+.cta-sub { font-size:clamp(15px,1.6vw,18px); font-weight:300; line-height:1.75; color:rgba(238,236,232,.4); margin-bottom:clamp(28px,4vw,48px); }
+.cta-actions { display:flex; flex-direction:column; align-items:center; gap:20px; }
 .cta-btn {
   font-size:clamp(10px,1vw,12px); font-weight:400; letter-spacing:.2em; text-transform:uppercase;
   color:#000000; background:#eeece8; padding:18px 48px;
@@ -726,13 +727,11 @@ footer {
 <!-- ── CTA ── -->
 <section class="cta" id="contact">
   <p class="cta-label sr">Ready to begin?</p>
-  <h2 class="cta-hl sr d1">Let's Make<br>Something<br>Worth Hearing.</h2>
-  <div class="cta-foot sr d2">
-    <p class="cta-sub">Tell us the project. We'll respond within 24 hours.</p>
-    <div class="cta-actions">
-      <a href="/contact/" class="cta-btn">Start Your Project</a>
-      <span class="cta-note">hello@ziptiestudio.co.uk &nbsp;·&nbsp; UK &amp; International &nbsp;·&nbsp; 24hr response</span>
-    </div>
+  <h2 class="cta-hl sr d1">Let's Make Something<br>Worth Hearing.</h2>
+  <p class="cta-sub sr d2">Tell us the project. We'll respond within 24 hours.</p>
+  <div class="cta-actions sr d3">
+    <a href="/contact/" class="cta-btn">Start Your Project</a>
+    <span class="cta-note">hello@ziptiestudio.co.uk &nbsp;·&nbsp; UK &amp; International &nbsp;·&nbsp; 24hr response</span>
   </div>
 </section>
 
