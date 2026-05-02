@@ -551,38 +551,6 @@ footer {
 </section>
 
 
-
-<!-- ── VIDEO REEL ── -->
-<section class="video-section">
-  <p class="video-eyebrow">Showreel</p>
-  <div class="video-wrapper" id="video-wrap">
-    <!-- Replace YOUR_VIDEO_ID below with your YouTube video ID when ready -->
-    <!-- e.g. for https://youtube.com/watch?v=dQw4w9WgXcQ the ID is dQw4w9WgXcQ -->
-    <div class="video-placeholder" id="video-placeholder">
-      <div class="video-placeholder-icon"></div>
-      <p>Showreel coming soon</p>
-    </div>
-  </div>
-  <p class="video-caption">Zip Tie Studio &nbsp;·&nbsp; Audio &amp; Video Production &nbsp;·&nbsp; UK &amp; International</p>
-</section>
-
-<script>
-// To activate: replace null below with your YouTube video ID string
-// e.g. const VIDEO_ID = 'dQw4w9WgXcQ';
-const VIDEO_ID = null;
-
-if (VIDEO_ID) {
-  const wrap = document.getElementById('video-wrap');
-  const placeholder = document.getElementById('video-placeholder');
-  const iframe = document.createElement('iframe');
-  iframe.src = `https://www.youtube-nocookie.com/embed/${VIDEO_ID}?autoplay=1&mute=1&loop=1&playlist=${VIDEO_ID}&controls=0&modestbranding=1&rel=0`;
-  iframe.allow = 'autoplay; encrypted-media';
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('title', 'Zip Tie Studio showreel');
-  placeholder.replaceWith(iframe);
-}
-</script>
-
 <!-- ── STATEMENT ── -->
 <section class="statement">
   <div class="st-inner">
