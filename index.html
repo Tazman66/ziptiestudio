@@ -404,7 +404,8 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .logo-item--mono:hover img { filter:grayscale(100%) brightness(3); }
 a[href*="scottishensemble"] img { filter:grayscale(100%) invert(1); }
 a[href*="gla.ac.uk"] img { max-height:130px!important; width:auto; }
-a[href*="rcs.ac.uk"] img { max-height:100px; }
+a[href*="rcs.ac.uk"] img { filter:brightness(1.2); opacity:0.7; max-height:100px; }
+a[href*="rcs.ac.uk"]:hover img { filter:brightness(1.5); opacity:1; }
 a[href*="scottishyoungmusicians"] img { filter:none; opacity:0.7; }
 a[href*="scottishyoungmusicians"]:hover img { filter:none; opacity:1; }
 
@@ -703,7 +704,7 @@ if (VIDEO_ID) {
     <a href="https://www.scottishyoungmusicians.com" target="_blank" rel="noopener" class="logo-item logo-item--mono">
       <img src="/images/logos/SYMC-Logo.png.webp" alt="Scottish Young Musicians">
     </a>
-    <a href="https://www.rcs.ac.uk" target="_blank" rel="noopener" class="logo-item logo-item--mono">
+    <a href="https://www.rcs.ac.uk" target="_blank" rel="noopener" class="logo-item">
       <img src="/images/logos/rcs-logo-transparent.png" alt="Royal Conservatoire of Scotland">
     </a>
     <a href="https://www.southbankcentre.co.uk" target="_blank" rel="noopener" class="logo-item">
