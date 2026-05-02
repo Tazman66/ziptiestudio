@@ -314,8 +314,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 
 /* ─── WHY ─── */
 .why { padding: clamp(40px,5vw,80px) clamp(20px,5vw,60px) clamp(60px,8vw,100px); }
-.why-inner { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(48px,8vw,120px); }
-.why-left {}
+.why-header { margin-bottom: clamp(32px,4vw,56px); }
+.why-cols { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.why-left-img { overflow:hidden; }
+.why-left-img img { width:100%; height:100%; min-height:600px; object-fit:cover; object-position:center; display:block; }
 .why-label { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.22em; text-transform:uppercase; color:rgba(238,236,232,.28); margin-bottom:24px; }
 .why-hl { font-family:'Bebas Neue', sans-serif; font-size:clamp(72px,11vw,160px); letter-spacing:.02em; line-height:.88; }
 .why-list { display:flex; flex-direction:column; }
@@ -452,8 +454,9 @@ footer {
   .cl-cell:nth-child(3n):not(:last-child) { border-right:none; }
   .cl-cell:nth-child(n+4) { border-top:1px solid rgba(238,236,232,.1); }
 
-  .why-inner { grid-template-columns:1fr; gap:40px; }
-  .why-hl { position:static; }
+  .why-cols { grid-template-columns:1fr; }
+  .why-left-img { order:-1; }
+  .why-left-img img { min-height:300px; height:300px; }
 
   .testi-inner { grid-template-columns:1fr; gap:40px; }
   .testi-img { order:-1; height:260px; }
@@ -684,13 +687,13 @@ footer {
 
 <!-- ── WHY ── -->
 <section class="why" aria-labelledby="why-title">
-  <div class="why-inner">
-    <div class="why-left">
-      <p class="why-label sr">What sets us apart</p>
-      <h2 class="why-hl sr d1" id="why-title">Why<br>Zip Tie<br>Studio?</h2>
-      <div class="why-image-wrap sr d2">
-        <img src="/images/TEAM/team-campbell-6.jpg" alt="Campbell Parker at work" style="width:100%; height:clamp(400px,55vw,700px); object-fit:cover; object-position:center center; display:block; margin-top:32px;">
-      </div>
+  <div class="why-header">
+    <p class="why-label sr">What sets us apart</p>
+    <h2 class="why-hl sr d1" id="why-title">Why<br>Zip Tie<br>Studio?</h2>
+  </div>
+  <div class="why-cols">
+    <div class="why-left-img">
+      <img src="/images/TEAM/team-campbell-6.jpg" alt="Campbell Parker at work" loading="lazy">
     </div>
     <div class="why-list">
       <div class="why-row sr d1">
