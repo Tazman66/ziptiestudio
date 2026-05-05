@@ -66,11 +66,11 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* ─── WHY ─── */
 .why-section{padding:clamp(40px,5vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;}
-.why-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
-.why-cols{grid-template-columns:1fr;max-width:800px;margin:0 auto;}
-.why-right{display:flex;flex-direction:column;gap:0;}
-.why-item{padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(238,236,232,.1);text-align:left;}
-.why-item:first-child{border-top:1px solid rgba(238,236,232,.1);}
+.why-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:16px;}
+.why-sub{font-size:clamp(13px,1.4vw,16px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.4);margin-bottom:clamp(40px,5vw,64px);}
+.why-cols{width:100%;}
+.why-right{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);}
+.why-item{background:#000;padding:clamp(28px,3vw,44px);text-align:left;}
 .why-n{font-size:10px;font-weight:300;letter-spacing:.15em;color:rgba(238,236,232,.28);display:block;margin-bottom:12px;}
 .why-item h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,32px);letter-spacing:.03em;margin-bottom:12px;}
 .why-item p{font-size:clamp(13px,1.4vw,16px);line-height:1.75;color:rgba(238,236,232,.4);}
@@ -192,8 +192,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <!-- ── WHY ── -->
 <section class="why-section">
-  <p class="section-label sr">What Sets Us Apart</p>
-  <h2 class="why-title sr d1">Why<br>Zip Tie<br>Studio?</h2>
+  <h2 class="why-title sr">Why Zip Tie Studio?</h2>
+  <p class="why-sub sr d1">What Sets Us Apart.</p>
   <div class="why-cols">
     <div class="why-right">
       <div class="why-item sr d1">
@@ -213,8 +213,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <div class="why-item sr d4">
         <span class="why-n">04</span>
-        <h3>International Standard</h3>
-        <p>Our work is on Pentatone. That's the standard we hold every project to. Debut album or competition submission, the approach doesn't change.</p>
+        <h3>High Standard. High Profile.</h3>
+        <p>We work with internationally recognised ensembles, labels and institutions. Whatever the scale of your project, we bring the same rigour and attention to detail that our highest profile clients expect.</p>
       </div>
     </div>
   </div>
