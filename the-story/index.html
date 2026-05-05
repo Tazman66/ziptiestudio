@@ -31,31 +31,24 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
 .mob-nav.open{opacity:1;}
 .mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
-.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;}
-.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
-.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
-.header-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);padding-bottom:8px;}
-.story{padding:clamp(60px,8vw,100px) var(--pad);display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,8vw,100px);}
-.story-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:.02em;line-height:.92;position:sticky;top:120px;height:fit-content;}
-.story-text p{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
-.story-text p+p{margin-top:20px;}
-.story-text strong{color:rgba(238,236,232,.8);font-weight:400;}
-.stats{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:repeat(4,1fr);}
-.stat{padding:clamp(28px,4vw,48px) clamp(20px,3vw,40px);border-right:1px solid rgba(238,236,232,.1);}
-.stat:last-child{border-right:none;}
-.stat-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,6vw,80px);letter-spacing:.02em;line-height:1;}
-.stat-label{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:8px;}
+
+/* ─── OPENING ─── */
+.opening{padding:calc(var(--pad) + 80px) var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;}
+.opening-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.opening-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
+.opening-intro{font-size:clamp(16px,1.8vw,20px);line-height:1.75;color:rgba(238,236,232,.5);}
+
+/* ─── TEAM ─── */
 .team{padding:clamp(60px,8vw,100px) var(--pad);}
 .team-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}
-.team-img{width:100%;aspect-ratio:3/4;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:24px;position:relative;overflow:hidden;}
-.team-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
-.story-image-band{width:100%;height:clamp(280px,40vw,500px);overflow:hidden;}
-.story-image-band img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.7);display:block;}
-.team-img-ph{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.08);}
+.team-portrait{width:100%;max-width:280px;aspect-ratio:1/1;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:20px;overflow:hidden;position:relative;}
+.team-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .team-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,3vw,32px);letter-spacing:.03em;margin-bottom:4px;}
 .team-role{font-size:10px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:16px;}
-.team-bio{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.4);}
+.team-bio{font-size:clamp(14px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.4);}
+
+/* ─── WHY ─── */
 .why-section{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
 .why-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
 .why-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;}
@@ -66,33 +59,37 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .why-n{font-size:10px;font-weight:300;letter-spacing:.15em;color:rgba(238,236,232,.28);display:block;margin-bottom:12px;}
 .why-item h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,32px);letter-spacing:.03em;margin-bottom:12px;}
 .why-item p{font-size:clamp(13px,1.4vw,16px);line-height:1.75;color:rgba(238,236,232,.4);}
-.clients{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
-.clients-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
-.client-list{display:flex;flex-wrap:wrap;border-left:1px solid rgba(238,236,232,.1);border-top:1px solid rgba(238,236,232,.1);}
-.client-item{width:25%;padding:clamp(20px,3vw,32px);border-right:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);font-family:'Bebas Neue',sans-serif;font-size:clamp(14px,2vw,20px);letter-spacing:.04em;color:rgba(238,236,232,.4);transition:color .2s;}
-.client-item:hover{color:#eeece8;}
+
+/* ─── QUOTE ─── */
+.quote-band{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;display:flex;flex-direction:column;align-items:center;}
+.quote-mark{font-family:'Bebas Neue',sans-serif;font-size:120px;color:rgba(238,236,232,.06);line-height:.5;margin-bottom:32px;display:block;}
+.quote-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3.5vw,48px);letter-spacing:.025em;line-height:1.1;color:rgba(238,236,232,.8);max-width:900px;margin-bottom:40px;}
+.quote-attr-name{font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:#eeece8;}
+.quote-attr-role{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:6px;}
+
+/* ─── FOOTER ─── */
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
 .ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
 .ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
 .ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
 .ft-nav a:hover{color:#eeece8;}
 .ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+
+/* ─── SCROLL REVEAL ─── */
 .sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
 .sr.vis{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}
-@media(max-width:768px){.nav-links,.nav-cta{display:none;}.ham{display:flex;}.page-header{grid-template-columns:1fr;}.story{grid-template-columns:1fr;}.story-hl{position:static;}.stats{grid-template-columns:1fr 1fr;}.stat{border-right:none;border-bottom:1px solid rgba(238,236,232,.1);}.team-grid{grid-template-columns:1fr;}.client-item{width:50%;}.testi-inner{grid-template-columns:1fr;gap:40px;}.testi-img{order:-1;height:260px;}.why-cols{grid-template-columns:1fr;}.why-left-img{order:-1;}.why-left-img img{height:280px;}}
-.testi{padding:clamp(80px,10vw,130px) clamp(20px,5vw,60px);}
-.testi-inner{display:grid;grid-template-columns:1fr 1fr;gap:clamp(48px,8vw,100px);align-items:center;}
-.testi-label{font-size:10px;font-weight:300;letter-spacing:.22em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:40px;}
-.testi-open{font-family:'Bebas Neue',sans-serif;font-size:100px;color:rgba(238,236,232,.06);line-height:.5;margin-bottom:28px;display:block;}
-.testi-q{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3vw,40px);letter-spacing:.025em;line-height:1.1;color:rgba(238,236,232,.8);margin-bottom:36px;}
-.testi-attr{padding-top:24px;border-top:1px solid rgba(238,236,232,.1);}
-.testi-name{font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.12em;text-transform:uppercase;}
-.testi-role{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.4);margin-top:5px;}
-.testi-img{height:clamp(320px,42vw,500px);overflow:hidden;clip-path:inset(100% 0 0 0);transition:clip-path .9s cubic-bezier(.16,1,.3,1);}
-.testi-img.revealed{clip-path:inset(0% 0 0 0);}
-.testi-img img{width:100%;height:100%;object-fit:cover;filter:brightness(.65) grayscale(.15);transition:transform .6s ease;}
-.testi-img:hover img{transform:scale(1.03);}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .ham{display:flex;}
+  .opening{grid-template-columns:1fr;}
+  .team-grid{grid-template-columns:1fr;}
+  .team-portrait{max-width:100%;}
+  .why-cols{grid-template-columns:1fr;}
+  .why-left-img{order:-1;}
+  .why-left-img img{height:280px;}
+}
 </style>
 </head>
 <body>
@@ -114,47 +111,40 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   <a href="/contact/" class="mob-l">Start a Project</a>
 </div>
 <main id="main">
-<header class="page-header">
+
+<!-- ── OPENING ── -->
+<section class="opening">
   <div>
-    <p class="page-label sr">About Zip Tie Studio</p>
-    <h1 class="page-title sr d1">The<br>Story.</h1>
+    <p class="opening-label sr">About Zip Tie Studio</p>
+    <h1 class="opening-title sr d1">The<br>Story.</h1>
   </div>
-  <div class="header-intro sr d2">
-    <p>Zip Tie Studio is a classical music production company built by musicians. We exist because the people who make recordings for a living should also understand the music from the inside.</p>
-  </div>
-</header>
-<section class="story">
-  <h2 class="story-hl sr">Why We<br>Exist.</h2>
-  <div class="story-text sr d1">
-    <p>Most recording sessions involve two separate teams — one for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. The audio team doesn't know why the cameras are positioned where they are. The video team doesn't know why the microphones are where they are.</p>
-    <p>We handle both. <strong>Microphone placement and camera angle are decided in the same conversation.</strong> The result sounds and looks like it belongs together, because it was made that way.</p>
-    <p>Zip Tie Studio was founded in 2023 by musicians trained at the Royal Conservatoire of Scotland. We understand the repertoire, the way sessions run, and what a final result needs to sound and look like.</p>
-    <p>Based in Glasgow and Edinburgh. Available throughout the UK and internationally.</p>
-  </div>
+  <p class="opening-intro sr d2">Zip Tie Studio is a classical music production company built by musicians. We handle audio and video as a single integrated service — because microphone placement and camera angle should be decided in the same conversation.</p>
 </section>
-<div class="story-image-band">
-  <img src="/images/ABOUT/about-orchestra.jpg" alt="Orchestra recording session with Zip Tie Studio" loading="lazy">
+
+<!-- ── FULL-WIDTH IMAGE ── -->
+<div style="width:100%; overflow:hidden;">
+  <img src="/images/ABOUT/about-orchestra.jpg" alt="Recording session" style="width:100%; height:clamp(300px,45vw,600px); object-fit:cover; object-position:center; display:block;">
 </div>
-<section class="stats">
-  <div class="stat sr"><div class="stat-n">2023</div><p class="stat-label">Founded</p></div>
-  <div class="stat sr d1"><div class="stat-n">6+</div><p class="stat-label">Label Clients</p></div>
-  <div class="stat sr d2"><div class="stat-n">UK &amp;<br>Intl</div><p class="stat-label">Area Served</p></div>
-  <div class="stat sr d3"><div class="stat-n">100%</div><p class="stat-label">Musician-Led</p></div>
-</section>
+
+<!-- ── TEAM ── -->
 <section class="team">
   <p class="team-label sr">The Team</p>
   <div class="team-grid">
-    <article class="team-card sr">
-      <div class="team-img"><img src="/images/TEAM/team-session-7.jpg" alt="Campbell Parker, Director and Audio & Video Producer at Zip Tie Studio" loading="lazy" style="object-position: center top"></div>
+    <article class="sr">
+      <div class="team-portrait">
+        <img src="/images/TEAM/team-session-7.jpg" alt="Campbell Parker, Director and Audio & Video Producer" loading="lazy" style="object-position:center top">
+      </div>
       <h3 class="team-name">Campbell Parker</h3>
       <p class="team-role">Director · Audio & Video Producer</p>
-      <p class="team-bio">Trained as a classical musician at the Royal Conservatoire of Scotland. Campbell leads all Zip Tie Studio productions, combining a background in orchestral performance with professional filmmaking and audio engineering. He is also Assistant Orchestra Manager at the Scottish Chamber Orchestra.</p>
+      <p class="team-bio">Trained at the Royal Conservatoire of Scotland. Campbell leads all productions, combining orchestral performance with professional filmmaking and audio engineering.</p>
     </article>
-    <article class="team-card sr d1">
-      <div class="team-img"><img src="/images/WORK/work-sean-9.jpg" alt="Matthew Swan, Audio Engineer and Producer at Zip Tie Studio" loading="lazy"></div>
+    <article class="sr d1">
+      <div class="team-portrait">
+        <img src="/images/WORK/work-sean-9.jpg" alt="Matthew Swan, Audio Engineer and Producer" loading="lazy">
+      </div>
       <h3 class="team-name">Matthew Swan</h3>
       <p class="team-role">Audio Engineer & Producer</p>
-      <p class="team-bio">Matthew brings broadcast and studio experience across classical, contemporary and live settings. His work with Zip Tie Studio spans album sessions, live concert recording and post-production — with an ear trained by years of professional performance as well as behind the console.</p>
+      <p class="team-bio">Audio engineer and producer with broadcast and studio experience across classical and contemporary settings. Matthew's ear is trained by years of professional performance as well as behind the console.</p>
     </article>
   </div>
 </section>
@@ -192,44 +182,18 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   </div>
 </section>
 
-<!-- ── TESTIMONIAL ── -->
-<section class="testi" aria-labelledby="testi-title">
-  <div class="testi-inner">
-    <div class="testi-quote-wrap sr">
-      <p class="testi-label">What our clients say</p>
-      <span class="testi-open" aria-hidden="true">"</span>
-      <blockquote>
-        <p class="testi-q" id="testi-title">
-          The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail. We're very pleased with the results and wouldn't hesitate to work with Zip Tie Studio again in future.
-        </p>
-        <footer class="testi-attr">
-          <cite class="testi-name">Alan Kerr</cite>
-          <p class="testi-role">Chairman · Scottish Young Musicians</p>
-        </footer>
-      </blockquote>
-    </div>
-    <div class="testi-img" aria-label="Session photograph">
-      <img
-        src="/images/ABOUT/about-pianist-session.jpg"
-        alt="Zip Tie Studio recording session" loading="lazy"
-        onerror="this.style.display='none'">
-    </div>
-  </div>
+<!-- ── QUOTE ── -->
+<section class="quote-band">
+  <span class="quote-mark" aria-hidden="true">"</span>
+  <blockquote>
+    <p class="quote-text sr">The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail.</p>
+    <footer class="sr d1">
+      <cite class="quote-attr-name">Alan Kerr</cite>
+      <p class="quote-attr-role">Chairman · Scottish Young Musicians</p>
+    </footer>
+  </blockquote>
 </section>
 
-<section class="clients">
-  <p class="clients-label sr">Who We've Worked With</p>
-  <div class="client-list sr d1">
-    <div class="client-item">Pentatone</div>
-    <div class="client-item">Southbank Centre</div>
-    <div class="client-item">Scottish Ensemble</div>
-    <div class="client-item">Dunedin Consort</div>
-    <div class="client-item">ABRSM</div>
-    <div class="client-item">NYOS</div>
-    <div class="client-item">University of Glasgow</div>
-    <div class="client-item">Sean Shibe</div>
-  </div>
-</section>
 </main>
 <footer>
   <div class="ft-logo">Zip Tie Studio</div>
@@ -250,9 +214,9 @@ function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute
 ham.addEventListener('click',()=>toggleMenu(!open));
 document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
-const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add(e.target.classList.contains('testi-img')?'revealed':'vis');obs.unobserve(e.target);}});},{threshold:0.08});
-document.querySelectorAll('.sr, .testi-img').forEach(el=>obs.observe(el));
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
 </script>
 </body>
-<!-- updated -->
+<!-- updated April 2026 -->
 </html>
