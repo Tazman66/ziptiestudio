@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Story | Zip Tie Studio</title>
-<meta name="description" content="Zip Tie Studio — broadcast-quality classical music production built by musicians. Based in Glasgow & Edinburgh, working across the UK and internationally since 2023.">
+<meta name="description" content="Zip Tie Studio, broadcast-quality classical music production built by musicians. Based in Glasgow and Edinburgh, working across the UK and internationally since 2023.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
@@ -38,34 +38,49 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .opening-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
 .opening-intro{font-size:clamp(16px,1.8vw,20px);line-height:1.75;color:rgba(238,236,232,.5);}
 
+/* ─── CTA BAR ─── */
+.cta-bar{padding:clamp(20px,3vw,32px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
+.cta-bar-text{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.4);}
+.cta-bar-link{font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 36px;text-decoration:none;transition:opacity .2s;white-space:nowrap;}
+.cta-bar-link:hover{opacity:.82;}
+
 /* ─── TEAM ─── */
 .team{padding:clamp(60px,8vw,100px) var(--pad);}
 .team-label{font-size:10px;font-weight:300;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(40px,5vw,64px);}
 .team-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,64px);}
-.team-portrait{width:100%;max-width:280px;aspect-ratio:1/1;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:20px;overflow:hidden;position:relative;}
+.team-portrait{width:100%;max-width:340px;aspect-ratio:4/5;background:#0c0c0c;border:1px solid rgba(238,236,232,.06);margin-bottom:20px;overflow:hidden;position:relative;}
 .team-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
 .team-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,3vw,32px);letter-spacing:.03em;margin-bottom:4px;}
 .team-role{font-size:10px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:16px;}
 .team-bio{font-size:clamp(14px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.4);}
+.team-bio+.team-bio{margin-top:14px;}
+
+/* ─── QUOTES ─── */
+.quote-section{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
+.quote-item{margin-bottom:clamp(48px,6vw,80px);max-width:800px;}
+.quote-item:last-child{margin-bottom:0;}
+.quote-text{font-family:'Outfit',sans-serif;font-size:clamp(18px,2.5vw,28px);font-weight:300;line-height:1.6;color:rgba(238,236,232,.8);margin-bottom:24px;}
+.quote-text+.quote-text{margin-top:20px;}
+.quote-author{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;}
+.quote-role{font-size:11px;font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:6px;}
 
 /* ─── WHY ─── */
-.why-section{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
+.why-section{padding:clamp(40px,5vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;}
 .why-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,8vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
-.why-cols{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;}
-.why-left-img img{width:100%;height:clamp(400px,50vw,700px);object-fit:cover;object-position:center;display:block;}
+.why-cols{grid-template-columns:1fr;max-width:800px;margin:0 auto;}
 .why-right{display:flex;flex-direction:column;gap:0;}
-.why-item{padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(238,236,232,.1);}
+.why-item{padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(238,236,232,.1);text-align:left;}
 .why-item:first-child{border-top:1px solid rgba(238,236,232,.1);}
 .why-n{font-size:10px;font-weight:300;letter-spacing:.15em;color:rgba(238,236,232,.28);display:block;margin-bottom:12px;}
 .why-item h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,32px);letter-spacing:.03em;margin-bottom:12px;}
 .why-item p{font-size:clamp(13px,1.4vw,16px);line-height:1.75;color:rgba(238,236,232,.4);}
 
-/* ─── QUOTE ─── */
-.quote-band{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;display:flex;flex-direction:column;align-items:center;}
-.quote-mark{font-family:'Bebas Neue',sans-serif;font-size:120px;color:rgba(238,236,232,.06);line-height:.5;margin-bottom:32px;display:block;}
-.quote-text{font-family:'Bebas Neue',sans-serif;font-size:clamp(26px,3.5vw,48px);letter-spacing:.025em;line-height:1.1;color:rgba(238,236,232,.8);max-width:900px;margin-bottom:40px;}
-.quote-attr-name{font-size:clamp(10px,1.2vw,13px);font-weight:400;letter-spacing:.15em;text-transform:uppercase;color:#eeece8;}
-.quote-attr-role{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:6px;}
+/* ─── PAGE CTA ─── */
+.page-cta{padding:clamp(60px,8vw,100px) var(--pad);text-align:center;display:flex;flex-direction:column;align-items:center;border-top:1px solid rgba(238,236,232,.1);}
+.page-cta-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(16px,2vw,24px);}
+.page-cta-sub{font-size:clamp(15px,1.6vw,18px);font-weight:300;line-height:1.75;color:rgba(238,236,232,.4);margin-bottom:clamp(28px,4vw,48px);}
+.page-cta-btn{font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:18px 48px;text-decoration:none;transition:opacity .2s;display:inline-block;}
+.page-cta-btn:hover{opacity:.82;}
 
 /* ─── FOOTER ─── */
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
@@ -84,11 +99,9 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
   .opening{grid-template-columns:1fr;}
+  .cta-bar{flex-direction:column;align-items:flex-start;}
   .team-grid{grid-template-columns:1fr;}
   .team-portrait{max-width:100%;}
-  .why-cols{grid-template-columns:1fr;}
-  .why-left-img{order:-1;}
-  .why-left-img img{height:280px;}
 }
 </style>
 </head>
@@ -118,8 +131,14 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <p class="opening-label sr">About Zip Tie Studio</p>
     <h1 class="opening-title sr d1">The<br>Story.</h1>
   </div>
-  <p class="opening-intro sr d2">Zip Tie Studio is a classical music production company built by musicians. We handle audio and video as a single integrated service — because microphone placement and camera angle should be decided in the same conversation.</p>
+  <p class="opening-intro sr d2">Zip Tie Studio is a classical music production company built by musicians. We handle audio and video as a single integrated service, because microphone placement and camera angle should be decided in the same conversation.</p>
 </section>
+
+<!-- ── CTA BAR ── -->
+<div class="cta-bar sr">
+  <span class="cta-bar-text">Ready to work together?</span>
+  <a href="/contact/" class="cta-bar-link">Start a Project</a>
+</div>
 
 <!-- ── FULL-WIDTH IMAGE ── -->
 <div style="width:100%; overflow:hidden;">
@@ -136,7 +155,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <h3 class="team-name">Campbell Parker</h3>
       <p class="team-role">Director · Audio & Video Producer</p>
-      <p class="team-bio">Trained at the Royal Conservatoire of Scotland. Campbell leads all productions, combining orchestral performance with professional filmmaking and audio engineering.</p>
+      <p class="team-bio">Campbell is a multi-disciplinary creative specialising in filmmaking, photography and audio recording. Trained as a classical musician at the Royal Conservatoire of Scotland, he has spent over a decade immersed in the arts as a performer, organiser and producer.</p>
+      <p class="team-bio">Based in Glasgow and Edinburgh, Campbell works throughout Scotland and beyond with clients including Pentatone, the Dunedin Consort, Scottish Ensemble, the Royal Conservatoire of Scotland and Scottish Young Musicians. Thoughtful, technically assured and deeply embedded in the world of classical music, he brings a musician's sensitivity and a producer's precision to every project.</p>
     </article>
     <article class="sr d1">
       <div class="team-portrait">
@@ -144,8 +164,29 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <h3 class="team-name">Matthew Swan</h3>
       <p class="team-role">Audio Engineer & Producer</p>
-      <p class="team-bio">Audio engineer and producer with broadcast and studio experience across classical and contemporary settings. Matthew's ear is trained by years of professional performance as well as behind the console.</p>
+      <p class="team-bio">Matthew is a record producer, sound engineer and audio editor with wide experience across the recorded classical music industry. His work spans the full range of the repertoire, from early music on period instruments to premiere recordings of contemporary works, and has featured in Gramophone, BBC Music Magazine and on BBC Radio 3.</p>
+      <p class="team-bio">His experience in realising the ideas of musicians and composers has led to chart-topping recordings and nominations from the leading international music press. Described by independent producer Andrew Keener as a natural in the recording studio, an empathetic presence whose people skills are as astute as those of his musicianship, Matthew brings rigour, warmth and genuine musical understanding to every session.</p>
     </article>
+  </div>
+</section>
+
+<!-- ── QUOTES ── -->
+<section class="quote-section">
+  <div class="quote-item sr">
+    <p class="quote-text">"The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail.</p>
+    <p class="quote-text">We're very pleased with the results and wouldn't hesitate to work with Zip Tie Studio again in future."</p>
+    <p class="quote-author">Alan Kerr</p>
+    <p class="quote-role">Chairman · Scottish Young Musicians</p>
+  </div>
+  <div class="quote-item sr d1">
+    <p class="quote-text">"Add quote here."</p>
+    <p class="quote-author">Name</p>
+    <p class="quote-role">Role · Organisation</p>
+  </div>
+  <div class="quote-item sr d2">
+    <p class="quote-text">"Add quote here."</p>
+    <p class="quote-author">Name</p>
+    <p class="quote-role">Role · Organisation</p>
   </div>
 </section>
 
@@ -154,9 +195,6 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   <p class="section-label sr">What Sets Us Apart</p>
   <h2 class="why-title sr d1">Why<br>Zip Tie<br>Studio?</h2>
   <div class="why-cols">
-    <div class="why-left-img sr d2">
-      <img src="/images/TEAM/team-campbell-6.jpg" alt="Campbell Parker at work" loading="lazy">
-    </div>
     <div class="why-right">
       <div class="why-item sr d1">
         <span class="why-n">01</span>
@@ -171,27 +209,22 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       <div class="why-item sr d3">
         <span class="why-n">03</span>
         <h3>Scotland-Based. UK-Ready.</h3>
-        <p>We know Scotland's halls and churches the way locals do. And we travel — London, Europe, wherever the project takes us. Distance has never killed a project we believed in.</p>
+        <p>We know Scotland's halls and churches the way locals do. We travel to London, Europe, wherever the project takes us. Distance has never killed a project we believed in.</p>
       </div>
       <div class="why-item sr d4">
         <span class="why-n">04</span>
         <h3>International Standard</h3>
-        <p>Our work is on Pentatone. That's the standard we hold every project to — debut album or competition submission, the approach doesn't change.</p>
+        <p>Our work is on Pentatone. That's the standard we hold every project to. Debut album or competition submission, the approach doesn't change.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── QUOTE ── -->
-<section class="quote-band">
-  <span class="quote-mark" aria-hidden="true">"</span>
-  <blockquote>
-    <p class="quote-text sr">The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail.</p>
-    <footer class="sr d1">
-      <cite class="quote-attr-name">Alan Kerr</cite>
-      <p class="quote-attr-role">Chairman · Scottish Young Musicians</p>
-    </footer>
-  </blockquote>
+<!-- ── PAGE CTA ── -->
+<section class="page-cta">
+  <h2 class="page-cta-hl sr">Let's Make Something<br>Exceptional.</h2>
+  <p class="page-cta-sub sr d1">Tell us about your project. We'll respond within 24 hours.</p>
+  <a href="/contact/" class="page-cta-btn sr d2">Start Your Project</a>
 </section>
 
 </main>
