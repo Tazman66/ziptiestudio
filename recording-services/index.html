@@ -31,12 +31,10 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
 .mob-nav.open{opacity:1;}
 .mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
-.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(32px,4vw,56px);border-bottom:1px solid rgba(238,236,232,.1);}
+.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(32px,4vw,48px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
 .page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
-.services-wrap{padding:clamp(40px,5vw,80px) var(--pad);}
-.services-intro{max-width:560px;margin-bottom:clamp(32px,4vw,56px);}
-.services-intro p{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
+.services-wrap{padding:0 var(--pad) clamp(40px,5vw,80px);}
 .svc-list{border-top:1px solid rgba(238,236,232,.1);}
 .svc-row{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;padding:0;border-bottom:1px solid rgba(238,236,232,.1);overflow:hidden;}
 .svc-img{width:100%;height:clamp(240px,30vw,420px);object-fit:cover;object-position:center;display:block;filter:brightness(0.75);transition:filter .4s ease;}
@@ -47,7 +45,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .svc-body{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.4);}
 .svc-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
 .svc-tag{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);border:1px solid rgba(238,236,232,.12);padding:5px 10px;}
-.rates-band{padding:clamp(40px,5vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.rates-band{padding:clamp(40px,5vw,72px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
 .rates-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:.02em;line-height:.92;}
 .rates-copy{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.4);}
 .rates-copy p+p{margin-top:12px;}
@@ -68,6 +66,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 @media(max-width:768px){
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
+  .page-header{grid-template-columns:1fr;}
   .svc-row{grid-template-columns:1fr;}
   .svc-img{height:220px;}
   .rates-band{grid-template-columns:1fr;}
@@ -94,18 +93,24 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </div>
 <main id="main">
 <header class="page-header">
-  <p class="page-label sr">What We Do</p>
-  <h1 class="page-title sr d1">Recording<br>Services.</h1>
+  <div>
+    <p class="page-label sr">What We Do</p>
+    <h1 class="page-title sr d1">Recording<br>Services.</h1>
+  </div>
+  <div class="sr d2" style="display:flex;flex-direction:column;justify-content:center;">
+    <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);">We handle audio and video as a single integrated service, not two separate productions bolted together. Every session is designed so that microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
+    <div style="margin-top:24px;">
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;">Ready to discuss your project?</p>
+      <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:12px 32px;text-decoration:none;transition:opacity .2s;">Get in Touch</a>
+    </div>
+  </div>
 </header>
 <section class="services-wrap">
-  <div class="services-intro sr">
-    <p>We handle audio and video as a single integrated service, not two separate productions bolted together. Every session is designed so that microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
-  </div>
   <div class="svc-list">
 
     <!-- 01 — image LEFT, content RIGHT -->
     <article class="svc-row sr">
-      <img class="svc-img" src="/images/ABOUT/about-orchestra.jpg" alt="Live concert recording" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/WORK/work-glasgow-singers-3.jpg" alt="Live concert recording" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
         <span class="svc-n">01</span>
         <h2 class="svc-title">Live Concert Recording</h2>
@@ -122,12 +127,12 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <p class="svc-body">Full session recording from first take through to label-ready masters. We work across churches, concert halls and studios, handling editing, mixing and mastering in-house so the chain of custody stays short and communication stays direct.</p>
         <div class="svc-tags"><span class="svc-tag">Studio Sessions</span><span class="svc-tag">Editing &amp; Mixing</span><span class="svc-tag">Mastering</span><span class="svc-tag">Label Delivery</span></div>
       </div>
-      <img class="svc-img" src="/images/WORK/work-sean-9.jpg" alt="CD and album production" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/WORK/work-sean-6.jpg" alt="CD and album production" loading="lazy" decoding="async">
     </article>
 
     <!-- 03 — image LEFT, content RIGHT -->
     <article class="svc-row sr d2">
-      <img class="svc-img" src="/images/TEAM/team-campbell-4.jpg" alt="Audition recording" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/ABOUT/about-portrait-bw.jpg" alt="Audition recording" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
         <span class="svc-n">03</span>
         <h2 class="svc-title">Audition Recording</h2>
@@ -144,12 +149,12 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <p class="svc-body">Cinematic multi-camera coverage of concerts and recitals designed with your social, press, and archive needs in mind. We know how to capture a performance without disrupting it.</p>
         <div class="svc-tags"><span class="svc-tag">Multi-camera</span><span class="svc-tag">4K</span><span class="svc-tag">Broadcast Format</span><span class="svc-tag">Social Cuts</span></div>
       </div>
-      <img class="svc-img" src="/images/ABOUT/about-camera-monitor.jpg" alt="Concert filming" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/WORK/work-zts-3.jpg" alt="Concert filming" loading="lazy" decoding="async">
     </article>
 
     <!-- 05 — image LEFT, content RIGHT -->
     <article class="svc-row sr d4">
-      <img class="svc-img" src="/images/WORK/work-sean-3.jpg" alt="Artist press kit" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/WORK/work-beth-taylor-2.jpg" alt="Artist press kit" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
         <span class="svc-n">05</span>
         <h2 class="svc-title">Artist Press Kit &amp; Promo</h2>
@@ -166,7 +171,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <p class="svc-body">Broadcast-quality live streaming for concerts and events. Encoding, delivery, and monitoring with optional multi-camera switching and live audio mixing. Delivered to any platform.</p>
         <div class="svc-tags"><span class="svc-tag">Live Broadcast</span><span class="svc-tag">YouTube / Vimeo</span><span class="svc-tag">Private Streams</span><span class="svc-tag">Multi-camera</span></div>
       </div>
-      <img class="svc-img" src="/images/WORK/work-zts-1.jpg" alt="Livestreaming" loading="lazy" decoding="async">
+      <img class="svc-img" src="/images/WORK/AyrChoralUnionRehearsal-1.jpg.webp" alt="Livestreaming" loading="lazy" decoding="async">
     </article>
 
   </div>
