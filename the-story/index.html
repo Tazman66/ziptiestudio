@@ -39,11 +39,6 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .opening-intro{font-size:clamp(14px,1.6vw,17px);line-height:1.85;color:rgba(238,236,232,.5);display:flex;flex-direction:column;justify-content:center;padding-top:0;}
 .opening-intro p+p{margin-top:18px;}
 
-/* ─── CTA BAR ─── */
-.cta-bar{padding:clamp(28px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
-.cta-bar-text{font-size:clamp(18px,2vw,24px);font-weight:300;letter-spacing:.04em;color:rgba(238,236,232,.5);}
-.cta-bar-link{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:#eeece8;text-decoration:none;border-bottom:1px solid rgba(238,236,232,.3);padding-bottom:2px;transition:border-color .2s;}
-.cta-bar-link:hover{border-color:#eeece8;}
 
 /* ─── TEAM ─── */
 .team{padding:clamp(60px,8vw,100px) var(--pad);}
@@ -103,7 +98,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
   .opening{grid-template-columns:1fr;}
-  .cta-bar{padding:clamp(24px,3vw,36px) var(--pad);}
+
   .team-grid{grid-template-columns:1fr;}
   .team-portrait{max-width:100%;}
   .why-right{grid-template-columns:1fr;}
@@ -143,14 +138,12 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <p>Zip Tie Studio is a classical music production company built by musicians. We started it because the people who make recordings for a living should also understand the music from the inside.</p>
     <p>Most recording sessions involve two separate teams. One for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. We handle both. Microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
     <p>We are based in Glasgow and Edinburgh and work throughout Scotland, the UK and internationally. Our clients include internationally recognised ensembles, labels and institutions, and every project, whatever the scale, gets the same level of attention.</p>
+    <div style="margin-top: clamp(24px, 3vw, 40px);">
+      <p style="font-size: clamp(12px, 1.3vw, 14px); letter-spacing: 0.15em; text-transform: uppercase; color: rgba(238,236,232,.4); margin-bottom: 16px;">Ready to work together?</p>
+      <a href="/contact/" style="display: inline-block; font-size: clamp(11px, 1.2vw, 13px); font-weight: 400; letter-spacing: 0.2em; text-transform: uppercase; color: #000; background: #eeece8; padding: 14px 36px; text-decoration: none; transition: opacity 0.2s;">Start a Project</a>
+    </div>
   </div>
 </section>
-
-<!-- ── CTA BAR ── -->
-<div class="cta-bar sr">
-  <span class="cta-bar-text">Ready to work together?</span>
-  <a href="/contact/" class="cta-bar-link">Start a Project</a>
-</div>
 
 <!-- ── FULL-WIDTH IMAGE ── -->
 <div style="width:100%; overflow:hidden;">
