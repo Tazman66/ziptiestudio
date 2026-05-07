@@ -33,10 +33,11 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
 
 /* ─── OPENING ─── */
-.opening{padding:calc(var(--pad) + 80px) var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;}
+.opening{padding:80px var(--pad) clamp(60px,8vw,100px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;}
 .opening-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
-.opening-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
-.opening-intro{font-size:clamp(16px,1.8vw,20px);line-height:1.75;color:rgba(238,236,232,.5);}
+.opening-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(72px,11vw,160px);letter-spacing:.01em;line-height:.85;}
+.opening-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
+.opening-intro p+p{margin-top:18px;}
 
 /* ─── CTA BAR ─── */
 .cta-bar{padding:clamp(20px,3vw,32px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;}
@@ -138,7 +139,11 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <p class="opening-label sr">About Zip Tie Studio</p>
     <h1 class="opening-title sr d1">The<br>Story.</h1>
   </div>
-  <p class="opening-intro sr d2">Zip Tie Studio is a classical music production company built by musicians. We handle audio and video as a single integrated service, because microphone placement and camera angle should be decided in the same conversation.</p>
+  <div class="opening-intro sr d2">
+    <p>Zip Tie Studio is a classical music production company built by musicians. We started it because the people who make recordings for a living should also understand the music from the inside.</p>
+    <p>Most recording sessions involve two separate teams. One for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. We handle both. Microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
+    <p>We are based in Glasgow and Edinburgh and work throughout Scotland, the UK and internationally. Our clients include internationally recognised ensembles, labels and institutions, and every project, whatever the scale, gets the same level of attention.</p>
+  </div>
 </section>
 
 <!-- ── CTA BAR ── -->
@@ -149,7 +154,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <!-- ── FULL-WIDTH IMAGE ── -->
 <div style="width:100%; overflow:hidden;">
-  <img src="/images/ABOUT/about-orchestra.jpg" alt="Recording session" loading="lazy" decoding="async" style="width:100%; height:clamp(300px,45vw,600px); object-fit:cover; object-position:center; display:block;">
+  <img src="/images/ABOUT/about-orchestra.jpg" alt="Recording session" loading="lazy" decoding="async" style="width:100%; height:clamp(160px,18vw,260px); object-fit:cover; object-position:center; display:block;">
 </div>
 
 <!-- ── TEAM ── -->
