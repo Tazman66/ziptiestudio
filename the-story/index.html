@@ -40,10 +40,10 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .opening-intro p+p{margin-top:18px;}
 
 /* ─── CTA BAR ─── */
-.cta-bar{padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:24px;}
-.cta-bar-text{font-size:clamp(32px,4vw,56px);font-weight:300;letter-spacing:.02em;color:#eeece8;}
-.cta-bar-link{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 40px;text-decoration:none;display:inline-block;transition:opacity .2s;white-space:nowrap;}
-.cta-bar-link:hover{opacity:.82;}
+.cta-bar{padding:clamp(28px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;}
+.cta-bar-text{font-size:clamp(18px,2vw,24px);font-weight:300;letter-spacing:.04em;color:rgba(238,236,232,.5);}
+.cta-bar-link{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:#eeece8;text-decoration:none;border-bottom:1px solid rgba(238,236,232,.3);padding-bottom:2px;transition:border-color .2s;}
+.cta-bar-link:hover{border-color:#eeece8;}
 
 /* ─── TEAM ─── */
 .team{padding:clamp(60px,8vw,100px) var(--pad);}
@@ -103,7 +103,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
   .opening{grid-template-columns:1fr;}
-  .cta-bar{flex-direction:column;align-items:flex-start;}
+  .cta-bar{padding:clamp(24px,3vw,36px) var(--pad);}
   .team-grid{grid-template-columns:1fr;}
   .team-portrait{max-width:100%;}
   .why-right{grid-template-columns:1fr;}
