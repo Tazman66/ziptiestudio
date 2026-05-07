@@ -11,8 +11,9 @@
 <meta property="og:description" content="Broadcast-quality audio and cinematic video for classical musicians across the UK and beyond. Based in Glasgow & Edinburgh.">
 <meta property="og:image" content="https://www.ziptiestudio.co.uk/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context":"https://schema.org" "@type":"LocalBusiness" "name":"Zip Tie Studio" "description":"Broadcast-quality audio recording and cinematic video production for classical artists, ensembles and labels across the UK and internationally." "url":"https://www.ziptiestudio.co.uk" "address":{"@type":"PostalAddress" "addressLocality":"Glasgow" "addressRegion":"Scotland" "addressCountry":"GB"},"foundingDate":"2023" "areaServed":["United Kingdom" "Europe"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Zip Tie Studio","description":"Broadcast-quality audio recording and cinematic video production for classical artists, ensembles and labels across the UK and internationally.","url":"https://www.ziptiestudio.co.uk","address":{"@type":"PostalAddress","addressLocality":"Glasgow","addressRegion":"Scotland","addressCountry":"GB"},"foundingDate":"2023","areaServed":["United Kingdom","Europe"]}</script>
 
+<link rel="preload" as="image" href="/images/HERO/hero-main.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
@@ -70,7 +71,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .nav-cta { font-size:clamp(11px,1.2vw,14px); font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:#eeece8; text-decoration:none; border:1px solid rgba(238,236,232,.22); padding:12px 28px; transition:background .2s, color .2s; }
 .nav-cta:hover { background:#eeece8; color:#000000; }
 
-.ham { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
+.ham { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; min-width:44px; min-height:44px; justify-content:center; align-items:center; }
 .ham span { display:block; width:22px; height:1px; background:#eeece8; transition:transform .3s, opacity .3s; }
 .ham.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
 .ham.open span:nth-child(2) { opacity:0; }
@@ -495,7 +496,7 @@ footer {
 <!-- ── HERO ── -->
 <section class="hero" aria-label="Hero">
   <div class="hero-bg">
-    <img src="/images/HERO/hero-main.jpg" alt="Recording session at Zip Tie Studio" />
+    <img src="/images/HERO/hero-main.jpg" alt="Recording session at Zip Tie Studio" fetchpriority="high" decoding="async">
   </div>
 
   <div class="hero-content">
@@ -536,7 +537,7 @@ footer {
     <img
       src="/images/WORK/work-sean-8.jpg"
       alt="Matthew, audio producer at work during recording session"
-      loading="lazy">
+      loading="lazy" decoding="async">
   </div>
 </section>
 
@@ -585,7 +586,7 @@ footer {
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/work-sean-1.jpg">
       <img src="/images/WORK/work-sean-1.jpg"
-        alt="Sean Shibe, artist video for Southbank Centre, Manchester Collective tour" loading="lazy" onerror="this.style.display='none'">
+        alt="Sean Shibe, artist video for Southbank Centre, Manchester Collective tour" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <div class="wi-label">
         <div class="wi-client">Sean Shibe — Pentatone</div>
         <div class="wi-type">Artist Film &amp; Press Kit · International</div>
@@ -596,7 +597,7 @@ footer {
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/ABOUT/about-orchestra.jpg">
       <img src="/images/ABOUT/about-orchestra.jpg"
-        alt="Scottish Ensemble, live concert recording" loading="lazy" onerror="this.style.display='none'">
+        alt="Scottish Ensemble, live concert recording" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <div class="wi-label">
         <div class="wi-client">Scottish Ensemble</div>
         <div class="wi-type">Live Concert Recording · Multicam &amp; Microphone Capture</div>
@@ -607,7 +608,7 @@ footer {
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/work-beth-taylor-1.jpg">
       <img src="/images/WORK/work-beth-taylor-1.jpg"
-        alt="Beth Taylor, artist film for Outhere Music" loading="lazy" onerror="this.style.display='none'">
+        alt="Beth Taylor, artist film for Outhere Music" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <div class="wi-label">
         <div class="wi-client">Beth Taylor — Outhere Music</div>
         <div class="wi-type">Artist Film</div>
@@ -618,7 +619,7 @@ footer {
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/ZIPTIEGB-1.jpg">
       <img src="/images/WORK/ZIPTIEGB-1.jpg"
-        alt="Inscriptions in Granite, The Glasgow Barons, Govan &amp; Linthouse Parish Church" loading="lazy" onerror="this.style.display='none'">
+        alt="Inscriptions in Granite, The Glasgow Barons, Govan &amp; Linthouse Parish Church" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <div class="wi-label">
         <div class="wi-client">Lewis Banks</div>
         <div class="wi-type">Inscriptions in Granite · Produced Concert Film</div>
@@ -629,7 +630,7 @@ footer {
     <div class="wi" role="listitem" tabindex="0"
       data-img="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp">
       <img src="/images/WORK/AyrChoralUnionRehearsal-2.jpg.webp"
-        alt="xx, Lotte, album recording session at Stockbridge Church, Edinburgh" loading="lazy" onerror="this.style.display='none'">
+        alt="xx, Lotte, album recording session at Stockbridge Church, Edinburgh" loading="lazy" decoding="async" onerror="this.style.display='none'">
       <div class="wi-label">
         <div class="wi-client">xx, Lotte</div>
         <div class="wi-type">CD Recording &amp; Music Video</div>
@@ -649,25 +650,25 @@ footer {
   </div>
   <div class="logo-grid">
     <a href="https://www.pentatonemusic.com" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/PENTATONE_HORIZONTAL_BLACK.png.webp" alt="Pentatone">
+      <img loading="lazy" decoding="async" src="/images/logos/PENTATONE_HORIZONTAL_BLACK.png.webp" alt="Pentatone">
     </a>
     <a href="https://www.southbankcentre.co.uk" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/Southbank_Centre_Logo.png.webp" alt="Southbank Centre">
+      <img loading="lazy" decoding="async" src="/images/logos/Southbank_Centre_Logo.png.webp" alt="Southbank Centre">
     </a>
     <a href="https://www.outhere-music.com" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/OuthereMusic.png.webp" alt="Outhere Music">
+      <img loading="lazy" decoding="async" src="/images/logos/OuthereMusic.png.webp" alt="Outhere Music">
     </a>
     <a href="https://www.scottishensemble.co.uk" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/ScottishEnsemble.png" alt="Scottish Ensemble">
+      <img loading="lazy" decoding="async" src="/images/logos/ScottishEnsemble.png" alt="Scottish Ensemble">
     </a>
     <a href="https://www.scottishyoungmusicians.com" target="_blank" rel="noopener" class="logo-item logo-item--mono">
-      <img src="/images/logos/SYMC-Logo.png.webp" alt="Scottish Young Musicians">
+      <img loading="lazy" decoding="async" src="/images/logos/SYMC-Logo.png.webp" alt="Scottish Young Musicians">
     </a>
     <a href="https://www.rcs.ac.uk" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/rcs-logo-transparent.png" alt="Royal Conservatoire of Scotland">
+      <img loading="lazy" decoding="async" src="/images/logos/rcs-logo-transparent.png" alt="Royal Conservatoire of Scotland">
     </a>
     <a href="https://www.gla.ac.uk" target="_blank" rel="noopener" class="logo-item">
-      <img src="/images/logos/glasgow-uni-logo.png.png" alt="University of Glasgow">
+      <img loading="lazy" decoding="async" src="/images/logos/glasgow-uni-logo.png.png" alt="University of Glasgow">
     </a>
   </div>
 </section>

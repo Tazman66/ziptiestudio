@@ -23,7 +23,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .nav-links a:hover,.nav-links a.active{color:#eeece8;}
 .nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
-.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center;}
 .ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
 .ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
 .ham.open span:nth-child(2){opacity:0;}
@@ -35,7 +35,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;}
 .filters{padding:clamp(32px,4vw,52px) var(--pad);display:flex;gap:16px;flex-wrap:wrap;}
-.filter-btn{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid rgba(238,236,232,.18);color:rgba(238,236,232,.4);padding:8px 18px;cursor:pointer;transition:all .2s;}
+.filter-btn{font-size:10px;font-weight:300;letter-spacing:.18em;text-transform:uppercase;background:none;border:1px solid rgba(238,236,232,.18);color:rgba(238,236,232,.4);padding:12px 18px;cursor:pointer;transition:all .2s;min-height:44px;}
 .filter-btn:hover,.filter-btn.on{border-color:rgba(238,236,232,.7);color:#eeece8;}
 .work-section{padding:0 var(--pad) clamp(80px,10vw,130px);}
 .work-masonry{columns:2;gap:24px;}
@@ -100,35 +100,35 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <section class="work-section">
   <div class="work-masonry" id="work-grid">
     <div class="work-card tall" data-type="label audio">
-      <div class="work-card-img"><img src="/images/WORK/work-sean-1.jpg" alt="Pentatone album recording session" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-1.jpg" alt="Pentatone album recording session" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">Pentatone</p><h2 class="work-title">Chamber Works Recording</h2><p class="work-type">Studio Recording · Editing · Mastering</p></div>
     </div>
     <div class="work-card" data-type="live video">
-      <div class="work-card-img"><img src="/images/WORK/work-beth-taylor-1.jpg" alt="Southbank Centre concert film" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-beth-taylor-1.jpg" alt="Southbank Centre concert film" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">Southbank Centre</p><h2 class="work-title">Royal Festival Hall Coverage</h2><p class="work-type">Concert Film · Multi-camera</p></div>
     </div>
     <div class="work-card" data-type="audio live">
-      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-1.jpg" alt="Scottish Ensemble live recording" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-1.jpg" alt="Scottish Ensemble live recording" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">Scottish Ensemble</p><h2 class="work-title">Season Concert Series</h2><p class="work-type">Live Recording · Post-production</p></div>
     </div>
     <div class="work-card tall" data-type="video label">
-      <div class="work-card-img"><img src="/images/WORK/work-sean-2.jpg" alt="Dunedin Consort promo film" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-2.jpg" alt="Dunedin Consort promo film" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">Dunedin Consort</p><h2 class="work-title">Artist & Release Campaign</h2><p class="work-type">Promo Film · Press Photography</p></div>
     </div>
     <div class="work-card" data-type="audio label">
-      <div class="work-card-img"><img src="/images/WORK/work-zts-1.jpg" alt="ABRSM educational recording session" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-zts-1.jpg" alt="ABRSM educational recording session" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">ABRSM</p><h2 class="work-title">Grade Syllabus Recording</h2><p class="work-type">Studio Recording · Editing</p></div>
     </div>
     <div class="work-card" data-type="audio live">
-      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-2.jpg" alt="National Youth Orchestra Scotland live recording" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-glasgow-singers-2.jpg" alt="National Youth Orchestra Scotland live recording" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">NYOS</p><h2 class="work-title">National Youth Orchestra Scotland</h2><p class="work-type">Live Recording · Livestream</p></div>
     </div>
     <div class="work-card tall" data-type="video live">
-      <div class="work-card-img"><img src="/images/WORK/work-zts-2.jpg" alt="University of Glasgow ceremonial and live events" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-zts-2.jpg" alt="University of Glasgow ceremonial and live events" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">University of Glasgow</p><h2 class="work-title">Ceremonial & Live Events</h2><p class="work-type">Multi-camera · Livestream</p></div>
     </div>
     <div class="work-card" data-type="video label">
-      <div class="work-card-img"><img src="/images/WORK/work-sean-3.jpg" alt="Sean Shibe artist documentary film" loading="lazy"></div>
+      <div class="work-card-img"><img src="/images/WORK/work-sean-3.jpg" alt="Sean Shibe artist documentary film" loading="lazy" decoding="async"></div>
       <div class="work-meta"><p class="work-client">Sean Shibe</p><h2 class="work-title">Artist Documentary Film</h2><p class="work-type">Documentary · Artist Film</p></div>
     </div>
   </div>
