@@ -39,6 +39,11 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .svc-row{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch;padding:0;border-bottom:1px solid rgba(238,236,232,.1);overflow:hidden;}
 .svc-img{width:100%;height:clamp(240px,30vw,420px);object-fit:cover;object-position:center;display:block;filter:brightness(0.75);transition:filter .4s ease;}
 .svc-row:hover .svc-img{filter:brightness(0.9);}
+.svc-link-wrap{display:block;text-decoration:none;color:inherit;}
+.svc-link-wrap:hover .svc-title{opacity:.6;transition:opacity .3s ease;}
+.svc-link-wrap:hover .svc-img{filter:brightness(0.95);}
+.svc-link-wrap:hover .svc-content-wrap{padding-left:calc(clamp(32px,4vw,56px) + 8px);transition:padding-left .3s ease;}
+.svc-title{transition:opacity .3s ease;}
 .svc-content-wrap{padding:clamp(32px,4vw,56px);display:flex;flex-direction:column;justify-content:center;background:#000;}
 .svc-n{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;color:rgba(238,236,232,.18);margin-bottom:16px;display:block;}
 .svc-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,3vw,32px);letter-spacing:.02em;margin-bottom:12px;}
@@ -109,6 +114,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   <div class="svc-list">
 
     <!-- 01 — image LEFT, content RIGHT -->
+    <a href="/recording-services/live-concert-recording/" class="svc-link-wrap">
     <article class="svc-row sr">
       <img class="svc-img" src="/images/WORK/work-glasgow-singers-3.jpg" alt="Live concert recording" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
@@ -118,8 +124,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <div class="svc-tags"><span class="svc-tag">Stereo &amp; Surround</span><span class="svc-tag">Multi-channel</span><span class="svc-tag">Live Mixing</span><span class="svc-tag">Post-production</span></div>
       </div>
     </article>
+    </a>
 
     <!-- 02 — content LEFT, image RIGHT -->
+    <a href="/recording-services/cd-album-production/" class="svc-link-wrap">
     <article class="svc-row sr d1">
       <div class="svc-content-wrap">
         <span class="svc-n">02</span>
@@ -129,8 +137,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <img class="svc-img" src="/images/WORK/work-sean-6.jpg" alt="CD and album production" loading="lazy" decoding="async">
     </article>
+    </a>
 
     <!-- 03 — image LEFT, content RIGHT -->
+    <a href="/recording-services/audition-recording/" class="svc-link-wrap">
     <article class="svc-row sr d2">
       <img class="svc-img" src="/images/ABOUT/about-portrait-bw.jpg" alt="Audition recording" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
@@ -140,8 +150,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <div class="svc-tags"><span class="svc-tag">Orchestral Auditions</span><span class="svc-tag">Competition Tapes</span><span class="svc-tag">Conservatoire</span><span class="svc-tag">Quick Turnaround</span></div>
       </div>
     </article>
+    </a>
 
     <!-- 04 — content LEFT, image RIGHT -->
+    <a href="/recording-services/concert-filming/" class="svc-link-wrap">
     <article class="svc-row sr d3">
       <div class="svc-content-wrap">
         <span class="svc-n">04</span>
@@ -151,8 +163,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <img class="svc-img" src="/images/WORK/work-zts-3.jpg" alt="Concert filming" loading="lazy" decoding="async">
     </article>
+    </a>
 
     <!-- 05 — image LEFT, content RIGHT -->
+    <a href="/recording-services/artist-press-content/" class="svc-link-wrap">
     <article class="svc-row sr d4">
       <img class="svc-img" src="/images/WORK/work-beth-taylor-2.jpg" alt="Artist press kit" loading="lazy" decoding="async">
       <div class="svc-content-wrap">
@@ -162,8 +176,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <div class="svc-tags"><span class="svc-tag">Artist Portraits</span><span class="svc-tag">Promo Films</span><span class="svc-tag">Press Packs</span><span class="svc-tag">Social Content</span></div>
       </div>
     </article>
+    </a>
 
     <!-- 06 — content LEFT, image RIGHT -->
+    <a href="/recording-services/livestreaming/" class="svc-link-wrap">
     <article class="svc-row sr d5">
       <div class="svc-content-wrap">
         <span class="svc-n">06</span>
@@ -173,6 +189,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       </div>
       <img class="svc-img" src="/images/ABOUT/about-camera-monitor.jpg" alt="Livestreaming" loading="lazy" decoding="async">
     </article>
+    </a>
 
   </div>
 </section>
