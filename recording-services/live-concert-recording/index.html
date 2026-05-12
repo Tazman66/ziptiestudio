@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Concert Recording | Zip Tie Studio</title>
+<meta name="description" content="Professional live concert recording for orchestras, choirs, chamber ensembles and soloists. Multi-microphone capture, minimal processing, maximum transparency.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,section,div,article,header,footer,main,aside,nav{background-color:transparent;}
+html,body{background-color:#000!important;color:#eeece8!important;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{--off:#eeece8;--pad:clamp(20px,5vw,60px);}
+body{background:#000;color:#eeece8;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px var(--pad);transition:padding .4s;}
+nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#eeece8;}
+.nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:#eeece8;color:#000;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center;}
+.ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
+.mob-nav.open{opacity:1;}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
+
+/* PAGE HEADER */
+.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(32px,4vw,48px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,110px);letter-spacing:.01em;line-height:.88;}
+.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
+.header-cta-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;display:block;margin-top:24px;}
+.header-cta-btn{display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:12px 32px;text-decoration:none;transition:opacity .2s;}
+.header-cta-btn:hover{opacity:.82;}
+
+/* BANNER */
+.banner{overflow:hidden;}
+.banner-img{width:100%;height:clamp(300px,40vw,560px);object-fit:cover;object-position:center;display:block;filter:brightness(.8);}
+
+/* SECTION SHARED */
+.section-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(32px,4vw,56px);}
+
+/* WHAT WE OFFER */
+.offer-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);}
+.offer-card{background:#000;padding:clamp(28px,3vw,44px);}
+.offer-card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,30px);letter-spacing:.04em;margin-bottom:16px;}
+.offer-card-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.5);margin-bottom:20px;}
+.offer-tags{font-size:clamp(10px,1.1vw,12px);letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.25);line-height:1.6;}
+
+/* HOW IT WORKS */
+.hiw-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
+.hiw-list{border-top:1px solid rgba(238,236,232,.1);}
+.hiw-step{display:grid;grid-template-columns:clamp(56px,7vw,88px) 1fr;gap:clamp(24px,3vw,48px);align-items:start;padding:clamp(28px,3vw,44px) 0;border-bottom:1px solid rgba(238,236,232,.1);}
+.hiw-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,5vw,64px);letter-spacing:.02em;color:rgba(238,236,232,.12);line-height:1;padding-top:4px;}
+.hiw-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.2vw,26px);letter-spacing:.04em;margin-bottom:10px;}
+.hiw-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.5);}
+
+/* PRICING */
+.pricing-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);text-align:center;}
+.pricing-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:.02em;margin-bottom:clamp(16px,2vw,24px);}
+.pricing-body{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);max-width:560px;margin:0 auto clamp(32px,4vw,48px);}
+.pricing-cta{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
+.pricing-cta:hover{opacity:.82;}
+
+/* RELATED WORK */
+.related-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
+.related-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px);}
+.related-card{display:block;text-decoration:none;color:inherit;}
+.related-img-wrap{overflow:hidden;margin-bottom:16px;}
+.related-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;filter:brightness(.7);transition:filter .4s ease;}
+.related-card:hover .related-img{filter:brightness(.9);}
+.related-client{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.04em;margin-bottom:4px;}
+.related-sub{font-size:clamp(10px,1.2vw,13px);letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+
+/* BOTTOM CTA */
+.page-cta{padding:clamp(60px,8vw,100px) var(--pad);text-align:center;}
+.page-cta-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(16px,2vw,28px);}
+.page-cta-body{font-size:clamp(14px,1.5vw,16px);color:rgba(238,236,232,.4);margin-bottom:clamp(28px,3vw,44px);}
+.page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
+.page-cta-btn:hover{opacity:.82;}
+
+/* FOOTER */
+footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
+.ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a:hover{color:#eeece8;}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-social{display:flex;gap:20px;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link:hover{color:#eeece8;}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}.d5{transition-delay:.39s}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .ham{display:flex;}
+  .page-header{grid-template-columns:1fr;}
+  .offer-grid{grid-template-columns:1fr;}
+  .hiw-step{grid-template-columns:auto 1fr;gap:20px;}
+  .related-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/" class="active">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a href="/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="/work/" class="mob-l">Work</a>
+  <a href="/recording-services/" class="mob-l">Services</a>
+  <a href="/the-story/" class="mob-l">About</a>
+  <a href="/contact/" class="mob-l">Start a Project</a>
+</div>
+
+<main id="main">
+
+<header class="page-header">
+  <div>
+    <p class="page-label sr">Live Concert Recording</p>
+    <h1 class="page-title sr d1">We Capture<br>The Performance.</h1>
+  </div>
+  <div class="sr d2" style="display:flex;flex-direction:column;justify-content:center;">
+    <p class="page-intro">From a string quartet in a village church to a full orchestra in a concert hall, we place microphones before the audience arrives and leave with a recording that sounds like the room. Minimal processing. Maximum transparency.</p>
+    <span class="header-cta-label">Ready to discuss your project?</span>
+    <a href="/contact/" class="header-cta-btn">Start a Project</a>
+  </div>
+</header>
+
+<div class="banner sr">
+  <img class="banner-img" src="/images/WORK/EMF_Day_3-7.jpg" alt="Live concert recording" fetchpriority="high" decoding="async">
+</div>
+
+<section class="offer-section">
+  <p class="section-label sr">What We Offer</p>
+  <div class="offer-grid">
+    <div class="offer-card sr">
+      <h2 class="offer-card-title">The Setup</h2>
+      <p class="offer-card-body">We use high-quality condenser microphone arrays, designed around the acoustic profile of your venue. Every placement decision is made with your hall in mind — not a template from the last job.</p>
+      <p class="offer-tags">Up to 24 inputs · Stereo &amp; surround · Multi-channel</p>
+    </div>
+    <div class="offer-card sr d1">
+      <h2 class="offer-card-title">The Session</h2>
+      <p class="offer-card-body">We arrive early, work quietly, and stay out of the way of your rehearsal. On the day of the concert, you will not notice we are there. After the final note, we pack down and leave the space as we found it.</p>
+      <p class="offer-tags">On-site monitoring · Live mix · Discreet setup</p>
+    </div>
+    <div class="offer-card sr d2">
+      <h2 class="offer-card-title">The Delivery</h2>
+      <p class="offer-card-body">Edited, mixed and mastered files delivered to your specification. Broadcast-ready, streaming-ready, or label-ready — whichever the project requires. Typical turnaround two to four weeks.</p>
+      <p class="offer-tags">Editing &amp; mixing · Mastering · Label delivery</p>
+    </div>
+  </div>
+</section>
+
+<section class="hiw-section">
+  <p class="section-label sr">How It Works</p>
+  <div class="hiw-list">
+    <div class="hiw-step sr">
+      <span class="hiw-n">01</span>
+      <div>
+        <h2 class="hiw-title">Pre-Session Consultation</h2>
+        <p class="hiw-body">We talk through the venue, the repertoire and your intended use for the recording. That conversation shapes every decision that follows.</p>
+      </div>
+    </div>
+    <div class="hiw-step sr d1">
+      <span class="hiw-n">02</span>
+      <div>
+        <h2 class="hiw-title">Microphone Placement</h2>
+        <p class="hiw-body">We visit the venue in advance where possible, or arrive early on the day. Placement is designed around the specific acoustic of the space.</p>
+      </div>
+    </div>
+    <div class="hiw-step sr d2">
+      <span class="hiw-n">03</span>
+      <div>
+        <h2 class="hiw-title">Recording</h2>
+        <p class="hiw-body">Multi-track capture throughout the session. We monitor in real time and flag anything that needs a retake before you leave the hall.</p>
+      </div>
+    </div>
+    <div class="hiw-step sr d3">
+      <span class="hiw-n">04</span>
+      <div>
+        <h2 class="hiw-title">Editing &amp; Post-Production</h2>
+        <p class="hiw-body">We edit the raw session into a complete recording, handle noise reduction where needed, and mix to a natural, transparent result.</p>
+      </div>
+    </div>
+    <div class="hiw-step sr d4">
+      <span class="hiw-n">05</span>
+      <div>
+        <h2 class="hiw-title">Delivery</h2>
+        <p class="hiw-body">Final files delivered in your required format. We are available for revisions and happy to liaise directly with your label or distributor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing-section sr">
+  <h2 class="pricing-title">Pricing</h2>
+  <p class="pricing-body">Every project is different. We price on the basis of session length, venue, and post-production requirements. As a guide, live concert recording projects start from £1,500.</p>
+  <a href="/contact/" class="pricing-cta">Get a Quote</a>
+</section>
+
+<section class="related-section">
+  <p class="section-label sr">Related Work</p>
+  <div class="related-grid">
+    <a href="/work/" class="related-card sr">
+      <div class="related-img-wrap">
+        <img class="related-img" src="/images/ABOUT/about-orchestra.jpg" alt="Scottish Ensemble" loading="lazy" decoding="async">
+      </div>
+      <h3 class="related-client">Scottish Ensemble</h3>
+      <p class="related-sub">Live Concert Recording</p>
+    </a>
+    <a href="/work/" class="related-card sr d1">
+      <div class="related-img-wrap">
+        <img class="related-img" src="/images/WORK/work-glasgow-singers-2.jpg" alt="Glasgow Singers" loading="lazy" decoding="async">
+      </div>
+      <h3 class="related-client">Glasgow Singers</h3>
+      <p class="related-sub">Live Concert Recording</p>
+    </a>
+  </div>
+</section>
+
+<section class="page-cta sr">
+  <h2 class="page-cta-hl">Ready to<br>Record?</h2>
+  <p class="page-cta-body">Tell us about your project. We will respond within 24 hours.</p>
+  <a href="/contact/" class="page-cta-btn">Start a Project</a>
+</section>
+
+</main>
+
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.instagram.com/_zip_tie_studio_/" target="_blank" rel="noopener" aria-label="Instagram" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg></a>
+    <a href="https://www.linkedin.com/company/98889420/" target="_blank" rel="noopener" aria-label="LinkedIn" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+    <a href="https://www.youtube.com/@ziptie-studio" target="_blank" rel="noopener" aria-label="YouTube" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg></a>
+  </div>
+  <p class="ft-copy">© 2026 Zip Tie Studio · UK &amp; International</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
+let open=false;
+function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);mob.style.display=open?'flex':'none';requestAnimationFrame(()=>mob.classList.toggle('open',open));document.body.style.overflow=open?'hidden':'';}
+ham.addEventListener('click',()=>toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
