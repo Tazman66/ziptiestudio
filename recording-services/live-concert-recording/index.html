@@ -67,10 +67,12 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .hiw-body{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);}
 
 /* PRICING */
-.pricing-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);text-align:center;}
-.pricing-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:.02em;margin-bottom:clamp(16px,2vw,24px);}
-.pricing-body{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);max-width:560px;margin:0 auto clamp(32px,4vw,48px);}
-.pricing-cta{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
+.pricing-section{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;}
+.pricing-price{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,100px);letter-spacing:.01em;line-height:.88;margin-bottom:12px;}
+.pricing-per{font-size:clamp(10px,1.2vw,13px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+.pricing-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.5);}
+.pricing-body p+p{margin-top:16px;}
+.pricing-cta{display:inline-block;margin-top:28px;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .pricing-cta:hover{opacity:.82;}
 
 /* RELATED WORK */
@@ -111,7 +113,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .ham{display:flex;}
   .page-header{grid-template-columns:1fr;}
   .offer-grid{grid-template-columns:1fr;}
-  .hiw-step{grid-template-columns:auto 1fr;gap:20px;}
+  .hiw-list{grid-template-columns:1fr;}
+  .pricing-section{grid-template-columns:1fr;}
   .related-grid{grid-template-columns:1fr;}
 }
 </style>
@@ -216,9 +219,19 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </section>
 
 <section class="pricing-section sr">
-  <h2 class="pricing-title">Pricing</h2>
-  <p class="pricing-body">Every project is different. We price on the basis of session length, venue, and post-production requirements. As a guide, live concert recording projects start from £1,500.</p>
-  <a href="/contact/" class="pricing-cta">Get a Quote</a>
+  <div>
+    <p class="section-label">Pricing</p>
+    <p class="pricing-price">From £1,500</p>
+    <p class="pricing-per">per project</p>
+  </div>
+  <div>
+    <div class="pricing-body">
+      <p>Standard live concert recording projects include pre-session consultation, on-site microphone setup, full multi-track recording, editing and stereo mix. Additional services including surround mixing, video sync and label mastering are available on request.</p>
+      <p>Projects are priced on the basis of session length, venue location and post-production scope. We will always provide a clear written quote before any work begins.</p>
+      <p>We work with ensembles, soloists, labels and institutions of all sizes. The approach does not change with the budget.</p>
+    </div>
+    <a href="/contact/" class="pricing-cta">Get a Quote</a>
+  </div>
 </section>
 
 <section class="related-section">
