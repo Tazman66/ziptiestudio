@@ -43,7 +43,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* BANNER */
 .banner{overflow:hidden;}
-.banner-img{width:100%;height:clamp(200px,22vw,320px);object-fit:cover;object-position:center;display:block;filter:brightness(.8);}
+.banner-img{width:100%;height:clamp(200px,22vw,320px);object-fit:cover;object-position:center top;display:block;filter:brightness(.8);}
 
 /* SECTION SHARED */
 .section-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:clamp(32px,4vw,56px);}
@@ -60,11 +60,11 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* HOW IT WORKS */
 .hiw-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
-.hiw-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.08);}
-.hiw-step{display:grid;grid-template-columns:auto 1fr;gap:clamp(16px,2vw,24px);align-items:start;padding:clamp(20px,2.5vw,32px);background:#000;}
-.hiw-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,56px);letter-spacing:.02em;color:rgba(238,236,232,.12);line-height:1;padding-top:2px;}
-.hiw-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.04em;margin-bottom:8px;}
-.hiw-body{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);}
+.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);margin-top:clamp(40px,5vw,64px);}
+.how-item{background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;}
+.how-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.02em;color:rgba(238,236,232,.15);line-height:1;}
+.how-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;color:#eeece8;}
+.how-body{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);}
 
 /* PRICING */
 .pricing-section{padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:start;}
@@ -113,7 +113,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .ham{display:flex;}
   .page-header{grid-template-columns:1fr;}
   .offer-grid{grid-template-columns:1fr;}
-  .hiw-list{grid-template-columns:1fr;}
+  .how-grid{grid-template-columns:1fr;}
   .pricing-section{grid-template-columns:1fr;}
   .related-grid{grid-template-columns:1fr;}
 }
@@ -164,7 +164,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       <p class="offer-card-body">We use high-quality condenser microphone arrays, designed around the acoustic profile of your venue. Every placement decision is made with your hall in mind — not a template from the last job.</p>
       <p class="offer-tags">Up to 24 inputs · Stereo &amp; surround · Multi-channel</p>
     </div>
-    <div class="offer-card sr d1" style="background-image:url('/images/WORK/work-glasgow-singers-3.jpg');">
+    <div class="offer-card sr d1" style="background-image:url('/images/TEAM/team-session-2.jpg');">
       <h2 class="offer-card-title">The Session</h2>
       <p class="offer-card-body">We arrive early, work quietly, and stay out of the way of your rehearsal. On the day of the concert, you will not notice we are there. After the final note, we pack down and leave the space as we found it.</p>
       <p class="offer-tags">On-site monitoring · Live mix · Discreet setup</p>
@@ -179,41 +179,31 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <section class="hiw-section">
   <p class="section-label sr">How It Works</p>
-  <div class="hiw-list">
-    <div class="hiw-step sr">
-      <span class="hiw-n">01</span>
-      <div>
-        <h2 class="hiw-title">Pre-Session Consultation</h2>
-        <p class="hiw-body">We talk through the venue, the repertoire and your intended use for the recording. That conversation shapes every decision that follows.</p>
-      </div>
+  <div class="how-grid">
+    <div class="how-item sr">
+      <span class="how-n">01</span>
+      <h2 class="how-title">Pre-Session Consultation</h2>
+      <p class="how-body">We talk through the venue, the repertoire and your intended use for the recording. That conversation shapes every decision that follows.</p>
     </div>
-    <div class="hiw-step sr d1">
-      <span class="hiw-n">02</span>
-      <div>
-        <h2 class="hiw-title">Microphone Placement</h2>
-        <p class="hiw-body">We visit the venue in advance where possible, or arrive early on the day. Placement is designed around the specific acoustic of the space.</p>
-      </div>
+    <div class="how-item sr d1">
+      <span class="how-n">02</span>
+      <h2 class="how-title">Microphone Placement</h2>
+      <p class="how-body">We visit the venue in advance where possible, or arrive early on the day. Placement is designed around the specific acoustic of the space.</p>
     </div>
-    <div class="hiw-step sr d2">
-      <span class="hiw-n">03</span>
-      <div>
-        <h2 class="hiw-title">Recording</h2>
-        <p class="hiw-body">Multi-track capture throughout the session. We monitor in real time and flag anything that needs a retake before you leave the hall.</p>
-      </div>
+    <div class="how-item sr d2">
+      <span class="how-n">03</span>
+      <h2 class="how-title">Recording</h2>
+      <p class="how-body">Multi-track capture throughout the session. We monitor in real time and flag anything that needs a retake before you leave the hall.</p>
     </div>
-    <div class="hiw-step sr d3">
-      <span class="hiw-n">04</span>
-      <div>
-        <h2 class="hiw-title">Editing &amp; Post-Production</h2>
-        <p class="hiw-body">We edit the raw session into a complete recording, handle noise reduction where needed, and mix to a natural, transparent result.</p>
-      </div>
+    <div class="how-item sr d3">
+      <span class="how-n">04</span>
+      <h2 class="how-title">Editing &amp; Post-Production</h2>
+      <p class="how-body">We edit the raw session into a complete recording, handle noise reduction where needed, and mix to a natural, transparent result.</p>
     </div>
-    <div class="hiw-step sr d4">
-      <span class="hiw-n">05</span>
-      <div>
-        <h2 class="hiw-title">Delivery</h2>
-        <p class="hiw-body">Final files delivered in your required format. We are available for revisions and happy to liaise directly with your label or distributor.</p>
-      </div>
+    <div class="how-item sr d4">
+      <span class="how-n">05</span>
+      <h2 class="how-title">Delivery</h2>
+      <p class="how-body">Final files delivered in your required format. We are available for revisions and happy to liaise directly with your label or distributor.</p>
     </div>
   </div>
 </section>
