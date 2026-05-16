@@ -49,10 +49,12 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .section-label{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;}
 
 /* WHAT WE OFFER */
-.offer-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
+.offer-section{padding:0 0 clamp(60px,7vw,100px);border-bottom:1px solid rgba(238,236,232,.1);}
 .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
-.offer-card{position:relative;overflow:hidden;background-size:cover;background-position:center;min-height:clamp(320px,35vw,480px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,3vw,40px);border:none;}
-.offer-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 60%,rgba(0,0,0,.1) 100%);z-index:0;}
+.offer-card{position:relative;overflow:hidden;background-size:cover;background-position:center;min-height:clamp(320px,35vw,480px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,3vw,40px);border:none;transition:transform .3s ease;cursor:pointer;}
+.offer-card:hover{transform:translateY(-8px);}
+.offer-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 60%,rgba(0,0,0,.1) 100%);z-index:0;transition:background .3s ease;}
+.offer-card:hover::before{background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.05) 100%);}
 .offer-card>*{position:relative;z-index:1;}
 .offer-card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,30px);letter-spacing:.04em;margin-bottom:12px;}
 .offer-card-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.7);margin-bottom:16px;}
@@ -143,7 +145,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <header class="page-header">
   <div>
     <p class="page-label sr">Live Concert Recording</p>
-    <h1 class="page-title sr d1">We Capture<br>The Performance.</h1>
+    <h1 class="page-title sr d1">WE CAPTURE<br>THE PERFORMANCE.</h1>
   </div>
   <div class="sr d2" style="display:flex;flex-direction:column;justify-content:center;">
     <p class="page-intro">From a string quartet in a village church to a full orchestra in a concert hall, we place microphones before the audience arrives and leave with a recording that sounds like the room. Minimal processing. Maximum transparency.</p>
@@ -157,8 +159,6 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </div>
 
 <section class="offer-section">
-  <p class="section-label sr">What We Offer</p>
-  <h2 class="sr d1" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);">WHAT WE OFFER.</h2>
   <div class="offer-grid">
     <div class="offer-card sr" style="background-image:url('/images/WORK/EMF_Day_3-7.jpg');">
       <h2 class="offer-card-title">The Setup</h2>
@@ -167,8 +167,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     </div>
     <div class="offer-card sr d1" style="background-image:url('/images/WORK/Interview_00_00_51_04.jpg');background-size:cover;background-position:center;background-repeat:no-repeat;">
       <h2 class="offer-card-title">The Session</h2>
-      <p class="offer-card-body">We arrive early, work quietly, and stay out of the way of your rehearsal. On the day of the concert, you will not notice we are there. After the final note, we pack down and leave the space as we found it.</p>
-      <p class="offer-tags">On-site monitoring · Live mix · Discreet setup</p>
+      <p class="offer-card-body">We arrive early, work quietly, and stay out of the way of your rehearsal. Where video is required, we run 4K Sony cameras alongside the audio rig, microphone placement and camera angle decided in the same conversation. On the day of the concert, you will not notice we are there.</p>
+      <p class="offer-tags">On-site monitoring · Live mix · 4K Sony cameras · Discreet setup</p>
     </div>
     <div class="offer-card sr d2" style="background-image:url('/images/ABOUT/about-microphone.jpg');">
       <h2 class="offer-card-title">The Delivery</h2>
