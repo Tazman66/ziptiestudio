@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD & Album Production | Zip Tie Studio</title>
+<meta name="description" content="Professional album and EP recording, editing and mastering for soloists, chamber groups and orchestras. Produced in-house from first take to label-ready master.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+*,section,div,article,header,footer,main,aside,nav{background-color:transparent;}
+html,body{background-color:#000!important;color:#eeece8!important;}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+:root{--off:#eeece8;--pad:clamp(20px,5vw,60px);}
+body{background:#000;color:#eeece8;font-family:'Outfit',sans-serif;font-weight:300;overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content:space-between;align-items:center;padding:28px var(--pad);transition:padding .4s;}
+nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
+.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
+.nav-links{display:flex;gap:36px;list-style:none;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:#eeece8;}
+.nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
+.nav-cta:hover{background:#eeece8;color:#000;}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px;min-width:44px;min-height:44px;justify-content:center;align-items:center;}
+.ham span{display:block;width:22px;height:1px;background:#eeece8;transition:transform .3s,opacity .3s;}
+.ham.open span:nth-child(1){transform:translateY(6px) rotate(45deg);}
+.ham.open span:nth-child(2){opacity:0;}
+.ham.open span:nth-child(3){transform:translateY(-6px) rotate(-45deg);}
+.mob-nav{display:none;position:fixed;inset:0;background:#000;z-index:490;flex-direction:column;justify-content:center;align-items:center;gap:48px;opacity:0;transition:opacity .3s;}
+.mob-nav.open{opacity:1;}
+.mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
+
+/* PAGE HEADER */
+.page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(32px,4vw,48px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,90px)!important;letter-spacing:.01em;line-height:.9;white-space:normal;}
+.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
+.header-cta-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;display:block;margin-top:24px;}
+.header-cta-btn{display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:12px 32px;text-decoration:none;transition:opacity .2s;}
+.header-cta-btn:hover{opacity:.82;}
+
+/* OFFER CARDS */
+.offer-section{padding:clamp(32px,4vw,56px) 0 0;}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;}
+.offer-card{position:relative;overflow:hidden;background-size:cover;background-position:center;min-height:clamp(320px,35vw,480px);display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(24px,3vw,40px);transition:transform .3s ease;cursor:pointer;}
+.offer-card::before{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.85) 0%,rgba(0,0,0,.3) 60%,rgba(0,0,0,.1) 100%);z-index:0;transition:background .3s ease;}
+.offer-card:hover{transform:translateY(-8px);}
+.offer-card:hover::before{background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.2) 60%,rgba(0,0,0,.05) 100%);}
+.offer-card>*{position:relative;z-index:1;}
+.offer-card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,30px);letter-spacing:.04em;margin-bottom:12px;}
+.offer-card-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.7);margin-bottom:16px;}
+.offer-tags{font-size:clamp(10px,1.1vw,12px);letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.4);line-height:1.6;}
+
+/* SECTION SHARED */
+.section-label{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;}
+
+/* FOOTER */
+footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
+.ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
+.ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a:hover{color:#eeece8;}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-social{display:flex;gap:20px;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link:hover{color:#eeece8;}
+
+/* SCROLL REVEAL */
+.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.sr.vis{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}.d5{transition-delay:.39s}
+
+@media(max-width:768px){
+  .nav-links,.nav-cta{display:none;}
+  .ham{display:flex;}
+  .page-header{grid-template-columns:1fr;}
+  .offer-grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/" class="active">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a href="/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+<div class="mob-nav" id="mob-nav">
+  <a href="/work/" class="mob-l">Work</a>
+  <a href="/recording-services/" class="mob-l">Services</a>
+  <a href="/the-story/" class="mob-l">About</a>
+  <a href="/contact/" class="mob-l">Start a Project</a>
+</div>
+
+<main id="main">
+
+<header class="page-header">
+  <div>
+    <p class="page-label sr">CD &amp; Album Production</p>
+    <h1 class="page-title sr d1">FROM SESSION<br>TO RELEASE.</h1>
+  </div>
+  <div class="sr d2" style="display:flex;flex-direction:column;justify-content:center;">
+    <p class="page-intro">We record, edit and master albums and EPs for soloists, chamber groups and orchestras. Every project is produced from first take to label-ready master in-house, which means one point of contact, one creative vision, and a result that holds together from start to finish.</p>
+    <span class="header-cta-label">Ready to discuss your project?</span>
+    <a href="/contact/" class="header-cta-btn">Get in Touch</a>
+  </div>
+</header>
+
+<section class="offer-section">
+  <div class="offer-grid">
+    <div class="offer-card sr" style="background-image:url('/images/WORK/work-sean-7.jpg');">
+      <h2 class="offer-card-title">The Recording</h2>
+      <p class="offer-card-body">We work in churches, concert halls and purpose-built studios depending on the repertoire and the sound you are after. Sessions are produced, not just engineered. We are in the room with you making musical decisions, not just pressing record.</p>
+      <p class="offer-tags">Produced sessions · Up to 24 inputs · 96kHz / 24-bit</p>
+    </div>
+    <div class="offer-card sr d1" style="background-image:url('/images/WORK/Interview_00_00_57_19.jpg');background-size:cover;background-position:center;">
+      <h2 class="offer-card-title">Editing &amp; Mastering</h2>
+      <p class="offer-card-body">We edit the raw session into a complete album sequence, handle noise reduction and tuning where needed, and master to a standard that satisfies label and streaming requirements. Everything in-house, nothing outsourced.</p>
+      <p class="offer-tags">Full editing · Stereo master · Streaming &amp; CD delivery</p>
+    </div>
+    <div class="offer-card sr d2" style="background-image:url('/images/ABOUT/about-pianist-dark.jpg');">
+      <h2 class="offer-card-title">Full Production Package</h2>
+      <p class="offer-card-body">Our top tier adds an electronic press kit, artist film and promotional content to the core recording. Label, press and social covered in one project. Linked to our music video and artist film service for clients who want the complete picture.</p>
+      <p class="offer-tags">EPK · Artist film · Music video · Social content</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(32px,4vw,48px) var(--pad) clamp(40px,5vw,72px); border-top:1px solid rgba(238,236,232,.1);">
+  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">The Process</p>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);">HOW IT WORKS.</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);">
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">01</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">PRE-SESSION PLANNING</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We talk through repertoire, venue options, session structure and your intended release format. That conversation shapes the entire project.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">02</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">VENUE &amp; DATES</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We advise on venue choice based on the acoustic requirements of the repertoire and book sessions around your availability and budget.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">03</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">PRODUCED SESSIONS</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We are in the room throughout. We listen, advise on takes, manage the session schedule and make sure you leave with everything you need.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">04</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">EDITING</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We edit the raw material into a complete album sequence, selecting the best takes and assembling a result that flows naturally from track to track.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">05</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">MIXING &amp; MASTERING</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We mix and master in-house to label or streaming specification. No outsourcing, no delay, no loss of creative continuity.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">06</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">DELIVERY &amp; RELEASE</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">Final files delivered in your required format. We liaise directly with your label, distributor or streaming aggregator if needed.</p>
+    </div>
+  </div>
+</section>
+
+<section style="padding:clamp(32px,4vw,56px) var(--pad) clamp(48px,6vw,80px);border-top:1px solid rgba(238,236,232,.1);">
+  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;text-align:center;">Pricing</p>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,120px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(24px,3vw,40px);text-align:center;">PACKAGES &amp;<br>PRICING.</h2>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(238,236,232,.1);margin-bottom:clamp(40px,5vw,64px);">
+
+    <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Essential</p>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">FROM £3,000</div>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Single project recording with editing and stereo master. Ideal for EPs, single works or debut recordings.</p>
+      <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Produced session</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full editing</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Stereo master</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Streaming-ready delivery</li>
+      </ul>
+    </div>
+
+    <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Standard</p>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">FROM £4,000</div>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Full album recording across multiple sessions with editing, mixing and mastering. Includes basic visual elements, session photography and a short promotional cut for social and press use.</p>
+      <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Multi-session recording</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full editing and mix</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· CD and streaming master</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Session photography</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Short promotional cut</li>
+      </ul>
+    </div>
+
+    <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Full Production</p>
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">BESPOKE</div>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Album recording combined with electronic press kit, artist film and promotional content. Everything needed for a complete release campaign.</p>
+      <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full album recording</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· EPK and press materials</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Artist film</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Music video and social content</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.4);margin-bottom:24px;">All projects include a pre-production consultation and written quote before any work begins.</p>
+    <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 40px;text-decoration:none;transition:opacity .2s;">Get a Quote</a>
+  </div>
+</section>
+
+</main>
+
+<div style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
+  <a href="/recording-services/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">← Back to Services</a>
+</div>
+
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.instagram.com/_zip_tie_studio_/" target="_blank" rel="noopener" aria-label="Instagram" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg></a>
+    <a href="https://www.linkedin.com/company/98889420/" target="_blank" rel="noopener" aria-label="LinkedIn" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+    <a href="https://www.youtube.com/@ziptie-studio" target="_blank" rel="noopener" aria-label="YouTube" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg></a>
+  </div>
+  <p class="ft-copy">© 2026 Zip Tie Studio · UK &amp; International</p>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
+const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
+let open=false;
+function toggleMenu(s){open=s;ham.classList.toggle('open',open);ham.setAttribute('aria-expanded',open);mob.style.display=open?'flex':'none';requestAnimationFrame(()=>mob.classList.toggle('open',open));document.body.style.overflow=open?'hidden':'';}
+ham.addEventListener('click',()=>toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>toggleMenu(false)));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
+document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
