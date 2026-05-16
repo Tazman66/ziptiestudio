@@ -63,7 +63,8 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 /* HOW IT WORKS */
 .hiw-section{padding:clamp(60px,7vw,100px) var(--pad);border-bottom:1px solid rgba(238,236,232,.1);}
 .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);margin-top:clamp(40px,5vw,64px);}
-.how-item{background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;}
+.how-item{background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background .3s ease,transform .3s ease;cursor:default;}
+.how-item:hover{background:rgba(238,236,232,.03);transform:translateY(-4px);}
 .how-n{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);letter-spacing:.02em;color:rgba(238,236,232,.15);line-height:1;}
 .how-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;color:#eeece8;}
 .how-body{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);}
@@ -174,7 +175,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   </div>
 </section>
 
-<section style="padding:clamp(60px,8vw,100px) var(--pad); border-top:1px solid rgba(238,236,232,.1);">
+<section style="padding:clamp(40px,5vw,72px) var(--pad); border-top:1px solid rgba(238,236,232,.1);">
   <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">The Process</p>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);">HOW IT WORKS.</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);">
@@ -198,10 +199,15 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;margin-bottom:12px;">EDITING &amp; POST-PRODUCTION</h3>
       <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We edit the raw session into a complete recording, handle noise reduction where needed, and mix to a natural, transparent result.</p>
     </div>
-    <div style="background:#000;padding:clamp(24px,3vw,40px);grid-column:1/-1;">
+    <div style="background:#000;padding:clamp(24px,3vw,40px);">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;margin-bottom:12px;">05</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;margin-bottom:12px;">DELIVERY</h3>
       <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">Final files delivered in your required format. We are available for revisions and happy to liaise directly with your label or distributor.</p>
+    </div>
+    <div style="background:#000;padding:clamp(24px,3vw,40px);">
+      <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;margin-bottom:12px;">06</div>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;margin-bottom:12px;">REVISIONS &amp; SIGN-OFF</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We share a draft edit for your review and incorporate any changes before final delivery. We are available throughout the process and do not disappear after the session.</p>
     </div>
   </div>
 </section>
