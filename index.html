@@ -184,21 +184,16 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 
 /* ─── STATEMENT ─── */
 .statement {
-  padding: clamp(32px,4vw,56px) clamp(20px,5vw,60px) 0;
+  padding: clamp(60px,8vw,100px) clamp(20px,5vw,60px);
 }
-.st-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px,6vw,80px);
-  align-items: center;
+.st-body {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
-.st-hl {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(36px,5vw,72px);
-  line-height: .88;
-  letter-spacing: .02em;
-}
-.st-right { display:flex; flex-direction:column; gap:22px; }
 .st-eyebrow {
   font-size: clamp(20px,3vw,32px); font-weight: 300;
   letter-spacing: .22em; text-transform: uppercase;
@@ -523,7 +518,7 @@ footer {
 
     <div class="hero-foot">
       <p class="hero-sub">
-        <strong>Broadcast audio.<br>Cinematic video.<br>One team.</strong>
+        <strong>Built By Musicians.<br>Trusted By The Industry.</strong>
       </p>
       <div class="hero-actions">
         <a href="/contact/" class="hero-cta-btn">Start a Project</a>
@@ -537,16 +532,13 @@ footer {
 
 <!-- ── STATEMENT ── -->
 <section class="statement">
-  <div class="st-inner">
-    <h2 class="st-hl sr">Built By Musicians.<br>Trusted By The Industry.</h2>
-    <div class="st-right sr d1">
-      <p class="st-eyebrow">Classical Music Production · UK &amp; International</p>
-      <p class="st-text">We understand the music from the inside. That changes how sessions run, how decisions get made, and what the final result sounds and looks like.</p>
-      <p class="st-text">Most sessions involve two teams, one for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. We handle both. Microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
-      <p class="st-text">Based in Scotland. Available everywhere.</p>
-    </div>
+  <div class="st-body sr">
+    <p class="st-eyebrow">Classical Music Production · UK &amp; International</p>
+    <p class="st-text">We understand the music from the inside. That changes how sessions run, how decisions get made, and what the final result sounds and looks like.</p>
+    <p class="st-text">Most sessions involve two teams, one for audio, one for video. Two setups, two briefs, two invoices, and a post-production problem nobody anticipated. We handle both. Microphone placement and camera angle are decided in the same conversation. The result sounds and looks like it belongs together, because it was made that way.</p>
+    <p class="st-text">Based in Scotland. Available everywhere.</p>
   </div>
-  <div class="st-img-wrap sr d2">
+  <div class="st-img-wrap sr d1">
     <img
       src="/images/WORK/work-sean-8.jpg"
       alt="Matthew, audio producer at work during recording session"
