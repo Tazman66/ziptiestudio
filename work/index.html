@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work | Zip Tie Studio</title>
-<meta name="description" content="Selected projects across artist films, concert recording, music video and documentary. Each one produced in-house from first conversation to final delivery.">
+<meta name="description" content="Selected projects across artist films, concert recording, documentary and live capture. Each one produced in-house from first conversation to final delivery.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
@@ -38,22 +38,19 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.01em;line-height:.9;}
 .page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
 
-/* PROJECT ROWS */
-.project-row{display:grid;grid-template-columns:1fr 1fr;min-height:unset;height:auto;border-bottom:1px solid rgba(238,236,232,.1);cursor:pointer;margin:0;}
-.project-row.reverse{direction:rtl;}
-.project-row.reverse>*{direction:ltr;}
-.project-img{overflow:hidden;aspect-ratio:4/3;}
-.project-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
-.project-row:hover .project-img img{transform:scale(1.04);}
-.project-info{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(32px,4vw,60px);gap:12px;}
-.project-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);}
-.project-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3.5vw,48px);letter-spacing:.02em;line-height:.9;}
-.project-subtitle{font-size:clamp(13px,1.4vw,16px);color:rgba(238,236,232,.6);font-weight:300;}
-.project-desc{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);max-width:90%;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
-.project-tags{display:flex;flex-wrap:wrap;gap:6px;}
-.project-tag{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);border:1px solid rgba(238,236,232,.15);padding:3px 8px;}
-.project-cta{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;margin-top:8px;transition:opacity .2s;}
-.project-cta:hover{opacity:.6;}
+/* INDEX LAYOUT */
+.index-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);padding:clamp(48px,6vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
+.index-list{display:flex;flex-direction:column;}
+.index-item{padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(238,236,232,.1);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;transition:padding-left 0.4s cubic-bezier(0.22,1,0.36,1);cursor:pointer;}
+.index-item:first-child{border-top:1px solid rgba(238,236,232,.1);}
+.index-item:hover{padding-left:16px;}
+.index-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:1;color:rgba(238,236,232,.4);transition:color 0.4s ease;}
+.index-item:hover .index-name{color:#eeece8;}
+.index-meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+.index-item-mobile-img{display:none;width:100%;aspect-ratio:16/9;object-fit:cover;margin-top:16px;}
+.index-preview{position:sticky;top:120px;height:fit-content;aspect-ratio:4/5;overflow:hidden;background:#0c0c0c;}
+.index-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.5s ease;}
+.index-preview img.active{opacity:1;}
 
 /* BOTTOM CTA */
 .page-cta{padding:clamp(40px,5vw,72px) var(--pad);text-align:center;border-top:1px solid rgba(238,236,232,.1);}
@@ -83,9 +80,9 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .ham{display:flex;}
   .page-header{grid-template-columns:1fr;}
   .page-title{font-size:clamp(40px,10vw,80px)!important;}
-  .project-row{grid-template-columns:1fr;}
-  .project-row.reverse{direction:ltr;}
-  .project-img{min-height:260px;}
+  .index-layout{grid-template-columns:1fr;}
+  .index-preview{display:none;}
+  .index-item-mobile-img{display:block;}
   .page-cta-btn{width:100%;text-align:center;}
 }
 </style>
@@ -114,106 +111,49 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <header class="page-header">
   <div>
     <p class="page-label sr">Selected Work</p>
-    <h1 class="page-title sr d1">SELECTED<br>PROJECTS.</h1>
+    <h1 class="page-title sr d1">PROJECTS.</h1>
   </div>
   <div class="sr d2">
-    <p class="page-intro">Five projects across artist films, concert recording, documentary and live capture. Each one produced in-house from first conversation to final delivery.</p>
+    <p class="page-intro">A selection of recent projects. Each one produced in-house, from first conversation to final delivery.</p>
   </div>
 </header>
 
-<a href="/work/sean-shibe/" style="text-decoration:none;color:inherit;display:block;">
-<article class="project-row sr">
-  <div class="project-img">
-    <img src="/images/WORK/work-sean-2.jpg" alt="Sean Shibe artist film" loading="lazy">
+<section class="index-layout">
+  <div class="index-list">
+    <a href="/work/sean-shibe/" class="index-item sr">
+      <p class="index-meta">Pentatone &middot; 2025</p>
+      <h2 class="index-name">SEAN SHIBE</h2>
+      <img src="/images/WORK/work-sean-1.jpg" class="index-item-mobile-img" alt="Sean Shibe" loading="lazy">
+    </a>
+    <a href="/work/scottish-ensemble/" class="index-item sr d1">
+      <p class="index-meta">Scottish Ensemble &middot; 2025-2026</p>
+      <h2 class="index-name">SCOTTISH ENSEMBLE</h2>
+      <img src="/images/ABOUT/about-orchestra.jpg" class="index-item-mobile-img" alt="Scottish Ensemble" loading="lazy">
+    </a>
+    <a href="/work/beth-taylor/" class="index-item sr d2">
+      <p class="index-meta">Outhere Music &middot; 2025</p>
+      <h2 class="index-name">BETH TAYLOR</h2>
+      <img src="/images/WORK/work-beth-taylor-1.jpg" class="index-item-mobile-img" alt="Beth Taylor" loading="lazy">
+    </a>
+    <a href="/work/xx-lotte/" class="index-item sr d3">
+      <p class="index-meta">Independent &middot; 2023</p>
+      <h2 class="index-name">XX, LOTTE</h2>
+      <img src="/images/WORK/work-singer-sessions-1.jpg" class="index-item-mobile-img" alt="xx, Lotte" loading="lazy">
+    </a>
+    <a href="/work/scottish-young-musicians/" class="index-item sr d4">
+      <p class="index-meta">Scottish Young Musicians &middot; Annual</p>
+      <h2 class="index-name">SCOTTISH YOUNG MUSICIANS</h2>
+      <img src="/images/WORK/EMF_Day_3-7.jpg" class="index-item-mobile-img" alt="Scottish Young Musicians" loading="lazy">
+    </a>
   </div>
-  <div class="project-info">
-    <p class="project-label">Pentatone &middot; 2025</p>
-    <h2 class="project-title">SEAN SHIBE</h2>
-    <p class="project-subtitle">Artist Film and Music Videos</p>
-    <p class="project-desc">Two music videos, a behind-the-scenes documentary, a long-form artist interview and social cuts for Pentatone's international release campaign. Photography featured in Gramophone magazine.</p>
-    <div class="project-tags">
-      <span class="project-tag">Concert Film and Video</span>
-      <span class="project-tag">Photography</span>
-    </div>
-    <a href="/work/sean-shibe/" class="project-cta">View Case Study &rarr;</a>
+  <div class="index-preview" aria-hidden="true">
+    <img src="/images/WORK/work-sean-1.jpg" alt="Sean Shibe">
+    <img src="/images/ABOUT/about-orchestra.jpg" alt="Scottish Ensemble">
+    <img src="/images/WORK/work-beth-taylor-1.jpg" alt="Beth Taylor">
+    <img src="/images/WORK/work-singer-sessions-1.jpg" alt="xx, Lotte">
+    <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Scottish Young Musicians">
   </div>
-</article>
-</a>
-
-<a href="/work/scottish-ensemble/" style="text-decoration:none;color:inherit;display:block;">
-<article class="project-row reverse sr">
-  <div class="project-img">
-    <img src="/images/ABOUT/about-orchestra.jpg" alt="Scottish Ensemble concert" loading="lazy">
-  </div>
-  <div class="project-info">
-    <p class="project-label">Scottish Ensemble &middot; 2025-26</p>
-    <h2 class="project-title">SCOTTISH ENSEMBLE</h2>
-    <p class="project-subtitle">Concert Film, Live Recording and Documentary</p>
-    <p class="project-desc">An ongoing relationship spanning three distinct projects: a same-night edited Candlelight Christmas concert film, a young artists side-by-side concert recording, and a short documentary for their partnership with Maggies.</p>
-    <div class="project-tags">
-      <span class="project-tag">Concert Film and Video</span>
-      <span class="project-tag">Live Concert Recording</span>
-    </div>
-    <a href="/work/scottish-ensemble/" class="project-cta">View Case Study &rarr;</a>
-  </div>
-</article>
-</a>
-
-<a href="/work/beth-taylor/" style="text-decoration:none;color:inherit;display:block;">
-<article class="project-row sr">
-  <div class="project-img">
-    <img src="/images/WORK/work-beth-taylor-1.jpg" alt="Beth Taylor artist film" loading="lazy">
-  </div>
-  <div class="project-info">
-    <p class="project-label">Outhere Music &middot; 2025</p>
-    <h2 class="project-title">BETH TAYLOR</h2>
-    <p class="project-subtitle">Artist Films for Debut Album</p>
-    <p class="project-desc">Two artist films produced for Outhere Music to support Beth Taylor's debut album release, designed for use across streaming platforms, social media and press.</p>
-    <div class="project-tags">
-      <span class="project-tag">Concert Film and Video</span>
-    </div>
-    <a href="/work/beth-taylor/" class="project-cta">View Case Study &rarr;</a>
-  </div>
-</article>
-</a>
-
-<a href="/work/xx-lotte/" style="text-decoration:none;color:inherit;display:block;">
-<article class="project-row reverse sr">
-  <div class="project-img">
-    <img src="/images/WORK/work-singer-sessions-1.jpg" alt="xx, Lotte recording session" loading="lazy">
-  </div>
-  <div class="project-info">
-    <p class="project-label">Independent &middot; 2023</p>
-    <h2 class="project-title">XX, LOTTE</h2>
-    <p class="project-subtitle">World Premiere Recording and Artist Films</p>
-    <p class="project-desc">Full album recording of a brand new song cycle by Christian Chamoun and Elea Bekkers. A contemporary feminist commentary on Goethe's Die Leiden des jungen Werther. Released on Spotify and physical CD, with artist films and interviews across YouTube and the artists' channels.</p>
-    <div class="project-tags">
-      <span class="project-tag">CD and Album Production</span>
-      <span class="project-tag">Concert Film and Video</span>
-    </div>
-    <a href="/work/xx-lotte/" class="project-cta">View Case Study &rarr;</a>
-  </div>
-</article>
-</a>
-
-<a href="/work/scottish-young-musicians/" style="text-decoration:none;color:inherit;display:block;">
-<article class="project-row sr">
-  <div class="project-img">
-    <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Scottish Young Musicians competition" loading="lazy">
-  </div>
-  <div class="project-info">
-    <p class="project-label">Scottish Young Musicians &middot; Annual</p>
-    <h2 class="project-title">SCOTTISH YOUNG MUSICIANS</h2>
-    <p class="project-subtitle">Concert Recording and Broadcast Supply</p>
-    <p class="project-desc">Full concert recording and filming across the Ensemble of the Year and Soloist of the Year competitions at the Royal Conservatoire of Scotland. Highlight reels delivered for web and social, with broadcast-quality content supplied to BBC Radio Scotland.</p>
-    <div class="project-tags">
-      <span class="project-tag">Live Concert Recording</span>
-      <span class="project-tag">Concert Film and Video</span>
-    </div>
-    <a href="/work/scottish-young-musicians/" class="project-cta">View Case Study &rarr;</a>
-  </div>
-</article>
-</a>
+</section>
 
 <section class="page-cta">
   <h2 class="page-cta-hl sr">HAVE A PROJECT IN MIND?</h2>
@@ -250,6 +190,17 @@ document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>to
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+
+// Index hover preview
+const items=document.querySelectorAll('.index-item');
+const previews=document.querySelectorAll('.index-preview img');
+items.forEach((item,i)=>{
+  item.addEventListener('mouseenter',()=>{
+    previews.forEach(p=>p.classList.remove('active'));
+    if(previews[i])previews[i].classList.add('active');
+  });
+});
+if(previews[0])previews[0].classList.add('active');
 </script>
 </body>
 </html>
