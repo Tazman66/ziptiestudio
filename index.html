@@ -394,10 +394,11 @@ footer {
 /* ─── MOBILE ─── */
 @media (max-width:768px) {
   body { cursor:auto; }
-  #cur, #cur-ring, 
+  #cur, #cur-ring,
   .nav-links, .nav-cta { display:none; }
   .ham { display:flex; }
 
+  .hero-hl { font-size: clamp(48px,12vw,80px); }
 
   .hero-foot { flex-direction:column; align-items:flex-start; gap:20px; }
 
@@ -408,14 +409,13 @@ footer {
   .svc-col:nth-child(odd) { border-right:1px solid rgba(238,236,232,.1); }
   .svc-col:last-child { border-bottom:none; }
 
-  .work-grid { grid-template-columns:1fr 1fr; grid-template-rows:280px 200px 200px; }
-  .wi:first-child { grid-column:1/3; grid-row:1; }
+  .work-grid { grid-template-columns:1fr; grid-template-rows:repeat(5, 260px); }
+  .wi:first-child { grid-row: auto; }
   .wi-label { opacity:1; transform:none; }
 
   .cl-grid { grid-template-columns:repeat(3,1fr); }
   .cl-cell:nth-child(3n):not(:last-child) { border-right:none; }
   .cl-cell:nth-child(n+4) { border-top:1px solid rgba(238,236,232,.1); }
-
 
   .testi-inner { grid-template-columns:1fr; gap:40px; }
   .testi-img { order:-1; height:260px; }
@@ -427,20 +427,21 @@ footer {
   .cl-title { display:block; margin-bottom:12px; }
   .cl-sub { display:block; text-align:left; }
 
-  .logo-grid { gap:24px 32px; justify-content:center; }
-  .logo-item img { max-height:36px !important; }
+  .logo-grid { gap:24px; justify-content:center; }
+  .logo-item img { max-height:32px !important; }
   a[href*="gla.ac.uk"] img { max-height:50px !important; }
   a[href*="rcs.ac.uk"] img { max-height:50px !important; max-width:120px !important; }
 }
 @media (max-width:480px) {
-  .work-grid { grid-template-columns:1fr; grid-template-rows:repeat(5,210px); }
+  .hero-hl { font-size: clamp(44px,14vw,72px); }
+  .svc-cols { grid-template-columns:1fr; }
+  .svc-col:nth-child(odd) { border-right:none; }
+  .work-grid { grid-template-columns:1fr; grid-template-rows:repeat(5,260px); }
   .wi:first-child { grid-column:1; grid-row:1; }
   .cl-grid { grid-template-columns:repeat(2,1fr); }
   .cl-cell:nth-child(2n) { border-right:none; }
   .cl-cell:nth-child(2n+1) { border-right:1px solid rgba(238,236,232,.1); }
   .cl-cell:nth-child(n+3) { border-top:1px solid rgba(238,236,232,.1); }
-  .svc-cols { grid-template-columns:1fr; }
-  .svc-col:nth-child(odd) { border-right:none; }
 }
 @media (prefers-reduced-motion:reduce) {
   *, *::before, *::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }

@@ -122,10 +122,20 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
   .page-header{grid-template-columns:1fr;}
+  .page-title{font-size:clamp(40px,10vw,80px) !important;}
   .offer-grid{grid-template-columns:1fr;}
+  .offer-card{min-height:280px;}
   .how-grid{grid-template-columns:1fr;}
   .pricing-section{grid-template-columns:1fr;}
   .related-grid{grid-template-columns:1fr;}
+  /* inline-style grids: how-it-works and pricing */
+  section [style*="grid-template-columns:1fr 1fr"],
+  section [style*="grid-template-columns: 1fr 1fr"],
+  section [style*="grid-template-columns:1fr 1fr 1fr"],
+  section [style*="grid-template-columns: 1fr 1fr 1fr"]{grid-template-columns:1fr !important;}
+  .header-cta-btn{width:100%;text-align:center;justify-content:center;}
+  .page-cta-btn{width:100%;text-align:center;justify-content:center;}
+  .pricing-cta{width:100%;text-align:center;justify-content:center;}
 }
 </style>
 </head>
