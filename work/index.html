@@ -33,31 +33,31 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .mob-nav a{font-family:'Bebas Neue',sans-serif;font-size:56px;letter-spacing:.04em;color:#eeece8;text-decoration:none;}
 
 /* PAGE HEADER */
-.page-header{padding:clamp(80px,10vw,120px) var(--pad) clamp(60px,8vw,80px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
+.page-header{padding:calc(var(--pad) + 100px) var(--pad) clamp(40px,5vw,60px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
 .page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
-.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,90px);letter-spacing:.01em;line-height:.9;}
+.page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.01em;line-height:.9;}
 .page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
 
 /* PROJECT ROWS */
-.project-row{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(400px,45vw,600px);border-bottom:1px solid rgba(238,236,232,.1);}
+.project-row{display:grid;grid-template-columns:1fr 1fr;min-height:clamp(320px,32vw,440px);border-bottom:1px solid rgba(238,236,232,.1);}
 .project-row.reverse{direction:rtl;}
 .project-row.reverse>*{direction:ltr;}
 .project-img{overflow:hidden;}
 .project-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
 .project-row:hover .project-img img{transform:scale(1.04);}
-.project-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,5vw,80px);gap:16px;}
+.project-info{display:flex;flex-direction:column;justify-content:center;padding:clamp(32px,4vw,56px);gap:12px;}
 .project-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);}
-.project-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:.9;}
+.project-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:.9;}
 .project-subtitle{font-size:clamp(13px,1.4vw,16px);color:rgba(238,236,232,.6);font-weight:300;}
-.project-desc{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);}
-.project-tags{display:flex;flex-wrap:wrap;gap:8px;}
-.project-tag{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);border:1px solid rgba(238,236,232,.15);padding:4px 10px;}
+.project-desc{font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);max-width:90%;}
+.project-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.project-tag{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);border:1px solid rgba(238,236,232,.15);padding:3px 8px;}
 .project-cta{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;margin-top:8px;transition:opacity .2s;}
 .project-cta:hover{opacity:.6;}
 
 /* BOTTOM CTA */
-.page-cta{padding:clamp(80px,10vw,120px) var(--pad);text-align:center;border-top:1px solid rgba(238,236,232,.1);}
-.page-cta-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,90px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(16px,2vw,28px);}
+.page-cta{padding:clamp(60px,8vw,100px) var(--pad);text-align:center;border-top:1px solid rgba(238,236,232,.1);}
+.page-cta-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(16px,2vw,28px);}
 .page-cta-body{font-size:clamp(14px,1.5vw,16px);color:rgba(238,236,232,.4);margin-bottom:clamp(28px,3vw,44px);}
 .page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .page-cta-btn:hover{opacity:.82;}
@@ -114,10 +114,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <header class="page-header">
   <div>
     <p class="page-label sr">Selected Work</p>
-    <h1 class="page-title sr d1">PROJECTS THAT<br>SPEAK FOR<br>THEMSELVES.</h1>
+    <h1 class="page-title sr d1">SELECTED<br>PROJECTS.</h1>
   </div>
   <div class="sr d2">
-    <p class="page-intro">Five projects across artist films, concert recording, music video and documentary. Each one produced in-house from first conversation to final delivery.</p>
+    <p class="page-intro">Five projects across artist films, concert recording, documentary and live capture. Each one produced in-house from first conversation to final delivery.</p>
   </div>
 </header>
 
