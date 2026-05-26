@@ -34,7 +34,11 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* CASE STUDY STYLES */
 .case-hero{position:relative;height:100svh;overflow:hidden;}
-.case-hero img{width:100%;height:100%;object-fit:cover;object-position:center 30%;}
+.case-hero img{position:absolute;top:-10%;left:0;width:100%;height:120%;object-fit:cover;object-position:center 30%;will-change:transform;}
+.case-hero-text .hero-label{opacity:0;transform:translateY(-20px);animation:fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;}
+.case-hero-text h1{opacity:0;transform:translateY(-30px);animation:fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.25s forwards;}
+.case-hero-text .hero-subtitle{opacity:0;transform:translateY(-20px);animation:fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
 .case-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.1) 100%);}
 .case-hero-text{position:absolute;bottom:clamp(40px,6vw,80px);left:var(--pad);z-index:1;}
 .case-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.5);margin-bottom:12px;}
@@ -244,6 +248,8 @@ document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>to
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+const caseHeroBg=document.querySelector('.case-hero img');
+if(caseHeroBg){window.addEventListener('scroll',()=>{caseHeroBg.style.transform=`translateY(${window.scrollY*0.4}px)`;},{passive:true});}
 </script>
 </body>
 </html>
