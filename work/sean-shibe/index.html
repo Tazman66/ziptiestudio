@@ -48,7 +48,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .case-info-item{background:#000;padding:clamp(16px,2vw,24px);}
 .case-info-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
 .case-info-value{font-size:clamp(13px,1.4vw,16px);color:#eeece8;font-weight:300;}
-.case-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);max-width:unset;padding:clamp(32px,4vw,48px) var(--pad);align-items:flex-start;}
+.case-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);max-width:unset;padding:clamp(24px,3vw,36px) var(--pad);align-items:flex-start;}
 .case-story h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
 .case-story p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
 .case-story-text{display:flex;flex-direction:column;gap:12px;}
@@ -64,18 +64,18 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .case-what li{font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.55);padding-bottom:12px;border-bottom:1px solid rgba(238,236,232,.08);}
 .case-service-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;margin-top:24px;display:block;transition:color .2s;}
 .case-service-link:hover{color:#eeece8;}
-.case-related{padding:clamp(32px,4vw,48px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
-.case-related h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;margin-bottom:clamp(24px,3vw,40px);}
+.case-related{padding:clamp(24px,3vw,36px) var(--pad);border-top:1px solid rgba(238,236,232,.1);background:rgba(238,236,232,.02);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px);}
+.case-related h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;margin-bottom:0;}
 .case-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);}
-.case-related-card{text-decoration:none;color:inherit;overflow:hidden;display:block;}
+.case-related-card{text-decoration:none;color:inherit;overflow:hidden;display:flex;flex-direction:column;gap:8px;}
 .case-related-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
 .case-related-card:hover img{transform:scale(1.04);}
-.case-related-card p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-top:10px;}
-.case-related-card h4{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.5vw,28px);letter-spacing:.02em;margin-top:4px;}
-.case-cta{text-align:center;padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
-.case-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:24px;}
-.case-cta p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:32px;}
-.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.35);text-decoration:none;margin-top:24px;transition:color .2s;}
+.case-related-card p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-top:0;}
+.case-related-card h4{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.5vw,28px);letter-spacing:.02em;margin-top:0;}
+.case-cta{text-align:center;padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;gap:24px;}
+.case-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
+.case-cta p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
+.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.35);text-decoration:none;margin-top:0;transition:color .2s;}
 .case-back:hover{color:#eeece8;}
 .page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .page-cta-btn:hover{opacity:.82;}
@@ -164,23 +164,23 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   </div>
 </section>
 
-<section style="padding:clamp(32px,4vw,48px) var(--pad);border-top:1px solid rgba(238,236,232,.1);">
+<section style="padding:clamp(24px,3vw,36px) var(--pad);border-top:1px solid rgba(238,236,232,.1);background:rgba(238,236,232,.02);">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;">
     <div style="aspect-ratio:3/4;overflow:hidden;">
       <img src="/images/WORK/sean-gramophone.jpg" alt="Sean Shibe featured in Gramophone magazine May 2026" style="width:100%;height:100%;object-fit:cover;display:block;">
     </div>
     <div style="display:flex;flex-direction:column;gap:16px;">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">Press Coverage</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Press Coverage</p>
       <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">FEATURED IN<br>GRAMOPHONE.</h2>
       <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);">Photography from the project was featured in Gramophone magazine, one of the most widely read classical music publications in the world. The shoot took place during the recording sessions and forms part of the wider visual campaign produced for Pentatone's release.</p>
     </div>
   </div>
 </section>
 
-<section style="padding:clamp(24px,3vw,40px) var(--pad) clamp(40px,5vw,60px);border-top:1px solid rgba(238,236,232,.1);">
-  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">The Work</p>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(32px,4vw,48px);">WATCH.</h2>
-  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(238,236,232,.1);margin-bottom:12px;">Music Videos</p>
+<section style="padding:clamp(20px,2.5vw,32px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;gap:16px;">
+  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">The Work</p>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">WATCH.</h2>
+  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(238,236,232,.1);">Music Videos</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);">
     <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
       <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/dBHuzn2TPMs" title="Sean Shibe — Music Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -189,7 +189,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/36WiiXR5ngs" title="Sean Shibe — Music Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
-  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(238,236,232,.1);margin-top:clamp(24px,3vw,40px);margin-bottom:12px;">Artist Film</p>
+  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(238,236,232,.1);">Artist Film</p>
   <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
     <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/GMZqsvaFwe4?start=14" title="Sean Shibe — Artist Film" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
@@ -201,23 +201,23 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">WHAT WE DID.</h2>
   </div>
   <div style="display:flex;flex-direction:column;">
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">TWO MUSIC VIDEOS</span>
       <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">01</span>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">BEHIND-THE-SCENES DOCUMENTARY</span>
       <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">02</span>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">LONG-FORM ARTIST INTERVIEW</span>
       <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">03</span>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SOCIAL &amp; SHORT-FORM EDITS</span>
       <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">04</span>
     </div>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:20px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">PHOTOGRAPHY (FEATURED IN GRAMOPHONE)</span>
       <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">05</span>
     </div>
@@ -261,7 +261,6 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   <h2>START A SIMILAR PROJECT</h2>
   <p>Tell us about it. We respond within 24 hours.</p>
   <a href="/contact/" class="page-cta-btn">Get in Touch</a>
-  <br>
   <a href="/work/" class="case-back">Back to Work</a>
 </section>
 
