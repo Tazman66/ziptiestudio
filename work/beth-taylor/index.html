@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Beth Taylor | Zip Tie Studio</title>
-<meta name="description" content="Two artist films produced for Outhere Music to support Beth Taylor's debut album release, for streaming, press and social.">
+<meta name="description" content="Artist films for Beth Taylor's debut album release on Outhere Music, 2025. Long-form artist film and social-optimised edit produced in-house.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@200;300;400&display=swap" rel="stylesheet">
@@ -34,39 +34,48 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* CASE STUDY STYLES */
 .case-hero{position:relative;height:100svh;overflow:hidden;}
-.case-hero img{width:100%;height:100%;object-fit:cover;}
+.case-hero>img{position:absolute;top:-10%;left:0;width:100%;height:120%;object-fit:cover;object-position:center center;will-change:transform;}
+.case-label{opacity:0;transform:translateY(-20px);animation:fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;}
+.case-h1{opacity:0;transform:translateY(-30px);animation:fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) 0.25s forwards;}
+.case-subtitle{opacity:0;transform:translateY(-20px);animation:fadeUp 0.6s cubic-bezier(0.22,1,0.36,1) 0.4s forwards;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
 .case-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.1) 100%);}
 .case-hero-text{position:absolute;bottom:clamp(40px,6vw,80px);left:var(--pad);z-index:1;}
-.case-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.5);margin-bottom:12px;}
+.case-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;}
 .case-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,110px);letter-spacing:.02em;line-height:.9;margin-bottom:16px;}
 .case-subtitle{font-size:clamp(14px,1.6vw,18px);color:rgba(238,236,232,.6);font-weight:300;}
 .case-info-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);}
-.case-info-item{background:#000;padding:clamp(20px,3vw,36px);}
+.case-info-item{background:#000;padding:clamp(16px,2vw,24px);}
 .case-info-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
 .case-info-value{font-size:clamp(13px,1.4vw,16px);color:#eeece8;font-weight:300;}
-.case-story{max-width:860px;margin:0 auto;padding:clamp(60px,8vw,100px) var(--pad);}
-.case-story h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;margin-bottom:clamp(24px,3vw,40px);}
-.case-story p{font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.65);margin-bottom:24px;}
+.case-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);max-width:unset;padding:clamp(24px,3vw,36px) var(--pad);align-items:stretch;}
+.case-story h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
+.case-story p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
+.case-story-text{display:flex;flex-direction:column;gap:12px;}
+.case-story-text p{margin-bottom:0;}
+.case-story-image{overflow:hidden;aspect-ratio:16/9;height:100%;}
+.case-story-image img{width:100%;height:100%;object-fit:cover;object-position:center top;}
 .case-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);}
 .case-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
-.case-what{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);align-items:start;}
-.case-what h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:.9;}
-.case-what ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:12px;}
-.case-what li{font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.55);padding-bottom:12px;border-bottom:1px solid rgba(238,236,232,.08);}
-.case-service-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;margin-top:24px;display:block;transition:color .2s;}
+.case-service-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;display:block;transition:color .2s;}
 .case-service-link:hover{color:#eeece8;}
-.case-related{padding:clamp(40px,5vw,72px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
-.case-related h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;margin-bottom:clamp(24px,3vw,40px);}
+.project-nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);}
+.project-nav a{padding:clamp(16px,2vw,28px) var(--pad);text-decoration:none;color:inherit;transition:background .2s;}
+.project-nav a:hover{background:rgba(238,236,232,.03);}
+.project-nav a:first-child{border-right:1px solid rgba(238,236,232,.1);}
+.project-nav a:last-child{text-align:right;}
+.case-related{padding:clamp(24px,3vw,36px) var(--pad);border-top:1px solid rgba(238,236,232,.1);background:rgba(238,236,232,.02);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px);}
+.case-related h3{font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;margin-bottom:0;}
 .case-related-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);}
-.case-related-card{text-decoration:none;color:inherit;overflow:hidden;display:block;}
+.case-related-card{text-decoration:none;color:inherit;overflow:hidden;display:flex;flex-direction:column;gap:8px;}
 .case-related-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
 .case-related-card:hover img{transform:scale(1.04);}
-.case-related-card p{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:10px;}
-.case-related-card h4{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.5vw,28px);letter-spacing:.02em;margin-top:4px;}
-.case-cta{text-align:center;padding:clamp(60px,8vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
-.case-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,90px);letter-spacing:.02em;margin-bottom:24px;}
-.case-cta p{font-size:clamp(13px,1.4vw,16px);color:rgba(238,236,232,.45);margin-bottom:32px;}
-.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.35);text-decoration:none;margin-top:24px;transition:color .2s;}
+.case-related-card p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-top:0;}
+.case-related-card h4{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.5vw,28px);letter-spacing:.02em;margin-top:0;}
+.case-cta{text-align:center;padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;gap:24px;}
+.case-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
+.case-cta p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
+.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.35);text-decoration:none;margin-top:0;transition:color .2s;}
 .case-back:hover{color:#eeece8;}
 .page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .page-cta-btn:hover{opacity:.82;}
@@ -88,13 +97,43 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 .d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}.d5{transition-delay:.39s}
 
 @media(max-width:768px){
+  /* Nav */
   .nav-links,.nav-cta{display:none;}
   .ham{display:flex;}
+
+  /* Hero */
+  .case-hero{height:70svh;}
+  .case-hero-text{bottom:clamp(24px,4vw,40px);left:var(--pad);right:var(--pad);}
+  .case-h1{font-size:clamp(48px,12vw,72px);}
+
+  /* Info bar */
   .case-info-bar{grid-template-columns:1fr;}
-  .case-gallery{grid-template-columns:1fr;}
-  .case-what{grid-template-columns:1fr;}
+  .case-info-item{border-bottom:1px solid rgba(238,236,232,.1);}
+
+  /* Story section */
+  .case-story{grid-template-columns:1fr;padding:clamp(32px,5vw,48px) var(--pad);}
+  .case-story-image{aspect-ratio:16/9;width:100%;}
+
+  /* Related projects */
   .case-related-grid{grid-template-columns:1fr;}
+
+  /* Project navigation */
+  .project-nav{grid-template-columns:1fr;}
+  .project-nav a:first-child{border-right:none;border-bottom:1px solid rgba(238,236,232,.1);}
+  .project-nav a:last-child{text-align:left;}
+
+  /* All inline grids -- force single column */
+  section > div[style*="grid-template-columns"]{display:flex !important;flex-direction:column !important;gap:clamp(24px,4vw,40px) !important;}
+
+  /* Typography */
+  h2{font-size:clamp(32px,8vw,56px) !important;}
+
+  /* CTA button */
   .page-cta-btn{width:100%;text-align:center;}
+}
+
+@media(max-width:480px){
+  .case-h1{font-size:clamp(40px,13vw,60px);}
 }
 </style>
 </head>
@@ -120,7 +159,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <main id="main">
 
 <section class="case-hero">
-  <img src="/images/WORK/work-beth-taylor-2.jpg" alt="Beth Taylor artist film">
+  <img src="/images/WORK/beth-hero.jpg" alt="Beth Taylor artist film" style="will-change:transform;height:120%;position:absolute;top:-10%;left:0;width:100%;object-fit:cover;object-position:center center;">
   <div class="case-hero-text">
     <p class="case-label">Outhere Music &middot; 2025</p>
     <h1 class="case-h1">BETH TAYLOR</h1>
@@ -135,7 +174,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   </div>
   <div class="case-info-item sr d1">
     <p class="case-info-label">Services</p>
-    <p class="case-info-value">Concert Film and Video</p>
+    <p class="case-info-value">Concert Film &amp; Video</p>
   </div>
   <div class="case-info-item sr d2">
     <p class="case-info-label">Year</p>
@@ -144,54 +183,88 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </div>
 
 <section class="case-story sr">
-  <h2>THE PROJECT</h2>
-  <p>Outhere Music commissioned us to produce the visual media for Beth Taylor's debut album release. For an artist releasing their first record on an international label, the films needed to introduce Beth to a new audience, capturing her as a performer and as a person, with the warmth and intelligence the music itself conveys.</p>
-  <p>We produced two artist films, each designed for a different context within the release campaign. One longer form for streaming platforms and press use, one optimised for social. Both were cut to work independently, without relying on each other for context.</p>
-  <p>The films form the visual centrepiece of Beth's debut release and will be distributed across Outhere Music's channels, Beth's own platforms and to press.</p>
+  <div class="case-story-text">
+    <h2>THE PROJECT</h2>
+    <p>Outhere Music commissioned us to produce the visual media for Beth Taylor's debut album release. For an artist releasing their first record on an international label, the films needed to introduce Beth to a new audience, capturing her as a performer and as a person, with the warmth and intelligence the music itself conveys.</p>
+    <p>We produced two artist films, each designed for a different context within the release campaign. One longer form for streaming platforms and press use, one optimised for social. Both were cut to work independently, without relying on each other for context.</p>
+    <p>The films form the visual centrepiece of Beth's debut release, distributed across Outhere Music's channels, Beth's own platforms and to press.</p>
+    <div style="margin-top:24px;padding-top:24px;border-top:1px solid rgba(238,236,232,.1);">
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">Services Provided</p>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.4);">Concert Film &amp; Video</p>
+        <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.4);">Long-form Artist Film</p>
+        <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.4);">Social-optimised Edit</p>
+      </div>
+      <a href="/recording-services/concert-filming/" style="display:inline-block;margin-top:20px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">&#8594; View Service</a>
+    </div>
+  </div>
+  <div class="case-story-image">
+    <img src="/images/WORK/work-beth-taylor-3.jpg" alt="Beth Taylor performing">
+  </div>
 </section>
 
-<div class="case-gallery">
-  <img src="/images/WORK/work-beth-taylor-1.jpg" alt="Beth Taylor image 1" loading="lazy">
-  <img src="/images/WORK/work-beth-taylor-2.jpg" alt="Beth Taylor image 2" loading="lazy">
-  <img src="/images/WORK/work-beth-taylor-3.jpg" alt="Beth Taylor image 3" loading="lazy">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);padding:clamp(40px,5vw,60px) var(--pad);border-top:1px solid rgba(238,236,232,.1);">
+  <div>
+    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">Project Scope</p>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">WHAT WE DID.</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">LONG-FORM ARTIST FILM</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">01</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SOCIAL-OPTIMISED EDIT</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">02</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SHOT AND EDITED IN-HOUSE</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">03</span>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
+      <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">DISTRIBUTED ACROSS OUTHERE MUSIC CHANNELS</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">04</span>
+    </div>
+    <a href="/recording-services/concert-filming/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;margin-top:24px;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">&#8594; Concert Film &amp; Video Service</a>
+  </div>
 </div>
-
-<section class="case-what">
-  <div class="sr">
-    <h2>WHAT WE DID.</h2>
-  </div>
-  <div class="sr d1">
-    <ul>
-      <li>Two artist films for international label release</li>
-      <li>Long-form film for streaming and press</li>
-      <li>Social-optimised edit</li>
-      <li>Shot and edited in-house</li>
-    </ul>
-    <a href="/recording-services/concert-filming/" class="case-service-link">This project used our Concert Film and Video service &rarr;</a>
-  </div>
-</section>
 
 <section class="case-related sr">
   <h3>RELATED PROJECTS</h3>
-  <div class="case-related-grid">
+  <div class="case-related-grid" style="grid-template-columns:1fr 1fr 1fr;">
     <a href="/work/sean-shibe/" class="case-related-card">
-      <img src="/images/WORK/work-sean-2.jpg" alt="Sean Shibe artist film" loading="lazy">
+      <img src="/images/WORK/sean-hero.jpg" alt="Sean Shibe artist film" loading="lazy">
       <p>Concert Film and Video &middot; 2025</p>
       <h4>SEAN SHIBE</h4>
     </a>
+    <a href="/work/scottish-ensemble/" class="case-related-card">
+      <img src="/images/WORK/Interview_00_00_25_15.jpg" alt="Scottish Ensemble concert" loading="lazy">
+      <p>Concert Film and Video &middot; 2025-26</p>
+      <h4>SCOTTISH ENSEMBLE</h4>
+    </a>
     <a href="/work/xx-lotte/" class="case-related-card">
-      <img src="/images/WORK/work-singer-sessions-1.jpg" alt="xx, Lotte recording session" loading="lazy">
-      <p>CD and Album Production &middot; 2023</p>
+      <img src="/images/WORK/work-singer-sessions-1.jpg" alt="xx, Lotte" loading="lazy">
+      <p>CD &amp; Album &middot; 2023</p>
       <h4>XX, LOTTE</h4>
     </a>
   </div>
 </section>
 
+<div class="project-nav">
+  <a href="/work/scottish-ensemble/">
+    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:8px;">&#8592; Previous</p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SCOTTISH ENSEMBLE</p>
+  </a>
+  <a href="/work/xx-lotte/">
+    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:8px;">Next &#8594;</p>
+    <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">XX, LOTTE</p>
+  </a>
+</div>
+
 <section class="case-cta sr">
   <h2>START A SIMILAR PROJECT</h2>
   <p>Tell us about it. We respond within 24 hours.</p>
   <a href="/contact/" class="page-cta-btn">Get in Touch</a>
-  <br>
   <a href="/work/" class="case-back">Back to Work</a>
 </section>
 
@@ -224,6 +297,8 @@ document.querySelectorAll('.mob-l').forEach(l=>l.addEventListener('click',()=>to
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&open)toggleMenu(false);});
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});},{threshold:0.08});
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
+const caseHeroBg=document.querySelector('.case-hero img');
+if(caseHeroBg){window.addEventListener('scroll',()=>{caseHeroBg.style.transform=`translateY(${window.scrollY*0.4}px)`;},{passive:true});}
 </script>
 </body>
 </html>
