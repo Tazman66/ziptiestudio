@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Audio and Video Should Be Recorded Together | Zip Tie Studio</title>
+<meta name="description" content="Most classical music sessions use two separate teams for audio and video. Here is why that creates problems and how an integrated approach changes the result.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.ziptiestudio.co.uk/blog/audio-and-video-together/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+<style>
+
+/* FORCE BLACK BACKGROUND */
+*, section, div, article, header, footer, main, aside, nav { background-color: transparent; }
+html, body { background-color: #000000 !important; color: #eeece8 !important; }
+
+/* ─── RESET & TOKENS ─── */
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+:root {
+  --ink:   #050505;
+  --off:   #eeece8;
+  --mid:   rgba(238,236,232,.42);
+  --ghost: rgba(238,236,232,.12);
+  --bb:    'Bebas Neue', sans-serif;
+  --tx:    'Outfit', sans-serif;
+  --pad:   clamp(20px, 5vw, 60px);
+}
+
+body {
+  background: #000000;
+  color: #eeece8;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+/* ─── SKIP ─── */
+.skip { position:absolute; top:-40px; left:0; background:#eeece8; color:#000000; padding:8px 16px; font-size:12px; z-index:10000; }
+.skip:focus { top:0; }
+
+/* ─── NAV ─── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:500;
+  display: flex; justify-content:space-between; align-items:center;
+  padding: 28px clamp(20px,5vw,60px);
+  transition: padding .4s;
+}
+nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); }
+.nav-logo { font-family:'Bebas Neue',sans-serif; font-size:clamp(16px,2vw,24px); letter-spacing:.07em; color:#eeece8; text-decoration:none; }
+.nav-links { display:flex; gap:36px; list-style:none; }
+.nav-links a { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.18em; text-transform:uppercase; color:rgba(238,236,232,.4); text-decoration:none; transition:color .2s; }
+.nav-links a:hover { color:#eeece8; }
+.nav-cta { font-size:clamp(11px,1.2vw,14px); font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:#eeece8; text-decoration:none; border:1px solid rgba(238,236,232,.22); padding:12px 28px; transition:background .2s,color .2s; }
+.nav-cta:hover { background:#eeece8; color:#000000; }
+
+.ham { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; min-width:44px; min-height:44px; justify-content:center; align-items:center; }
+.ham span { display:block; width:22px; height:1px; background:#eeece8; transition:transform .3s,opacity .3s; }
+.ham.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+.ham.open span:nth-child(2) { opacity:0; }
+.ham.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+.mob-nav { display:none; position:fixed; inset:0; background:#000000; z-index:490; flex-direction:column; justify-content:center; align-items:center; gap:48px; opacity:0; transition:opacity .3s; }
+.mob-nav.open { opacity:1; }
+.mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
+.mob-nav a:hover { color:rgba(238,236,232,.4); }
+
+/* ─── FOOTER ─── */
+footer {
+  padding: clamp(20px,3vw,32px) clamp(20px,5vw,60px);
+  display: flex; justify-content:space-between; align-items:center;
+  flex-wrap:wrap; gap:16px;
+  border-top: 1px solid rgba(238,236,232,.1);
+}
+.ft-logo { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:.07em; }
+.ft-nav { display:flex; gap:28px; list-style:none; flex-wrap:wrap; }
+.ft-nav a { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.22); text-decoration:none; transition:color .2s; }
+.ft-nav a:hover { color:#eeece8; }
+.ft-copy { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.1em; color:rgba(238,236,232,.12); }
+.ft-social { display:flex; gap:20px; align-items:center; }
+.ft-social-link { color:rgba(238,236,232,.3); transition:color .2s; display:flex; align-items:center; }
+.ft-social-link:hover { color:#eeece8; }
+
+/* ─── MOBILE ─── */
+@media (max-width:768px) {
+  .nav-links, .nav-cta { display:none; }
+  .ham { display:flex; }
+  footer { flex-direction:column; align-items:flex-start; gap:18px; }
+}
+
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
+}
+
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip">Skip to main content</a>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">Zip Tie Studio</a>
+  <ul class="nav-links">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <a href="/contact/" class="nav-cta">Start a Project</a>
+  <button class="ham" id="ham" aria-label="Open menu" aria-expanded="false" aria-controls="mob-nav">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mob-nav" id="mob-nav" role="dialog" aria-modal="true" aria-label="Navigation">
+  <a href="/work/"               class="mob-l">Work</a>
+  <a href="/recording-services/" class="mob-l">Services</a>
+  <a href="/the-story/"          class="mob-l">About</a>
+  <a href="/contact/"            class="mob-l">Start a Project</a>
+</div>
+
+<main id="main">
+
+<!-- HERO -->
+<div style="width:100%;overflow:hidden;height:clamp(280px,35vw,480px);">
+  <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Classical music recording session with microphones and cameras" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+</div>
+
+<!-- POST HEADER -->
+<div style="max-width:760px;margin:0 auto;padding:clamp(40px,5vw,72px) var(--pad) clamp(24px,3vw,40px);">
+  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;">Campbell Parker · June 2026 · Process</p>
+  <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(16px,2vw,24px);">WHY AUDIO AND VIDEO SHOULD BE RECORDED TOGETHER</h1>
+  <p style="font-size:clamp(16px,1.8vw,20px);line-height:1.7;color:rgba(238,236,232,.5);font-weight:300;">Most classical music sessions still use two separate teams. Here is why that creates problems, and how handling both in the same conversation changes the result.</p>
+</div>
+
+<!-- POST BODY: part one (up to end of communication problem) -->
+<article style="max-width:680px;margin:0 auto;padding:0 var(--pad) 0;">
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Walk into almost any classical music recording session and you will find two separate operations running in parallel. On one side, an audio team: producer, engineer, microphones everywhere, headphones on, monitoring the signal. On the other, a video team: camera operators, a director, lenses trained on the stage. Two briefs. Two schedules. Two invoices. And, often, two sets of problems that nobody anticipated.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">This is the default approach and for a long time it was unavoidable. Audio production and video production were genuinely separate disciplines, requiring different skills, different equipment and different people. Bringing them together in one team was not practical for most productions.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">But the problems that come from keeping them separate are real, and they show up consistently.</p>
+
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">THE MICROPHONE PROBLEM</h2>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Microphone placement is one of the most consequential decisions in any recording session. The position of a main stereo pair relative to the ensemble affects not just the balance of sound but the sense of space, the relationship between instruments, and whether the recording feels like it happened in a real room or was assembled in post. These decisions are made before the first take.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">When the video team arrives separately, they find microphone stands in places that were not chosen with cameras in mind. The main pair might be exactly where the best camera angle would be. A spot mic on the principal might block a clean shot of the soloist. The overhead rig might appear in every wide shot of the stage.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">At this point, someone has to compromise. Either the audio team moves a microphone they placed carefully for acoustic reasons, or the video team works around it and ends up with shots that avoid half the stage. Neither outcome is ideal.</p>
+
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">THE COMMUNICATION PROBLEM</h2>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Two separate teams means two separate points of contact for the client. Questions about the audio go one way. Questions about the video go another. If a decision affects both, it has to be communicated twice, and the risk of something getting lost increases with every handoff.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">In post-production, this becomes more acute. The audio edit and the video edit happen in different places, by different people, to different timelines. Syncing them at the end is technically straightforward, but any creative decision made in the audio edit that affects the video, or vice versa, requires another round of communication and another round of changes.</p>
+
+</article>
+
+<!-- IMAGE BREAK -->
+<div style="width:100%;overflow:hidden;margin:clamp(32px,4vw,48px) 0;">
+  <img src="/images/WORK/work-sean-8.jpg" alt="Microphone and camera setup during classical recording session" style="width:100%;height:clamp(200px,25vw,360px);object-fit:cover;object-position:center;">
+</div>
+
+<!-- POST BODY: part two -->
+<article style="max-width:680px;margin:0 auto;padding:0 var(--pad) clamp(60px,8vw,100px);">
+
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:0 0 16px;">WHAT CHANGES WHEN YOU HANDLE BOTH</h2>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">When microphone placement and camera angle are decided in the same conversation, the compromises disappear. We know where every microphone needs to be for the audio to work. We also know where every camera needs to be for the shots to work. Those two sets of requirements get resolved together, before anyone arrives on the day.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">On the session day, there is one team, one brief and one person the client talks to. If something needs to change, it changes once. If a decision in the audio affects the edit, the person making the audio decision is the same person doing the edit.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">The result is a recording and a film that feel like they belong together, because they were made that way from the first conversation. The audio is not retrofitted to the video. The video is not an afterthought bolted onto the recording. They are the same project, made by the same people, at the same time.</p>
+
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">WHEN SEPARATE TEAMS STILL MAKE SENSE</h2>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">To be fair, there are situations where separate teams are the right call. Very large productions with complex multi-camera setups and dedicated broadcast crews operate at a scale where specialisation makes sense. If you are filming a major opera for television broadcast, you probably want a dedicated TV director and a dedicated audio producer who each focus entirely on their own discipline.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">For the kind of work we do, which is location recording and filming for ensembles, soloists, labels and institutions, the integrated approach consistently produces better results with less friction. The session runs more smoothly, the client has a simpler experience, and the finished work is more coherent.</p>
+
+  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">It is also, frankly, how the work should always have been done. The microphone and the camera are both there to serve the music. It makes sense for the people placing them to be in the same conversation.</p>
+
+  <!-- CTA block -->
+  <div style="margin-top:clamp(40px,5vw,64px);padding:clamp(28px,3vw,40px);border:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;gap:12px;">
+    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Interested in working together?</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;">WE HANDLE AUDIO AND VIDEO AS ONE PROJECT.</h3>
+    <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.45);">Tell us about your project and we will respond within 24 hours.</p>
+    <a href="/contact/" style="display:inline-block;margin-top:8px;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000000;background:#eeece8;padding:14px 32px;text-decoration:none;transition:opacity .2s;width:fit-content;">Get in Touch</a>
+  </div>
+
+</article>
+
+<!-- BACK TO BLOG -->
+<div style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
+  <a href="/blog/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">← Back to Journal</a>
+</div>
+
+</main>
+
+<footer>
+  <div class="ft-logo">Zip Tie Studio</div>
+  <ul class="ft-nav">
+    <li><a href="/work/">Work</a></li>
+    <li><a href="/recording-services/">Services</a></li>
+    <li><a href="/the-story/">About</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+  <div class="ft-social">
+    <a href="https://www.instagram.com/_zip_tie_studio_/" target="_blank" rel="noopener" aria-label="Instagram" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"></circle></svg></a>
+    <a href="https://www.linkedin.com/company/98889420/" target="_blank" rel="noopener" aria-label="LinkedIn" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+    <a href="https://www.youtube.com/@ziptie-studio" target="_blank" rel="noopener" aria-label="YouTube" class="ft-social-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"></path><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="currentColor" stroke="none"></polygon></svg></a>
+  </div>
+  <p class="ft-copy">© 2026 Zip Tie Studio · UK &amp; International</p>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('stuck', window.scrollY > 60), { passive:true });
+
+const ham = document.getElementById('ham');
+const mob = document.getElementById('mob-nav');
+let open = false;
+function toggleMenu(s) {
+  open = s;
+  ham.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+  mob.style.display = open ? 'flex' : 'none';
+  requestAnimationFrame(() => mob.classList.toggle('open', open));
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+ham.addEventListener('click', () => toggleMenu(!open));
+document.querySelectorAll('.mob-l').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) toggleMenu(false); });
+</script>
+</body>
+</html>
