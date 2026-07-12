@@ -22,13 +22,9 @@ html, body { background-color: #000000 !important; color: #eeece8 !important; }
 html { scroll-behavior:smooth; }
 
 :root {
-  --ink:   #050505;
-  --off:   #eeece8;
-  --mid:   rgba(238,236,232,.42);
-  --ghost: rgba(238,236,232,.12);
-  --bb:    'Bebas Neue', sans-serif;
-  --tx:    'Outfit', sans-serif;
-  --pad:   clamp(20px, 5vw, 60px);
+  --ink: #050505;
+  --off: #eeece8;
+  --pad: clamp(20px, 5vw, 60px);
 }
 
 body {
@@ -68,6 +64,157 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
 .mob-nav a:hover { color:rgba(238,236,232,.4); }
 
+/* ─── HERO ─── */
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+  height: clamp(400px, 50vw, 640px);
+}
+.hero-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 60%);
+}
+.hero-text {
+  position: absolute;
+  bottom: clamp(32px,5vw,64px);
+  left: var(--pad);
+  right: var(--pad);
+  z-index: 1;
+}
+.hero-meta {
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.5);
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px,6vw,80px);
+  letter-spacing: .02em;
+  line-height: .9;
+  max-width: 800px;
+}
+
+/* ─── POST BODY ─── */
+.post-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(40px,5vw,72px) var(--pad) clamp(60px,8vw,100px);
+}
+
+.post-p {
+  font-size: clamp(16px,1.8vw,19px);
+  line-height: 1.95;
+  color: rgba(238,236,232,.7);
+  margin-bottom: 28px;
+}
+
+.post-p--lead {
+  font-size: clamp(18px,2vw,22px);
+  line-height: 1.85;
+  color: rgba(238,236,232,.8);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.post-h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(11px,1.2vw,14px);
+  font-weight: 300;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.4);
+  margin: clamp(48px,6vw,72px) 0 20px;
+  border-top: 1px solid rgba(238,236,232,.1);
+  padding-top: 24px;
+}
+
+/* ─── FULL-BLEED IMAGE ─── */
+.post-img-wrap {
+  width: 100vw;
+  margin-left: calc(-1 * var(--pad));
+  height: clamp(240px,28vw,400px);
+  overflow: hidden;
+  margin-top: clamp(40px,5vw,64px);
+  margin-bottom: clamp(40px,5vw,64px);
+}
+.post-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ─── CTA ─── */
+.post-cta {
+  margin-top: clamp(48px,6vw,72px);
+  padding: clamp(32px,4vw,56px);
+  background: rgba(238,236,232,.04);
+  border: 1px solid rgba(238,236,232,.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post-cta-label {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.28);
+}
+.post-cta-hl {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(24px,3vw,40px);
+  letter-spacing: .02em;
+  line-height: .9;
+}
+.post-cta-body {
+  font-size: clamp(13px,1.4vw,15px);
+  line-height: 1.7;
+  color: rgba(238,236,232,.45);
+}
+.post-cta-btn {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #000000;
+  background: #eeece8;
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: opacity .2s;
+  width: fit-content;
+}
+.post-cta-btn:hover { opacity: .82; }
+
+/* ─── BACK LINK ─── */
+.back-link-wrap {
+  padding: clamp(24px,3vw,40px) var(--pad);
+  border-top: 1px solid rgba(238,236,232,.1);
+  text-align: center;
+}
+.back-link {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.3);
+  text-decoration: none;
+  transition: color .2s;
+}
+.back-link:hover { color: #eeece8; }
+
 /* ─── FOOTER ─── */
 footer {
   padding: clamp(20px,3vw,32px) clamp(20px,5vw,60px);
@@ -88,6 +235,7 @@ footer {
 @media (max-width:768px) {
   .nav-links, .nav-cta { display:none; }
   .ham { display:flex; }
+  .hero-wrap { height: 50svh; }
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
 }
 
@@ -98,6 +246,9 @@ footer {
 </style>
 </head>
 <body>
+
+<!-- READING PROGRESS -->
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:#eeece8;width:0%;z-index:1000;transition:width .1s;"></div>
 
 <a href="#main" class="skip">Skip to main content</a>
 
@@ -126,79 +277,74 @@ footer {
 <main id="main">
 
 <!-- HERO -->
-<div style="width:100%;overflow:hidden;height:clamp(280px,35vw,480px);">
-  <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Classical music recording session with microphones and cameras" style="width:100%;height:100%;object-fit:cover;object-position:center;">
+<div class="hero-wrap">
+  <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Classical music recording session with microphones and cameras">
+  <div class="hero-text">
+    <p class="hero-meta">Campbell Parker · June 2026 · Process · 5 min read</p>
+    <h1 class="hero-title">WHY AUDIO AND VIDEO SHOULD BE RECORDED TOGETHER</h1>
+  </div>
 </div>
 
-<!-- POST HEADER -->
-<div style="max-width:760px;margin:0 auto;padding:clamp(40px,5vw,72px) var(--pad) clamp(24px,3vw,40px);">
-  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;">Campbell Parker · June 2026 · Process</p>
-  <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(16px,2vw,24px);">WHY AUDIO AND VIDEO SHOULD BE RECORDED TOGETHER</h1>
-  <p style="font-size:clamp(16px,1.8vw,20px);line-height:1.7;color:rgba(238,236,232,.5);font-weight:300;">Most classical music sessions still use two separate teams. Here is why that creates problems, and how handling both in the same conversation changes the result.</p>
-</div>
+<!-- ARTICLE -->
+<article class="post-body">
 
-<!-- POST BODY: part one (up to end of communication problem) -->
-<article style="max-width:680px;margin:0 auto;padding:0 var(--pad) 0;">
+  <p class="post-p post-p--lead">Most classical music sessions still use two separate teams. Here is why that creates problems, and how handling both in the same conversation changes the result.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Walk into almost any classical music recording session and you will find two separate operations running in parallel. On one side, an audio team: producer, engineer, microphones everywhere, headphones on, monitoring the signal. On the other, a video team: camera operators, a director, lenses trained on the stage. Two briefs. Two schedules. Two invoices. And, often, two sets of problems that nobody anticipated.</p>
+  <p class="post-p">Walk into almost any classical music recording session and you will find two separate operations running in parallel. On one side, an audio team: producer, engineer, microphones everywhere, headphones on, monitoring the signal. On the other, a video team: camera operators, a director, lenses trained on the stage. Two briefs. Two schedules. Two invoices. And, often, two sets of problems that nobody anticipated.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">This is the default approach and for a long time it was unavoidable. Audio production and video production were genuinely separate disciplines, requiring different skills, different equipment and different people. Bringing them together in one team was not practical for most productions.</p>
+  <p class="post-p">This is the default approach and for a long time it was unavoidable. Audio production and video production were genuinely separate disciplines, requiring different skills, different equipment and different people. Bringing them together in one team was not practical for most productions.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">But the problems that come from keeping them separate are real, and they show up consistently.</p>
+  <p class="post-p">But the problems that come from keeping them separate are real, and they show up consistently.</p>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">THE MICROPHONE PROBLEM</h2>
+  <h2 class="post-h2">The Microphone Problem</h2>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Microphone placement is one of the most consequential decisions in any recording session. The position of a main stereo pair relative to the ensemble affects not just the balance of sound but the sense of space, the relationship between instruments, and whether the recording feels like it happened in a real room or was assembled in post. These decisions are made before the first take.</p>
+  <p class="post-p">Microphone placement is one of the most consequential decisions in any recording session. The position of a main stereo pair relative to the ensemble affects not just the balance of sound but the sense of space, the relationship between instruments, and whether the recording feels like it happened in a real room or was assembled in post. These decisions are made before the first take.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">When the video team arrives separately, they find microphone stands in places that were not chosen with cameras in mind. The main pair might be exactly where the best camera angle would be. A spot mic on the principal might block a clean shot of the soloist. The overhead rig might appear in every wide shot of the stage.</p>
+  <p class="post-p">When the video team arrives separately, they find microphone stands in places that were not chosen with cameras in mind. The main pair might be exactly where the best camera angle would be. A spot mic on the principal might block a clean shot of the soloist. The overhead rig might appear in every wide shot of the stage.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">At this point, someone has to compromise. Either the audio team moves a microphone they placed carefully for acoustic reasons, or the video team works around it and ends up with shots that avoid half the stage. Neither outcome is ideal.</p>
+  <p class="post-p">At this point, someone has to compromise. Either the audio team moves a microphone they placed carefully for acoustic reasons, or the video team works around it and ends up with shots that avoid half the stage. Neither outcome is ideal.</p>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">THE COMMUNICATION PROBLEM</h2>
+  <h2 class="post-h2">The Communication Problem</h2>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">Two separate teams means two separate points of contact for the client. Questions about the audio go one way. Questions about the video go another. If a decision affects both, it has to be communicated twice, and the risk of something getting lost increases with every handoff.</p>
+  <p class="post-p">Two separate teams means two separate points of contact for the client. Questions about the audio go one way. Questions about the video go another. If a decision affects both, it has to be communicated twice, and the risk of something getting lost increases with every handoff.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">In post-production, this becomes more acute. The audio edit and the video edit happen in different places, by different people, to different timelines. Syncing them at the end is technically straightforward, but any creative decision made in the audio edit that affects the video, or vice versa, requires another round of communication and another round of changes.</p>
+  <p class="post-p">In post-production, this becomes more acute. The audio edit and the video edit happen in different places, by different people, to different timelines. Syncing them at the end is technically straightforward, but any creative decision made in the audio edit that affects the video, or vice versa, requires another round of communication and another round of changes.</p>
 
-</article>
+  <blockquote style="margin:clamp(40px,5vw,64px) 0;padding:clamp(24px,3vw,40px);border-left:2px solid rgba(238,236,232,.2);font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:1.1;color:rgba(238,236,232,.8);">
+    "When microphone placement and camera angle are decided in the same conversation, the compromises disappear."
+  </blockquote>
 
-<!-- IMAGE BREAK -->
-<div style="width:100%;overflow:hidden;margin:clamp(32px,4vw,48px) 0;">
-  <img src="/images/WORK/work-sean-8.jpg" alt="Microphone and camera setup during classical recording session" style="width:100%;height:clamp(200px,25vw,360px);object-fit:cover;object-position:center;">
-</div>
+  <div class="post-img-wrap">
+    <img src="/images/WORK/work-sean-8.jpg" alt="Microphone and camera setup during classical recording session">
+  </div>
 
-<!-- POST BODY: part two -->
-<article style="max-width:680px;margin:0 auto;padding:0 var(--pad) clamp(60px,8vw,100px);">
+  <h2 class="post-h2">What Changes When You Handle Both</h2>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:0 0 16px;">WHAT CHANGES WHEN YOU HANDLE BOTH</h2>
+  <p class="post-p">When microphone placement and camera angle are decided in the same conversation, the compromises disappear. We know where every microphone needs to be for the audio to work. We also know where every camera needs to be for the shots to work. Those two sets of requirements get resolved together, before anyone arrives on the day.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">When microphone placement and camera angle are decided in the same conversation, the compromises disappear. We know where every microphone needs to be for the audio to work. We also know where every camera needs to be for the shots to work. Those two sets of requirements get resolved together, before anyone arrives on the day.</p>
+  <p class="post-p">On the session day, there is one team, one brief and one person the client talks to. If something needs to change, it changes once. If a decision in the audio affects the edit, the person making the audio decision is the same person doing the edit.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">On the session day, there is one team, one brief and one person the client talks to. If something needs to change, it changes once. If a decision in the audio affects the edit, the person making the audio decision is the same person doing the edit.</p>
+  <p class="post-p">The result is a recording and a film that feel like they belong together, because they were made that way from the first conversation. The audio is not retrofitted to the video. The video is not an afterthought bolted onto the recording. They are the same project, made by the same people, at the same time.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">The result is a recording and a film that feel like they belong together, because they were made that way from the first conversation. The audio is not retrofitted to the video. The video is not an afterthought bolted onto the recording. They are the same project, made by the same people, at the same time.</p>
+  <h2 class="post-h2">When Separate Teams Still Make Sense</h2>
 
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;margin:clamp(32px,4vw,48px) 0 16px;">WHEN SEPARATE TEAMS STILL MAKE SENSE</h2>
+  <p class="post-p">To be fair, there are situations where separate teams are the right call. Very large productions with complex multi-camera setups and dedicated broadcast crews operate at a scale where specialisation makes sense. If you are filming a major opera for television broadcast, you probably want a dedicated TV director and a dedicated audio producer who each focus entirely on their own discipline.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">To be fair, there are situations where separate teams are the right call. Very large productions with complex multi-camera setups and dedicated broadcast crews operate at a scale where specialisation makes sense. If you are filming a major opera for television broadcast, you probably want a dedicated TV director and a dedicated audio producer who each focus entirely on their own discipline.</p>
+  <p class="post-p">For the kind of work we do, which is location recording and filming for ensembles, soloists, labels and institutions, the integrated approach consistently produces better results with less friction. The session runs more smoothly, the client has a simpler experience, and the finished work is more coherent.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">For the kind of work we do, which is location recording and filming for ensembles, soloists, labels and institutions, the integrated approach consistently produces better results with less friction. The session runs more smoothly, the client has a simpler experience, and the finished work is more coherent.</p>
+  <p class="post-p">It is also, frankly, how the work should always have been done. The microphone and the camera are both there to serve the music. It makes sense for the people placing them to be in the same conversation.</p>
 
-  <p style="font-size:clamp(15px,1.6vw,18px);line-height:1.9;color:rgba(238,236,232,.6);margin-bottom:24px;">It is also, frankly, how the work should always have been done. The microphone and the camera are both there to serve the music. It makes sense for the people placing them to be in the same conversation.</p>
-
-  <!-- CTA block -->
-  <div style="margin-top:clamp(40px,5vw,64px);padding:clamp(28px,3vw,40px);border:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;gap:12px;">
-    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Interested in working together?</p>
-    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:.02em;line-height:.9;">WE HANDLE AUDIO AND VIDEO AS ONE PROJECT.</h3>
-    <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.45);">Tell us about your project and we will respond within 24 hours.</p>
-    <a href="/contact/" style="display:inline-block;margin-top:8px;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000000;background:#eeece8;padding:14px 32px;text-decoration:none;transition:opacity .2s;width:fit-content;">Get in Touch</a>
+  <div class="post-cta">
+    <p class="post-cta-label">Interested in working together?</p>
+    <h3 class="post-cta-hl">WE HANDLE AUDIO AND VIDEO AS ONE PROJECT.</h3>
+    <p class="post-cta-body">Tell us about your project and we will respond within 24 hours.</p>
+    <a href="/contact/" class="post-cta-btn">Get in Touch</a>
   </div>
 
 </article>
 
-<!-- BACK TO BLOG -->
-<div style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
-  <a href="/blog/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">← Back to Journal</a>
+<div class="back-link-wrap">
+  <a href="/blog/" class="back-link">← Back to Blog</a>
 </div>
 
 </main>
@@ -238,6 +384,16 @@ function toggleMenu(s) {
 ham.addEventListener('click', () => toggleMenu(!open));
 document.querySelectorAll('.mob-l').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) toggleMenu(false); });
+
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('article');
+  if (!article) return;
+  const scrollTop = window.scrollY;
+  const docHeight = article.offsetHeight;
+  const winHeight = window.innerHeight;
+  const scrollPercent = scrollTop / (docHeight - winHeight + article.offsetTop);
+  document.getElementById('reading-progress').style.width = Math.min(scrollPercent * 100, 100) + '%';
+}, { passive: true });
 </script>
 </body>
 </html>
