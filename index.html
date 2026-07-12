@@ -90,11 +90,12 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 
 .hero-bg {
   position: absolute; inset: 0;
+  overflow: hidden;
+  z-index: 0;
   filter: brightness(.32);
   transform: scale(1.06);
   animation: zoomOut 12s ease forwards;
   will-change: transform;
-  overflow: hidden;
 }
 .hero-bg img {
   position: absolute; top: -10%; left: 0;
