@@ -68,80 +68,6 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
 .mob-nav a:hover { color:rgba(238,236,232,.4); }
 
-/* ─── PAGE HEADER ─── */
-.blog-page-header {
-  padding: clamp(100px,14vw,180px) var(--pad) clamp(40px,5vw,60px);
-  border-bottom: 1px solid rgba(238,236,232,.1);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px,6vw,80px);
-  align-items: end;
-}
-.blog-page-label {
-  font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
-  color: rgba(238,236,232,.3); margin-bottom: 16px;
-}
-.blog-page-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(40px,6vw,90px);
-  line-height: .9; letter-spacing: .02em;
-}
-.blog-page-intro {
-  font-size: clamp(15px,1.6vw,18px); line-height: 1.75;
-  color: rgba(238,236,232,.5); font-weight: 300;
-}
-
-/* ─── BLOG GRID ─── */
-.blog-section { padding: clamp(40px,5vw,60px) 0; }
-
-.blog-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1px;
-  background: rgba(238,236,232,.1);
-  padding: 0;
-}
-.blog-card {
-  background: #000000;
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  transition: background 0.3s ease;
-}
-.blog-card:hover { background: rgba(238,236,232,.03); }
-.blog-card-img-wrap { overflow: hidden; }
-.blog-card-img {
-  width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block;
-  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
-}
-.blog-card:hover .blog-card-img { transform: scale(1.03); }
-.blog-card-body {
-  padding: clamp(24px,3vw,40px);
-  display: flex; flex-direction: column; gap: 10px; flex: 1;
-}
-.blog-card-meta {
-  font-size: 9px; letter-spacing: .2em; text-transform: uppercase;
-  color: rgba(238,236,232,.3);
-}
-.blog-card-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(22px,3vw,36px); letter-spacing: .02em; line-height: .95;
-  color: #eeece8;
-}
-.blog-card-excerpt {
-  font-size: clamp(13px,1.4vw,15px); line-height: 1.7;
-  color: rgba(238,236,232,.45);
-}
-.blog-card-cta {
-  font-size: 9px; letter-spacing: .18em; text-transform: uppercase;
-  color: rgba(238,236,232,.3); margin-top: auto; padding-top: 16px;
-}
-
-/* ─── SCROLL REVEAL ─── */
-.sr { opacity:0; transform:translateY(24px); transition:opacity .8s ease,transform .8s ease; }
-.sr.vis { opacity:1; transform:translateY(0); }
-
 /* ─── FOOTER ─── */
 footer {
   padding: clamp(20px,3vw,32px) clamp(20px,5vw,60px);
@@ -162,9 +88,10 @@ footer {
 @media (max-width:768px) {
   .nav-links, .nav-cta { display:none; }
   .ham { display:flex; }
-  .blog-page-header { grid-template-columns: 1fr; gap: clamp(24px,3vw,32px); padding-top: clamp(80px,12vw,120px); }
-  .blog-grid { grid-template-columns: 1fr; }
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
+  header > div { grid-template-columns: 1fr !important; }
+  .featured-link { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
+  .placeholder-grid { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -201,30 +128,59 @@ footer {
 
 <main id="main">
 
-<header class="blog-page-header">
-  <div>
-    <p class="blog-page-label">Blog</p>
-    <h1 class="blog-page-title">BLOG.</h1>
-  </div>
-  <div>
-    <p class="blog-page-intro">Notes from the studio. We write about the work, the process and the ideas behind what we do. For artists, labels and organisations thinking about recording, filming or producing their music.</p>
+<!-- PAGE HEADER -->
+<header style="padding:calc(var(--pad) + 100px) var(--pad) clamp(40px,5vw,64px);border-bottom:1px solid rgba(238,236,232,.1);">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:end;">
+    <div>
+      <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;">Blog</p>
+      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,10vw,140px);letter-spacing:.02em;line-height:.85;">NOTES<br>ON THE<br>WORK.</h1>
+    </div>
+    <div style="padding-bottom:8px;">
+      <p style="font-size:clamp(14px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.5);max-width:480px;">We write about recording, filming and producing classical music. Process, ideas and the thinking behind what we do. For artists, labels and anyone curious about how this work gets made.</p>
+    </div>
   </div>
 </header>
 
-<section class="blog-section" aria-label="Journal articles">
-  <div class="blog-grid">
-    <a href="/blog/audio-and-video-together/" class="blog-card sr">
-      <div class="blog-card-img-wrap">
-        <img class="blog-card-img" src="/images/WORK/Interview_00_00_51_04.jpg" alt="Recording session showing microphone and camera setup">
-      </div>
-      <div class="blog-card-body">
-        <p class="blog-card-meta">Campbell Parker · June 2026 · Process</p>
-        <h2 class="blog-card-title">WHY AUDIO AND VIDEO SHOULD BE RECORDED TOGETHER</h2>
-        <p class="blog-card-excerpt">Most classical music sessions still use two separate teams. Here is why that creates problems, and how handling both in the same conversation changes the result.</p>
-        <p class="blog-card-cta">Read more →</p>
-      </div>
-    </a>
+<!-- FEATURED POST -->
+<section style="border-bottom:1px solid rgba(238,236,232,.1);">
+  <a href="/blog/audio-and-video-together/" class="featured-link" style="display:grid;grid-template-columns:1fr 1fr;text-decoration:none;color:inherit;min-height:clamp(360px,40vw,520px);">
+    <div style="overflow:hidden;">
+      <img src="/images/WORK/EMF_Day_3-7.jpg" alt="Classical music recording session" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);" onmouseenter="this.style.transform='scale(1.04)'" onmouseleave="this.style.transform='scale(1)'">
+    </div>
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,5vw,80px);gap:16px;">
+      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Process · June 2026 · 5 min read</p>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:.92;color:#eeece8;">WHY AUDIO AND VIDEO SHOULD BE RECORDED TOGETHER</h2>
+      <p style="font-size:clamp(13px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.45);">Most classical music sessions still use two separate teams. Here is why that creates problems, and how handling both in the same conversation changes the result.</p>
+      <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:8px;">Read more →</p>
+    </div>
+  </a>
+</section>
+
+<!-- COMING SOON POSTS -->
+<section style="padding:clamp(40px,5vw,72px) var(--pad);">
+  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.25);margin-bottom:clamp(24px,3vw,40px);">More posts coming soon</p>
+  <div class="placeholder-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);">
+
+    <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:12px;opacity:0.5;">
+      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Coming Soon · Recording</p>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">WHAT TO EXPECT FROM A CLASSICAL ALBUM RECORDING SESSION</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.4);">A guide for soloists and ensembles preparing for their first album project. What happens before, during and after the sessions.</p>
+    </div>
+
+    <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:12px;opacity:0.5;">
+      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Coming Soon · Venues</p>
+      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">FIVE SCOTTISH VENUES WORTH RECORDING IN</h3>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.4);">Scotland has some of the finest acoustic spaces in the UK. Here are the venues we return to again and again, and why they work.</p>
+    </div>
+
   </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section style="padding:clamp(48px,6vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
+  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;">Work with us</p>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,90px);letter-spacing:.02em;line-height:.9;margin-bottom:24px;">HAVE A PROJECT<br>IN MIND?</h2>
+  <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 40px;text-decoration:none;transition:opacity .2s;" onmouseenter="this.style.opacity='.82'" onmouseleave="this.style.opacity='1'">Get in Touch</a>
 </section>
 
 </main>
@@ -264,11 +220,6 @@ function toggleMenu(s) {
 ham.addEventListener('click', () => toggleMenu(!open));
 document.querySelectorAll('.mob-l').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) toggleMenu(false); });
-
-const revObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); revObs.unobserve(e.target); } });
-}, { threshold: 0.08 });
-document.querySelectorAll('.sr').forEach(el => revObs.observe(el));
 </script>
 </body>
 </html>
