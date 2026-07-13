@@ -454,35 +454,16 @@ footer {
   .wi, .testi-img { clip-path:none!important; }
 }
 
-.grain {
-  position: fixed;
-  inset: -100%;
-  width: 300%;
-  height: 300%;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0.05;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  animation: grainShift 8s steps(10) infinite;
+.h-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-@keyframes grainShift {
-  0%, 100% { transform: translate(0, 0); }
-  10% { transform: translate(-5%, -5%); }
-  20% { transform: translate(-10%, 5%); }
-  30% { transform: translate(5%, -10%); }
-  40% { transform: translate(-5%, 15%); }
-  50% { transform: translate(-10%, 5%); }
-  60% { transform: translate(15%, 0); }
-  70% { transform: translate(0, 10%); }
-  80% { transform: translate(-15%, 0); }
-  90% { transform: translate(10%, 5%); }
+.h-reveal.revealed {
+  clip-path: inset(0 0 0% 0);
 }
 </style>
 </head>
 <body>
-
-<div class="grain" aria-hidden="true"></div>
 
 
 
@@ -541,7 +522,7 @@ footer {
 
 <!-- ── SERVICES ── -->
 <section class="services" id="services">
-  <h2 class="svc-hl sr">WHAT WE DO.</h2>
+  <h2 class="svc-hl sr h-reveal">WHAT WE DO.</h2>
   <div class="svc-cols">
     <a href="/recording-services/live-concert-recording/" class="svc-col sr">
       <p class="svc-col-num">01</p>
@@ -586,7 +567,7 @@ footer {
 <!-- ── WORK ── -->
 <section class="work" id="work">
   <div class="work-hd sr">
-    <h2 class="work-title">Selected Work</h2>
+    <h2 class="work-title h-reveal">Selected Work</h2>
   </div>
 
   <div class="work-grid" role="list">
@@ -655,7 +636,7 @@ footer {
 <!-- ── CLIENTS ── -->
 <section class="clients" aria-labelledby="cl-title">
   <div class="cl-hd sr">
-    <h2 class="cl-title" id="cl-title">Trusted By</h2>
+    <h2 class="cl-title h-reveal" id="cl-title">Trusted By</h2>
   </div>
   <div class="logo-grid">
     <a href="https://www.pentatonemusic.com" target="_blank" rel="noopener" class="logo-item">
@@ -687,7 +668,7 @@ footer {
 <!-- ── CTA ── -->
 <section class="cta" id="contact">
   <p class="cta-label sr">Ready to begin?</p>
-  <h2 class="cta-hl sr d1">Audio Worth Hearing.<br>Video Worth Watching.</h2>
+  <h2 class="cta-hl sr d1 h-reveal">Audio Worth Hearing.<br>Video Worth Watching.</h2>
   <p class="cta-sub sr d2">Tell us the project. We'll respond within 24 hours.</p>
   <div class="cta-actions sr d3">
     <a href="/contact/" class="cta-btn">Start Your Project</a>
@@ -757,6 +738,32 @@ if (heroBg) {
     heroBg.style.transform = `translateY(${rate}px)`;
   }, { passive: true });
 }
+
+// Magnetic buttons
+document.querySelectorAll('.cta-primary, .hero-actions a, a[href="/contact/"]').forEach(btn => {
+  if (btn.closest('nav') || btn.closest('footer')) return;
+  btn.style.transition = 'transform 0.2s cubic-bezier(0.22, 1, 0.36, 1)';
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// Heading reveals
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      headingObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
 </script>
 </body>
 <!-- updated April 2026 -->
