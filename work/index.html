@@ -85,6 +85,14 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .index-item-mobile-img{display:block;}
   .page-cta-btn{width:100%;text-align:center;}
 }
+
+.h-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.h-reveal.revealed {
+  clip-path: inset(0 0 0% 0);
+}
 </style>
 </head>
 <body>
@@ -157,7 +165,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </section>
 
 <section class="page-cta">
-  <h2 class="page-cta-hl sr">HAVE A PROJECT IN MIND?</h2>
+  <h2 class="page-cta-hl sr h-reveal">HAVE A PROJECT IN MIND?</h2>
   <p class="page-cta-body sr d1">Tell us about it. We respond within 24 hours.</p>
   <a href="/contact/" class="page-cta-btn sr d2">Start a Conversation</a>
 </section>
@@ -203,6 +211,33 @@ items.forEach((item,i)=>{
   });
 });
 if(previews[0])previews[0].classList.add('active');
+
+// Magnetic buttons
+document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
+  if (btn.closest('nav') || btn.closest('footer')) return;
+  if (!btn.style.background && !btn.className.includes('cta')) return;
+  btn.style.transition = 'transform 0.2s cubic-bezier(0.22, 1, 0.36, 1)';
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// Heading reveals
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      headingObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
 </script>
 </body>
 </html>

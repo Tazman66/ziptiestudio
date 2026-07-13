@@ -87,6 +87,14 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 .budget-display{display:flex;align-items:baseline;gap:12px;}
 #budget-value{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);letter-spacing:0.02em;color:#eeece8;}
 .budget-note{font-size:10px;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+
+.h-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.h-reveal.revealed {
+  clip-path: inset(0 0 0% 0);
+}
 </style>
 </head>
 <body>
@@ -135,7 +143,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     </div>
   </div>
   <div class="contact-right">
-    <h2 class="form-title sr">Tell Us About<br>Your Project.</h2>
+    <h2 class="form-title sr h-reveal">Tell Us About<br>Your Project.</h2>
     <form id="contact-form" class="sr d1" novalidate>
       <div class="form-row">
         <div class="form-group">
@@ -233,6 +241,33 @@ const budgetValue=document.getElementById('budget-value');
 function formatBudget(val){val=parseInt(val);if(val>=20000)return'£20,000+';return'£'+val.toLocaleString('en-GB');}
 budgetSlider.addEventListener('input',function(){budgetValue.textContent=formatBudget(this.value);});
 budgetValue.textContent=formatBudget(budgetSlider.value);
+
+// Magnetic buttons
+document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
+  if (btn.closest('nav') || btn.closest('footer')) return;
+  if (!btn.style.background && !btn.className.includes('cta')) return;
+  btn.style.transition = 'transform 0.2s cubic-bezier(0.22, 1, 0.36, 1)';
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// Heading reveals
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      headingObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
 </script>
 </body>
 <!-- updated April 2026 -->

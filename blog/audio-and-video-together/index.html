@@ -243,6 +243,14 @@ footer {
   *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; }
 }
 
+
+.h-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.h-reveal.revealed {
+  clip-path: inset(0 0 0% 0);
+}
 </style>
 </head>
 <body>
@@ -336,7 +344,7 @@ footer {
 
   <div class="post-cta">
     <p class="post-cta-label">Interested in working together?</p>
-    <h3 class="post-cta-hl">WE HANDLE AUDIO AND VIDEO AS ONE PROJECT.</h3>
+    <h3 class="post-cta-hl h-reveal">WE HANDLE AUDIO AND VIDEO AS ONE PROJECT.</h3>
     <p class="post-cta-body">Tell us about your project and we will respond within 24 hours.</p>
     <a href="/contact/" class="post-cta-btn">Get in Touch</a>
   </div>
@@ -394,6 +402,33 @@ window.addEventListener('scroll', () => {
   const scrollPercent = scrollTop / (docHeight - winHeight + article.offsetTop);
   document.getElementById('reading-progress').style.width = Math.min(scrollPercent * 100, 100) + '%';
 }, { passive: true });
+
+// Magnetic buttons
+document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
+  if (btn.closest('nav') || btn.closest('footer')) return;
+  if (!btn.style.background && !btn.className.includes('cta')) return;
+  btn.style.transition = 'transform 0.2s cubic-bezier(0.22, 1, 0.36, 1)';
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// Heading reveals
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      headingObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
 </script>
 </body>
 </html>
