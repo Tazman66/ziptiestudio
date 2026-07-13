@@ -147,6 +147,14 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 @media(max-width:480px){
   .case-h1{font-size:clamp(40px,13vw,60px);}
 }
+
+.h-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.h-reveal.revealed {
+  clip-path: inset(0 0 0% 0);
+}
 </style>
 </head>
 <body>
@@ -197,7 +205,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <section class="case-story sr">
   <div class="case-story-text">
-    <h2>THE PROJECT</h2>
+    <h2 class="h-reveal">THE PROJECT</h2>
     <p>Pentatone commissioned us to deliver all visual media for Sean Shibe's 2025 album release. The brief was to create a body of work that could sustain an international release campaign across streaming platforms, social media, press and broadcast.</p>
     <p>We produced two music videos featuring Sean performing works from the album, a behind-the-scenes documentary capturing the recording process, and a long-form interview film in which Sean discusses the album, the repertoire and the ideas behind it. The footage was then cut into a series of short-form social edits for Pentatone's channels.</p>
     <p>The films were featured by Gramophone as their Video of the Day, and photography from the project appeared in the magazine's May 2026 issue, where Sean was the cover artist.</p>
@@ -223,7 +231,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     </div>
     <div style="display:flex;flex-direction:column;gap:16px;">
       <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Press Coverage</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">FEATURED IN<br>GRAMOPHONE.</h2>
+      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;" class="h-reveal">FEATURED IN<br>GRAMOPHONE.</h2>
       <p style="font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);">Photography from the project was featured in Gramophone magazine, one of the most widely read classical music publications in the world. The shoot took place during the recording sessions and forms part of the wider visual campaign produced for Pentatone's release.</p>
     </div>
   </div>
@@ -231,7 +239,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <section style="padding:clamp(20px,2.5vw,32px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;gap:16px;">
   <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">The Work</p>
-  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">WATCH.</h2>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;" class="h-reveal">WATCH.</h2>
   <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);padding-top:clamp(24px,3vw,36px);border-top:1px solid rgba(238,236,232,.1);">Music Videos</p>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);">
     <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
@@ -250,7 +258,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);padding:clamp(40px,5vw,60px) var(--pad);border-top:1px solid rgba(238,236,232,.1);">
   <div>
     <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">Project Scope</p>
-    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;">WHAT WE DID.</h2>
+    <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;" class="h-reveal">WHAT WE DID.</h2>
   </div>
   <div style="display:flex;flex-direction:column;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
@@ -278,7 +286,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </div>
 
 <section class="case-related sr">
-  <h3>RELATED PROJECTS</h3>
+  <h3 class="h-reveal">RELATED PROJECTS</h3>
   <div class="case-related-grid" style="grid-template-columns:1fr 1fr 1fr;">
     <a href="/work/beth-taylor/" class="case-related-card">
       <img src="/images/WORK/work-beth-taylor-1.jpg" alt="Beth Taylor artist film" loading="lazy">
@@ -310,7 +318,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </div>
 
 <section class="case-cta sr">
-  <h2>START A SIMILAR PROJECT</h2>
+  <h2 class="h-reveal">START A SIMILAR PROJECT</h2>
   <p>Tell us about it. We respond within 24 hours.</p>
   <a href="/contact/" class="page-cta-btn">Get in Touch</a>
   <a href="/work/" class="case-back">Back to Work</a>
@@ -348,6 +356,33 @@ const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersec
 document.querySelectorAll('.sr').forEach(el=>obs.observe(el));
 const caseHeroBg=document.querySelector('.case-hero img');
 if(caseHeroBg){window.addEventListener('scroll',()=>{caseHeroBg.style.transform=`translateY(${window.scrollY*0.4}px)`;},{passive:true});}
+
+// Magnetic buttons
+document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
+  if (btn.closest('nav') || btn.closest('footer')) return;
+  if (!btn.style.background && !btn.className.includes('cta')) return;
+  btn.style.transition = 'transform 0.2s cubic-bezier(0.22, 1, 0.36, 1)';
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = 'translate(0, 0)';
+  });
+});
+
+// Heading reveals
+const headingObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('revealed');
+      headingObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
 </script>
 </body>
 </html>
