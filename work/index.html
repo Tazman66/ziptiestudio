@@ -73,8 +73,8 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 .ft-social-link:hover{color:#eeece8;}
 
 /* SCROLL REVEAL */
-.sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
-.sr.vis{opacity:1;transform:translateY(0);}
+.js-ready .sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+.js-ready .sr.vis{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.07s}.d2{transition-delay:.15s}.d3{transition-delay:.23s}.d4{transition-delay:.31s}.d5{transition-delay:.39s}
 
 @media(max-width:768px){
@@ -88,11 +88,11 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .page-cta-btn{width:100%;text-align:center;}
 }
 
-.h-reveal {
+.js-ready .h-reveal {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.h-reveal.revealed {
+.js-ready .h-reveal.revealed {
   clip-path: inset(0 0 0% 0);
 }
 </style>
@@ -192,6 +192,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </footer>
 
 <script>
+document.documentElement.classList.add('js-ready');
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>nav.classList.toggle('stuck',window.scrollY>60),{passive:true});
 const ham=document.getElementById('ham'),mob=document.getElementById('mob-nav');
@@ -231,15 +232,22 @@ document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
 });
 
 // Heading reveals
-const headingObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      headingObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
+if ('IntersectionObserver' in window) {
+  const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        headingObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
+} else {
+  document.querySelectorAll('.h-reveal').forEach(h => h.classList.add('revealed'));
+}
+setTimeout(() => {
+  document.querySelectorAll('.h-reveal').forEach(h => h.classList.add('revealed'));
+}, 2500);
 </script>
 </body>
 </html>

@@ -246,11 +246,11 @@ footer {
 }
 
 
-.h-reveal {
+.js-ready .h-reveal {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.h-reveal.revealed {
+.js-ready .h-reveal.revealed {
   clip-path: inset(0 0 0% 0);
 }
 </style>
@@ -375,6 +375,7 @@ footer {
 </footer>
 
 <script>
+document.documentElement.classList.add('js-ready');
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => nav.classList.toggle('stuck', window.scrollY > 60), { passive:true });
 
@@ -420,15 +421,22 @@ document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
 });
 
 // Heading reveals
-const headingObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('revealed');
-      headingObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.3 });
-document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
+if ('IntersectionObserver' in window) {
+  const headingObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        headingObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.h-reveal').forEach(h => headingObserver.observe(h));
+} else {
+  document.querySelectorAll('.h-reveal').forEach(h => h.classList.add('revealed'));
+}
+setTimeout(() => {
+  document.querySelectorAll('.h-reveal').forEach(h => h.classList.add('revealed'));
+}, 2500);
 </script>
 </body>
 </html>
