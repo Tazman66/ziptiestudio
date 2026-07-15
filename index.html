@@ -85,7 +85,9 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 
 /* ─── HERO ─── */
 .hero {
-  height: 100svh; min-height: 560px;
+  min-height: 560px;
+  min-height: 100svh;
+  height: auto;
   position: relative; overflow: hidden;
   display: flex; flex-direction: column; justify-content: space-between; padding-bottom: clamp(40px, 5vw, 60px);
 }
@@ -118,6 +120,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .hero-content {
   position: relative; z-index: 2;
   padding: clamp(120px,15vw,200px) clamp(20px,5vw,60px) clamp(56px,9vw,100px);
+  padding-bottom: clamp(32px, 5vh, 64px);
 }
 
 /* studio name label above h1 */
@@ -132,7 +135,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 /* headline */
 .hero-hl {
   font-family: 'Bebas Neue', sans-serif;
-  font-size: clamp(64px, 11vw, 160px);
+  font-size: min(clamp(64px, 11vw, 160px), 18vh);
   line-height: .85;
   letter-spacing: .01em;
   overflow: hidden;
