@@ -5,6 +5,11 @@
     { "source": "/services/:path*", "destination": "/recording-services/", "permanent": true },
     { "source": "/work/xx-lotte", "destination": "/work/xx-lotte/", "permanent": true },
     { "source": "/about", "destination": "/the-story/", "permanent": true },
-    { "source": "/services", "destination": "/recording-services/", "permanent": true }
+    { "source": "/services", "destination": "/recording-services/", "permanent": true },
+    { "source": "/recording-services/cdrecording", "destination": "/recording-services/cd-album-production/", "permanent": true },
+    { "source": "/recording-services/liverecording", "destination": "/recording-services/live-concert-recording/", "permanent": true },
+    { "source": "/recording-services/videoproduction", "destination": "/recording-services/concert-filming/", "permanent": true },
+    { "source": "/recording-services/auditionrecording", "destination": "/recording-services/audition-recording/", "permanent": true },
+    { "source": "/recording-services/livestream", "destination": "/recording-services/livestreaming/", "permanent": true }
   ]
 }
