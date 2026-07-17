@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    { "source": "/services/cdrecording", "destination": "/recording-services/cd-album-production/", "permanent": true },
+    { "source": "/services/liverecording", "destination": "/recording-services/live-concert-recording/", "permanent": true },
+    { "source": "/services/:path*", "destination": "/recording-services/", "permanent": true },
+    { "source": "/work/xx-lotte", "destination": "/work/xx-lotte/", "permanent": true },
+    { "source": "/about", "destination": "/the-story/", "permanent": true },
+    { "source": "/services", "destination": "/recording-services/", "permanent": true }
+  ]
+}
