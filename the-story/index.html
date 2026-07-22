@@ -60,13 +60,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .team-bio+.team-bio{margin-top:12px;}
 
 /* QUOTE */
-.quote-section{padding:clamp(32px,4vw,48px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);text-align:center;}
-.quote-item{max-width:760px;margin:0 auto clamp(40px,5vw,64px);}
-.quote-item:last-child{margin-bottom:0;}
-.quote-text{font-family:'Outfit',sans-serif;font-size:clamp(18px,2.5vw,28px);font-weight:300;line-height:1.6;color:rgba(238,236,232,.7);}
-.quote-text+.quote-text{margin-top:16px;}
-.quote-author{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;margin-top:24px;}
-.quote-role{font-size:10px;font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:6px;}
+.testimonial-grid{grid-template-columns:1fr 1fr;}
 
 /* BOTTOM CTA */
 .page-cta{text-align:center;padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;gap:24px;}
@@ -96,9 +90,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .team-grid{grid-template-columns:1fr;}
   .credibility-bar{grid-template-columns:1fr 1fr;}
   .page-cta-btn{width:100%;text-align:center;}
-}
-@media(max-width:480px){
-  .quote-text{font-size:clamp(16px,5vw,22px);}
+  .testimonial-grid{grid-template-columns:1fr;}
 }
 
 .js-ready .h-reveal {
@@ -189,12 +181,19 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   </div>
 </section>
 
-<section class="quote-section">
-  <div class="quote-item sr">
-    <p class="quote-text">"The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail.</p>
-    <p class="quote-text">We're very pleased with the results and wouldn't hesitate to work with Zip Tie Studio again in future."</p>
-    <p class="quote-author">Alan Kerr</p>
-    <p class="quote-role">Chairman &middot; Scottish Young Musicians</p>
+<section style="padding:clamp(40px,5vw,72px) var(--pad);border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);">
+  <div class="testimonial-grid sr" style="display:grid;gap:clamp(40px,6vw,80px);align-items:start;">
+
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <p style="font-size:clamp(16px,2vw,22px);line-height:1.65;color:rgba(238,236,232,.7);font-weight:300;">&ldquo;I was very fortunate to be able to book Zip Tie Studio at short notice after a change in recording schedule. I&rsquo;m so thrilled with the quality work they&rsquo;ve done for my debut recital album and the time taken to create personal, unique and engaging footage for our promotional material. Would highly recommend!&rdquo;</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Beth Taylor &middot; Mezzo-Soprano</p>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <p style="font-size:clamp(16px,2vw,22px);line-height:1.65;color:rgba(238,236,232,.7);font-weight:300;">"The videos captured the atmosphere and energy of the day brilliantly. Everything in the brief was covered, and it was clear that time had been taken to understand what was important to us. The final edits were delivered promptly and with excellent attention to detail. We're very pleased with the results and wouldn't hesitate to work with Zip Tie Studio again in future."</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Alan Kerr &middot; Chairman, Scottish Young Musicians</p>
+    </div>
+
   </div>
 </section>
 
