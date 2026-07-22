@@ -348,7 +348,9 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .logo-strip-row {
   display: flex;
   align-items: center;
-  gap: clamp(40px, 6vw, 80px);
+  justify-content: space-between;
+  flex: 1;
+  gap: clamp(24px, 3vw, 48px);
 }
 .logo-strip-row img {
   height: clamp(26px, 2.5vw, 36px);
@@ -373,12 +375,14 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   height: clamp(44px, 4.5vw, 64px);
   max-width: none;
   width: auto;
+  opacity: .65;
   filter: grayscale(100%) invert(1) brightness(3.6);
 }
 .logo-strip-row a[href*="gla.ac.uk"] img {
   height: clamp(38px, 4vw, 54px);
   max-width: none;
   width: auto;
+  opacity: .65;
   filter: none;
 }
 
@@ -443,6 +447,7 @@ footer {
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
 
   .logo-strip { overflow-x: auto; }
+  .logo-strip-row { justify-content: flex-start; flex: none; gap: 32px; }
   .logo-strip-row img { height: 22px; }
   .logo-strip-row a[href*="scottishensemble"] img,
   .logo-strip-row a[href*="scottishyoungmusicians"] img { height: 26px; }
