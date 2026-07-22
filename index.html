@@ -351,21 +351,26 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   gap: clamp(40px, 6vw, 80px);
 }
 .logo-strip-row img {
-  max-height: clamp(28px, 3vw, 40px);
+  height: clamp(26px, 2.5vw, 36px);
   width: auto;
+  max-width: clamp(90px, 10vw, 150px);
+  object-fit: contain;
   flex-shrink: 0;
   opacity: .5;
   filter: grayscale(100%) invert(1);
 }
 .logo-strip-row a[href*="scottishensemble"] img {
+  height: clamp(32px, 3vw, 44px);
   filter: none;
   mix-blend-mode: screen;
 }
 .logo-strip-row a[href*="scottishyoungmusicians"] img {
-  filter: none;
-  opacity: .7;
+  height: clamp(32px, 3vw, 44px);
+  filter: grayscale(100%) brightness(3);
+  opacity: .5;
 }
 .logo-strip-row a[href*="rcs.ac.uk"] img {
+  height: clamp(32px, 3vw, 44px);
   filter: grayscale(100%) invert(1) brightness(2.2);
 }
 .logo-strip-row a[href*="gla.ac.uk"] img {
@@ -433,7 +438,10 @@ footer {
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
 
   .logo-strip { overflow-x: auto; }
-  .logo-strip-row img { max-height: 22px; }
+  .logo-strip-row img { height: 22px; }
+  .logo-strip-row a[href*="scottishensemble"] img,
+  .logo-strip-row a[href*="scottishyoungmusicians"] img,
+  .logo-strip-row a[href*="rcs.ac.uk"] img { height: 26px; }
 }
 @media (max-width:480px) {
   .hero-hl { font-size: clamp(72px, 20vw, 100px); }
