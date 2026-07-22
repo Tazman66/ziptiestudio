@@ -335,7 +335,6 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   align-items: center;
   gap: clamp(24px, 4vw, 56px);
   padding: clamp(24px, 3vw, 40px) var(--pad);
-  border-bottom: 1px solid rgba(238,236,232,.08);
   overflow-x: auto;
 }
 .logo-strip-label {
@@ -360,6 +359,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   flex-shrink: 0;
   opacity: .5;
   filter: grayscale(100%) invert(1);
+  transition: opacity .3s ease, filter .3s ease;
+}
+.logo-strip-row img:hover {
+  opacity: 1;
 }
 .logo-strip-row a[href*="scottishensemble"] img {
   height: clamp(32px, 3vw, 44px);
@@ -384,6 +387,12 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   width: auto;
   opacity: .65;
   filter: none;
+}
+.logo-strip-row a[href*="scottishensemble"] img:hover,
+.logo-strip-row a[href*="scottishyoungmusicians"] img:hover,
+.logo-strip-row a[href*="rcs.ac.uk"] img:hover,
+.logo-strip-row a[href*="gla.ac.uk"] img:hover {
+  opacity: 1;
 }
 
 /* ─── FOOTER ─── */
