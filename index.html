@@ -339,7 +339,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   align-items: center;
   justify-content: space-between;
   flex: 1;
-  gap: clamp(24px, 3vw, 48px);
+  gap: clamp(20px, 2.5vw, 40px);
 }
 .logo-strip-row img {
   height: clamp(26px, 2.5vw, 36px);
@@ -358,6 +358,10 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   height: clamp(32px, 3vw, 44px);
   filter: none;
   mix-blend-mode: screen;
+}
+.logo-strip-row a[href*="linnrecords"] img {
+  height: clamp(36px, 3.5vw, 50px);
+  width: auto;
 }
 .logo-strip-row a[href*="scottishyoungmusicians"] img {
   height: clamp(32px, 3vw, 44px);
@@ -461,6 +465,7 @@ footer {
   .logo-strip-row a[href*="scottishensemble"] img,
   .logo-strip-row a[href*="scottishyoungmusicians"] img { height: 26px; }
   .logo-strip-row a[href*="rcs.ac.uk"] img { height: 38px; }
+  .logo-strip-row a[href*="linnrecords"] img { height: 34px; }
   .logo-strip-row a[href*="gla.ac.uk"] img { height: 32px; }
 }
 @media (max-width:480px) {
@@ -592,6 +597,9 @@ footer {
     </a>
     <a href="https://www.outhere-music.com" target="_blank" rel="noopener">
       <img loading="lazy" decoding="async" src="/images/logos/OuthereMusic.png.webp" alt="Outhere Music">
+    </a>
+    <a href="https://www.linnrecords.com" target="_blank" rel="noopener">
+      <img src="/images/logos/linn-records.png" alt="Linn Records" loading="lazy">
     </a>
     <a href="https://www.scottishensemble.co.uk" target="_blank" rel="noopener">
       <img loading="lazy" decoding="async" src="/images/logos/ScottishEnsemble.png" alt="Scottish Ensemble">
