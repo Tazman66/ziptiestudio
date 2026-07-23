@@ -97,8 +97,10 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .ham{display:flex;}
   .page-header{grid-template-columns:1fr;}
   .page-title{font-size:clamp(40px,10vw,80px);}
-  .svc-row{grid-template-columns:1fr;}
-  .svc-img{height:220px;}
+  .svc-row{display:flex!important;flex-direction:column!important;direction:ltr!important;}
+  .svc-row>*{direction:ltr!important;order:unset!important;}
+  .svc-row .svc-img{order:-1!important;width:100%;height:clamp(200px,40vw,280px);object-fit:cover;}
+  .svc-content-wrap{padding:clamp(20px,4vw,32px) var(--pad);}
   .rates-band{grid-template-columns:1fr;}
   .rates-cta{width:100%;text-align:center;justify-content:center;}
 }
