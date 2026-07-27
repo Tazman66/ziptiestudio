@@ -22,7 +22,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:#eeece8;}
 .nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
@@ -44,23 +44,23 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 @keyframes fadeUp{from{opacity:0;transform:translateY(-30px);}to{opacity:1;transform:translateY(0);}}
 .case-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.7) 0%,rgba(0,0,0,.2) 50%,rgba(0,0,0,.1) 100%);}
 .case-hero-text{position:absolute;bottom:clamp(40px,6vw,80px);left:var(--pad);z-index:1;}
-.case-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;}
+.case-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:12px;}
 .case-h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,110px);letter-spacing:.02em;line-height:.9;margin-bottom:16px;}
 .case-subtitle{font-size:clamp(14px,1.6vw,18px);color:rgba(238,236,232,.6);font-weight:300;}
 .case-info-bar{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);}
 .case-info-item{background:#000;padding:clamp(16px,2vw,24px);}
-.case-info-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
+.case-info-label{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;}
 .case-info-value{font-size:clamp(13px,1.4vw,16px);color:#eeece8;font-weight:300;}
 .case-story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,48px);max-width:unset;padding:clamp(24px,3vw,36px) var(--pad);align-items:stretch;}
 .case-story h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
-.case-story p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
+.case-story p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.65);margin-bottom:0;}
 .case-story-text{display:flex;flex-direction:column;gap:12px;}
 .case-story-text p{margin-bottom:0;}
 .case-story-image{overflow:hidden;aspect-ratio:16/9;height:100%;}
 .case-story-image img{width:100%;height:100%;object-fit:cover;object-position:center;}
 .case-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);}
 .case-gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;}
-.case-service-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;display:block;transition:color .2s;}
+.case-service-link{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);text-decoration:none;display:block;transition:color .2s;}
 .case-service-link:hover{color:#eeece8;}
 .project-nav{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(238,236,232,.1);border-bottom:1px solid rgba(238,236,232,.1);}
 .project-nav a{padding:clamp(16px,2vw,28px) var(--pad);text-decoration:none;color:inherit;transition:background .2s;}
@@ -73,12 +73,12 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .case-related-card{text-decoration:none;color:inherit;overflow:hidden;display:flex;flex-direction:column;gap:8px;}
 .case-related-card img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);}
 .case-related-card:hover img{transform:scale(1.04);}
-.case-related-card p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-top:0;}
+.case-related-card p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.65);margin-top:0;}
 .case-related-card h4{font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2.5vw,28px);letter-spacing:.02em;margin-top:0;}
 .case-cta{text-align:center;padding:clamp(40px,5vw,64px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;gap:24px;}
 .case-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:0;}
-.case-cta p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.5);margin-bottom:0;}
-.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.35);text-decoration:none;margin-top:0;transition:color .2s;}
+.case-cta p{font-size:clamp(14px,1.5vw,16px);line-height:1.7;color:rgba(238,236,232,.65);margin-bottom:0;}
+.case-back{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.5);text-decoration:none;margin-top:0;transition:color .2s;}
 .case-back:hover{color:#eeece8;}
 .page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .page-cta-btn:hover{opacity:.82;}
@@ -87,21 +87,21 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
 .ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
 .ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
-.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .ft-nav a:hover{color:#eeece8;}
-.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.55);}
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social{display:flex;gap:20px;align-items:center;}
-.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.55);transition:color .2s;display:flex;align-items:center;}
 .ft-social-link:hover{color:#eeece8;}
 
 /* SCROLL REVEAL */
@@ -220,7 +220,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </section>
 
 <section style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);">
-  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;">The Work</p>
+  <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;">The Work</p>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(24px,3vw,36px);" class="h-reveal">WATCH.</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,24px);">
 
@@ -228,21 +228,21 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
         <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/IhmTxIOorNQ" title="Scottish Young Musicians Highlight Reel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">Ensemble of the Year &mdash; Highlight Reel</p>
+      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">Ensemble of the Year &mdash; Highlight Reel</p>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:12px;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
         <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/_939RRn7Uvo" title="Scottish Young Musicians Highlight Reel 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">Soloist of the Year &mdash; Highlight Reel</p>
+      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">Soloist of the Year &mdash; Highlight Reel</p>
     </div>
 
     <div style="display:flex;flex-direction:column;gap:12px;grid-column:1/-1;">
       <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
         <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/1SEFZQOHQYU?start=23" title="Scottish Young Musicians Performance" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">Performance Capture</p>
+      <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">Performance Capture</p>
     </div>
 
   </div>
@@ -250,28 +250,28 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);padding:clamp(40px,5vw,60px) var(--pad);border-top:1px solid rgba(238,236,232,.1);">
   <div>
-    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">Project Scope</p>
+    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:12px;">Project Scope</p>
     <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,4vw,64px);letter-spacing:.02em;line-height:.9;" class="h-reveal">WHAT WE DID.</h2>
   </div>
   <div style="display:flex;flex-direction:column;">
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">ENSEMBLE OF THE YEAR CONCERT RECORDING &amp; FILM</span>
-      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">01</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">01</span>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SOLOIST OF THE YEAR CONCERT RECORDING &amp; FILM</span>
-      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">02</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">02</span>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">HIGHLIGHT REELS FOR WEB &amp; SOCIAL</span>
-      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">03</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">03</span>
     </div>
     <div style="display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px solid rgba(238,236,232,.08);">
       <span style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">BROADCAST SUPPLY TO BBC RADIO SCOTLAND</span>
-      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.3);">04</span>
+      <span style="font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">04</span>
     </div>
-    <a href="/recording-services/live-concert-recording/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;margin-top:24px;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">&#8594; Live Concert Recording Service</a>
-    <a href="/recording-services/concert-filming/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;margin-top:8px;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">&#8594; Concert Film &amp; Video Service</a>
+    <a href="/recording-services/live-concert-recording/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;margin-top:24px;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">&#8594; Live Concert Recording Service</a>
+    <a href="/recording-services/concert-filming/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;margin-top:8px;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">&#8594; Concert Film &amp; Video Service</a>
   </div>
 </div>
 
@@ -298,11 +298,11 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
 <div class="project-nav">
   <a href="/work/xx-lotte/">
-    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:8px;">&#8592; Previous</p>
+    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;">&#8592; Previous</p>
     <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">XX, LOTTE</p>
   </a>
   <a href="/work/sean-shibe/">
-    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:8px;">Next &#8594;</p>
+    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;">Next &#8594;</p>
     <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(18px,2vw,24px);letter-spacing:.02em;color:#eeece8;">SEAN SHIBE</p>
   </a>
 </div>
@@ -323,6 +323,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">

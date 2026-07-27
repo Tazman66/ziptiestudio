@@ -21,7 +21,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .nav-links a:hover{color:#eeece8;}
 .nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
@@ -36,19 +36,19 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .contact-wrap{min-height:100svh;display:grid;grid-template-columns:1fr 1fr;padding-top:80px;}
 .contact-left{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);border-right:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;justify-content:space-between;}
 .contact-right{padding:clamp(48px,8vw,100px) var(--pad) clamp(60px,8vw,100px);}
-.contact-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.contact-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:24px;}
 .contact-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,120px);letter-spacing:.01em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);}
 .contact-info-item{margin-bottom:32px;}
-.contact-info-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;}
+.contact-info-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;}
 .contact-info-value{font-size:clamp(15px,1.6vw,18px);color:rgba(238,236,232,.7);}
 .contact-info-value a{color:rgba(238,236,232,.7);text-decoration:none;transition:color .2s;}
 .contact-info-value a:hover{color:#eeece8;}
-.contact-note{font-size:clamp(15px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.28);max-width:320px;}
+.contact-note{font-size:clamp(15px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.45);max-width:320px;}
 .form-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,3vw,32px);letter-spacing:.02em;margin-bottom:clamp(32px,4vw,52px);}
 .form-group{margin-bottom:32px;}
-.form-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);display:block;margin-bottom:10px;}
+.form-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.6);display:block;margin-bottom:10px;}
 .form-input,.form-textarea,.form-select{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(238,236,232,.2);color:#eeece8;font-family:'Outfit',sans-serif;font-size:clamp(15px,1.6vw,18px);font-weight:300;padding:10px 0;outline:none;transition:border-color .2s;appearance:none;}
-.form-input::placeholder,.form-textarea::placeholder{color:rgba(238,236,232,.2);}
+.form-input::placeholder,.form-textarea::placeholder{color:rgba(238,236,232,.5);}
 .form-input:focus,.form-textarea:focus,.form-select:focus{border-bottom-color:rgba(238,236,232,.7);}
 .form-textarea{resize:none;min-height:120px;line-height:1.7;}
 .form-select option{background:#0a0a0a;color:#eeece8;}
@@ -57,25 +57,25 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .form-submit:hover{opacity:.82;}
 .form-success{display:none;text-align:center;padding:48px 0;}
 .form-success-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,80px);letter-spacing:.02em;margin-bottom:12px;}
-.form-success-sub{font-size:clamp(15px,1.6vw,18px);color:rgba(238,236,232,.4);}
+.form-success-sub{font-size:clamp(15px,1.6vw,18px);color:rgba(238,236,232,.55);}
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
 .ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
 .ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
-.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .ft-nav a:hover{color:#eeece8;}
-.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.55);}
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social{display:flex;gap:20px;align-items:center;}
-.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.55);transition:color .2s;display:flex;align-items:center;}
 .ft-social-link:hover{color:#eeece8;}
 .js-ready .sr{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
 .js-ready .sr.vis{opacity:1;transform:translateY(0);}
@@ -98,7 +98,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 .budget-slider::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#eeece8;cursor:pointer;border:none;}
 .budget-display{display:flex;align-items:baseline;gap:12px;}
 #budget-value{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,48px);letter-spacing:0.02em;color:#eeece8;}
-.budget-note{font-size:10px;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+.budget-note{font-size:10px;font-weight:300;letter-spacing:0.15em;text-transform:uppercase;color:rgba(238,236,232,.45);}
 
 .js-ready .h-reveal {
   clip-path: inset(0 0 100% 0);
@@ -204,6 +204,23 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <label class="form-label" for="message">Tell Us More</label>
         <textarea class="form-textarea" id="message" name="message" placeholder="Venue, repertoire, number of players, any other details..." required></textarea>
       </div>
+      <div class="form-group">
+        <label class="form-label" for="how_heard">How Did You Hear About Us?</label>
+        <select class="form-select" id="how_heard" name="how_heard">
+          <option value="">Select one (optional)</option>
+          <option>Referral / word of mouth</option>
+          <option>Google search</option>
+          <option>Instagram</option>
+          <option>YouTube</option>
+          <option>Saw us at an event</option>
+          <option>Press / Gramophone</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;margin-top:16px;">
+        <input type="checkbox" name="newsletter_optin" value="Yes" style="margin-top:3px;accent-color:#eeece8;">
+        <span style="font-size:13px;color:rgba(238,236,232,.55);line-height:1.6;">Add me to the Zip Tie Studio newsletter. A few notes from the studio each year, unsubscribe anytime.</span>
+      </label>
       <input type="hidden" name="_subject" value="New enquiry — ziptiestudio.co.uk">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <button type="submit" class="form-submit">Send Enquiry</button>
@@ -222,6 +239,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">

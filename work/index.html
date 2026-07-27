@@ -21,7 +21,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:#eeece8;}
 .nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
@@ -36,9 +36,9 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* PAGE HEADER */
 .page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(24px,3vw,40px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
-.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:24px;}
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.01em;line-height:.9;}
-.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
+.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.65);}
 
 /* INDEX LAYOUT */
 .index-layout{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,5vw,80px);padding:clamp(48px,6vw,100px) var(--pad);border-top:1px solid rgba(238,236,232,.1);}
@@ -46,9 +46,9 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .index-item{padding:clamp(24px,3vw,40px) 0;border-bottom:1px solid rgba(238,236,232,.1);text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:6px;transition:padding-left 0.4s cubic-bezier(0.22,1,0.36,1);cursor:pointer;}
 .index-item:first-child{border-top:1px solid rgba(238,236,232,.1);}
 .index-item:hover{padding-left:16px;}
-.index-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:1;color:rgba(238,236,232,.4);transition:color 0.4s ease;}
+.index-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:1;color:rgba(238,236,232,.55);transition:color 0.4s ease;}
 .index-item:hover .index-name{color:#eeece8;}
-.index-meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);}
+.index-meta{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);}
 .index-item-mobile-img{display:none;}
 .index-preview{position:sticky;top:120px;height:fit-content;aspect-ratio:4/5;overflow:hidden;background:#0c0c0c;}
 .index-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 0.5s ease;}
@@ -57,7 +57,7 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 /* BOTTOM CTA */
 .page-cta{padding:clamp(40px,5vw,72px) var(--pad);text-align:center;border-top:1px solid rgba(238,236,232,.1);}
 .page-cta-hl{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,80px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(16px,2vw,28px);}
-.page-cta-body{font-size:clamp(14px,1.5vw,16px);color:rgba(238,236,232,.4);margin-bottom:clamp(28px,3vw,44px);}
+.page-cta-body{font-size:clamp(14px,1.5vw,16px);color:rgba(238,236,232,.55);margin-bottom:clamp(28px,3vw,44px);}
 .page-cta-btn{display:inline-block;font-size:clamp(10px,1vw,12px);font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:16px 48px;text-decoration:none;transition:opacity .2s;}
 .page-cta-btn:hover{opacity:.82;}
 
@@ -65,21 +65,21 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
 .ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
 .ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
-.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .ft-nav a:hover{color:#eeece8;}
-.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.55);}
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social{display:flex;gap:20px;align-items:center;}
-.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.55);transition:color .2s;display:flex;align-items:center;}
 .ft-social-link:hover{color:#eeece8;}
 
 /* SCROLL REVEAL */
@@ -191,6 +191,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">

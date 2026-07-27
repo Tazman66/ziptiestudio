@@ -28,7 +28,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;justify-content
 nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blur(20px);}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,24px);letter-spacing:.07em;color:#eeece8;text-decoration:none;}
 .nav-links{display:flex;gap:36px;list-style:none;}
-.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;}
+.nav-links a{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .nav-links a:hover,.nav-links a.active{color:#eeece8;}
 .nav-cta{font-size:clamp(11px,1.2vw,14px);font-weight:400;letter-spacing:.18em;text-transform:uppercase;color:#eeece8;text-decoration:none;border:1px solid rgba(238,236,232,.22);padding:12px 28px;transition:background .2s,color .2s;}
 .nav-cta:hover{background:#eeece8;color:#000;}
@@ -43,10 +43,10 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 
 /* PAGE HEADER */
 .page-header{padding:calc(var(--pad) + 80px) var(--pad) clamp(32px,4vw,48px);border-bottom:1px solid rgba(238,236,232,.1);display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;}
-.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:24px;}
+.page-label{font-size:clamp(10px,1.2vw,13px);font-weight:300;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:24px;}
 .page-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(40px,6vw,90px)!important;letter-spacing:.01em;line-height:.9;white-space:normal;}
-.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.5);}
-.header-cta-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-bottom:12px;display:block;margin-top:24px;}
+.page-intro{font-size:clamp(15px,1.6vw,18px);line-height:1.75;color:rgba(238,236,232,.65);}
+.header-cta-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:12px;display:block;margin-top:24px;}
 .header-cta-btn{display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:12px 32px;text-decoration:none;transition:opacity .2s;}
 .header-cta-btn:hover{opacity:.82;}
 
@@ -60,30 +60,30 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .offer-card>*{position:relative;z-index:1;}
 .offer-card-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,30px);letter-spacing:.04em;margin-bottom:12px;}
 .offer-card-body{font-size:clamp(14px,1.5vw,16px);line-height:1.8;color:rgba(238,236,232,.7);margin-bottom:16px;}
-.offer-tags{font-size:clamp(10px,1.1vw,12px);letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.4);line-height:1.6;}
+.offer-tags{font-size:clamp(10px,1.1vw,12px);letter-spacing:.12em;text-transform:uppercase;color:rgba(238,236,232,.55);line-height:1.6;}
 
 /* SECTION SHARED */
-.section-label{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;}
+.section-label{font-size:clamp(11px,1.2vw,14px);font-weight:300;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:12px;}
 
 /* FOOTER */
 footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(238,236,232,.1);}
 .ft-logo{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:.07em;}
 .ft-nav{display:flex;gap:28px;list-style:none;flex-wrap:wrap;}
-.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.22);text-decoration:none;transition:color .2s;}
+.ft-nav a{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.14em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;}
 .ft-nav a:hover{color:#eeece8;}
-.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.12);}
+.ft-copy{font-size:clamp(10px,1vw,12px);font-weight:300;letter-spacing:.1em;color:rgba(238,236,232,.55);}
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social{display:flex;gap:20px;align-items:center;}
-.ft-social-link{color:rgba(238,236,232,.3);transition:color .2s;display:flex;align-items:center;}
+.ft-social-link{color:rgba(238,236,232,.55);transition:color .2s;display:flex;align-items:center;}
 .ft-social-link:hover{color:#eeece8;}
 
 /* SCROLL REVEAL */
@@ -170,105 +170,105 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 </section>
 
 <section style="padding:clamp(32px,4vw,48px) var(--pad) clamp(40px,5vw,72px); border-top:1px solid rgba(238,236,232,.1);">
-  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:12px;">The Process</p>
+  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:12px;">The Process</p>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,7vw,100px);letter-spacing:.02em;line-height:.88;margin-bottom:clamp(40px,5vw,64px);" class="h-reveal">HOW IT WORKS.</h2>
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);">
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">01</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">PRE-SESSION PLANNING</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We talk through repertoire, venue options, session structure and your intended release format. That conversation shapes the entire project.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">We talk through repertoire, venue options, session structure and your intended release format. That conversation shapes the entire project.</p>
     </div>
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">02</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">VENUE &amp; DATES</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We advise on location based on the acoustic requirements of the repertoire. We have worked in churches, concert halls and historic buildings throughout Scotland and the UK.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">We advise on location based on the acoustic requirements of the repertoire. We have worked in churches, concert halls and historic buildings throughout Scotland and the UK.</p>
     </div>
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">03</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">PRODUCED SESSIONS</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We are in the room throughout. We listen, advise on takes, manage the session schedule and make sure you leave with everything you need.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">We are in the room throughout. We listen, advise on takes, manage the session schedule and make sure you leave with everything you need.</p>
     </div>
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">04</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">EDITING</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We assemble a draft edit and share it with you for review. You give notes, we make changes. That process continues until the sequence is exactly right.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">We assemble a draft edit and share it with you for review. You give notes, we make changes. That process continues until the sequence is exactly right.</p>
     </div>
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">05</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">MIXING &amp; MASTERING</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">We mix and master in-house to label or streaming specification. No outsourcing, no loss of creative continuity. Final masters are delivered in whatever format your label or distributor requires.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">We mix and master in-house to label or streaming specification. No outsourcing, no loss of creative continuity. Final masters are delivered in whatever format your label or distributor requires.</p>
     </div>
     <div style="background:#000;padding:clamp(24px,3vw,40px);display:flex;flex-direction:column;gap:12px;transition:background 0.3s ease,transform 0.3s ease;cursor:default;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,64px);color:rgba(238,236,232,.12);line-height:1;">06</div>
       <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(16px,2vw,22px);letter-spacing:.04em;">DELIVERY &amp; RELEASE</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.45);">Final files delivered in your required format. We liaise directly with your label, distributor or streaming aggregator if needed.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">Final files delivered in your required format. We liaise directly with your label, distributor or streaming aggregator if needed.</p>
     </div>
   </div>
 </section>
 
 <section style="padding:clamp(32px,4vw,56px) var(--pad) clamp(48px,6vw,80px);border-top:1px solid rgba(238,236,232,.1);">
-  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;text-align:center;">Pricing</p>
+  <p style="font-size:clamp(11px,1.2vw,14px);letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;text-align:center;">Pricing</p>
   <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,120px);letter-spacing:.02em;line-height:.9;margin-bottom:clamp(24px,3vw,40px);text-align:center;" class="h-reveal">PACKAGES &amp;<br>PRICING.</h2>
 
   <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:rgba(238,236,232,.1);margin-bottom:clamp(40px,5vw,64px);">
 
     <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Essential</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Essential</p>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">FROM £3,000</div>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Single project recording with editing and stereo master. Ideal for EPs, single works or debut recordings.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">Single project recording with editing and stereo master. Ideal for EPs, single works or debut recordings.</p>
       <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Produced session</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full editing</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Stereo master</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Streaming-ready delivery</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Produced session</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Full editing</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Stereo master</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Streaming-ready delivery</li>
       </ul>
     </div>
 
     <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Standard</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Standard</p>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">FROM £4,000</div>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Full album recording across multiple sessions with editing, mixing and mastering. Includes basic visual elements, session photography and a short promotional cut for social and press use.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">Full album recording across multiple sessions with editing, mixing and mastering. Includes basic visual elements, session photography and a short promotional cut for social and press use.</p>
       <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Multi-session recording</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full editing and mix</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· CD and streaming master</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Session photography</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Short promotional cut</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Multi-session recording</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Full editing and mix</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· CD and streaming master</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Session photography</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Short promotional cut</li>
       </ul>
     </div>
 
     <div style="background:#000;padding:clamp(28px,3vw,44px);display:flex;flex-direction:column;gap:16px;transition:background 0.3s ease,transform 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.04)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.background='#000';this.style.transform='translateY(0)'">
-      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);">Full Production</p>
+      <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Full Production</p>
       <div style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,72px);letter-spacing:.02em;line-height:1;">BESPOKE</div>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.5);">Album recording combined with electronic press kit, artist film and promotional content. Everything needed for a complete release campaign.</p>
+      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.8;color:rgba(238,236,232,.65);">Album recording combined with electronic press kit, artist film and promotional content. Everything needed for a complete release campaign.</p>
       <ul style="list-style:none;padding:0;margin-top:8px;display:flex;flex-direction:column;gap:8px;">
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Full album recording</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· EPK and press materials</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Artist film</li>
-        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.35);">· Music video and social content</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Full album recording</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· EPK and press materials</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Artist film</li>
+        <li style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.5);">· Music video and social content</li>
       </ul>
     </div>
 
   </div>
 
   <div style="text-align:center;">
-    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.4);margin-bottom:24px;">All projects include a pre-production consultation and written quote before any work begins.</p>
+    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.55);margin-bottom:24px;">All projects include a pre-production consultation and written quote before any work begins.</p>
     <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 40px;text-decoration:none;transition:opacity .2s;">Get a Quote</a>
   </div>
 </section>
 
 <div style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
   <div>
-    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:6px;">See it in action</p>
+    <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:6px;">See it in action</p>
     <p style="font-family:'Bebas Neue',sans-serif;font-size:clamp(20px,2.5vw,32px);letter-spacing:.02em;color:#eeece8;">XX, LOTTE — WORLD PREMIERE ALBUM RECORDING</p>
   </div>
-  <a href="/work/xx-lotte/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.4);text-decoration:none;transition:color .2s;white-space:nowrap;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">View Case Study →</a>
+  <a href="/work/xx-lotte/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.55);text-decoration:none;transition:color .2s;white-space:nowrap;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.4)'">View Case Study →</a>
 </div>
 
 </main>
 
 <div style="padding:clamp(24px,3vw,40px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
-  <a href="/recording-services/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">← Back to Services</a>
+  <a href="/recording-services/" style="font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">← Back to Services</a>
 </div>
 
 <footer>
@@ -278,6 +278,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">

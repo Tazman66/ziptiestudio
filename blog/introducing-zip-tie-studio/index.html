@@ -52,7 +52,7 @@ nav {
 nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); }
 .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:clamp(16px,2vw,24px); letter-spacing:.07em; color:#eeece8; text-decoration:none; }
 .nav-links { display:flex; gap:36px; list-style:none; }
-.nav-links a { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.18em; text-transform:uppercase; color:rgba(238,236,232,.4); text-decoration:none; transition:color .2s; }
+.nav-links a { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.18em; text-transform:uppercase; color:rgba(238,236,232,.55); text-decoration:none; transition:color .2s; }
 .nav-links a:hover { color:#eeece8; }
 .nav-cta { font-size:clamp(11px,1.2vw,14px); font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:#eeece8; text-decoration:none; border:1px solid rgba(238,236,232,.22); padding:12px 28px; transition:background .2s,color .2s; }
 .nav-cta:hover { background:#eeece8; color:#000000; }
@@ -65,7 +65,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .mob-nav { display:none; position:fixed; inset:0; background:#000000; z-index:490; flex-direction:column; justify-content:center; align-items:center; gap:48px; opacity:0; transition:opacity .3s; }
 .mob-nav.open { opacity:1; }
 .mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
-.mob-nav a:hover { color:rgba(238,236,232,.4); }
+.mob-nav a:hover { color:rgba(238,236,232,.55); }
 
 /* ─── HERO ─── */
 .hero-wrap {
@@ -97,7 +97,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   font-size: 9px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(238,236,232,.5);
+  color: rgba(238,236,232,.65);
   margin-bottom: 12px;
 }
 .hero-title {
@@ -136,7 +136,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   font-weight: 300;
   letter-spacing: .25em;
   text-transform: uppercase;
-  color: rgba(238,236,232,.4);
+  color: rgba(238,236,232,.55);
   margin: clamp(48px,6vw,72px) 0 20px;
   border-top: 1px solid rgba(238,236,232,.1);
   padding-top: 24px;
@@ -173,7 +173,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   font-size: 10px;
   letter-spacing: .2em;
   text-transform: uppercase;
-  color: rgba(238,236,232,.28);
+  color: rgba(238,236,232,.45);
 }
 .post-cta-hl {
   font-family: 'Bebas Neue', sans-serif;
@@ -184,7 +184,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .post-cta-body {
   font-size: clamp(13px,1.4vw,15px);
   line-height: 1.7;
-  color: rgba(238,236,232,.45);
+  color: rgba(238,236,232,.65);
 }
 .post-cta-btn {
   display: inline-block;
@@ -212,7 +212,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
   font-size: 10px;
   letter-spacing: .18em;
   text-transform: uppercase;
-  color: rgba(238,236,232,.3);
+  color: rgba(238,236,232,.45);
   text-decoration: none;
   transition: color .2s;
 }
@@ -227,21 +227,21 @@ footer {
 }
 .ft-logo { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:.07em; }
 .ft-nav { display:flex; gap:28px; list-style:none; flex-wrap:wrap; }
-.ft-nav a { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.22); text-decoration:none; transition:color .2s; }
+.ft-nav a { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.55); text-decoration:none; transition:color .2s; }
 .ft-nav a:hover { color:#eeece8; }
-.ft-copy { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.1em; color:rgba(238,236,232,.12); }
+.ft-copy { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.1em; color:rgba(238,236,232,.55); }
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social { display:flex; gap:20px; align-items:center; }
-.ft-social-link { color:rgba(238,236,232,.3); transition:color .2s; display:flex; align-items:center; }
+.ft-social-link { color:rgba(238,236,232,.55); transition:color .2s; display:flex; align-items:center; }
 .ft-social-link:hover { color:#eeece8; }
 
 /* ─── MOBILE ─── */
@@ -354,9 +354,9 @@ footer {
   <p class="post-p">If you are planning a recording, a film or a release and want to talk it through, we would be glad to hear from you. The first conversation costs nothing and usually saves a great deal.</p>
 
   <div style="margin-top:clamp(32px,4vw,48px);padding:clamp(28px,3vw,40px);border:1px solid rgba(238,236,232,.1);">
-    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:8px;">Enjoyed this?</p>
+    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;">Enjoyed this?</p>
     <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.8vw,36px);letter-spacing:.02em;line-height:.95;margin-bottom:8px;">GET THE NEXT ONE BY EMAIL.</h3>
-    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.45);line-height:1.7;margin-bottom:16px;">A few notes from the studio each year. No noise, unsubscribe anytime.</p>
+    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.65);line-height:1.7;margin-bottom:16px;">A few notes from the studio each year. No noise, unsubscribe anytime.</p>
     <form action="https://ziptiestudio.us6.list-manage.com/subscribe/post?u=b49018a4ec6b6bc142f7087e9&id=5c797e77e5" method="post" target="_blank" class="nl-form" novalidate>
       <input type="email" name="EMAIL" placeholder="Email address" required class="nl-input">
       <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_b49018a4ec6b6bc142f7087e9_5c797e77e5" tabindex="-1" value=""></div>
@@ -386,6 +386,7 @@ footer {
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">

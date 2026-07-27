@@ -55,7 +55,7 @@ nav {
 nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); }
 .nav-logo { font-family:'Bebas Neue',sans-serif; font-size:clamp(16px,2vw,24px); letter-spacing:.07em; color:#eeece8; text-decoration:none; }
 .nav-links { display:flex; gap:36px; list-style:none; }
-.nav-links a { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.18em; text-transform:uppercase; color:rgba(238,236,232,.4); text-decoration:none; transition:color .2s; }
+.nav-links a { font-size:clamp(11px,1.2vw,14px); font-weight:300; letter-spacing:.18em; text-transform:uppercase; color:rgba(238,236,232,.55); text-decoration:none; transition:color .2s; }
 .nav-links a:hover { color:#eeece8; }
 .nav-cta { font-size:clamp(11px,1.2vw,14px); font-weight:400; letter-spacing:.18em; text-transform:uppercase; color:#eeece8; text-decoration:none; border:1px solid rgba(238,236,232,.22); padding:12px 28px; transition:background .2s,color .2s; }
 .nav-cta:hover { background:#eeece8; color:#000000; }
@@ -68,7 +68,7 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .mob-nav { display:none; position:fixed; inset:0; background:#000000; z-index:490; flex-direction:column; justify-content:center; align-items:center; gap:48px; opacity:0; transition:opacity .3s; }
 .mob-nav.open { opacity:1; }
 .mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
-.mob-nav a:hover { color:rgba(238,236,232,.4); }
+.mob-nav a:hover { color:rgba(238,236,232,.55); }
 
 /* ─── FOOTER ─── */
 footer {
@@ -79,21 +79,21 @@ footer {
 }
 .ft-logo { font-family:'Bebas Neue',sans-serif; font-size:16px; letter-spacing:.07em; }
 .ft-nav { display:flex; gap:28px; list-style:none; flex-wrap:wrap; }
-.ft-nav a { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.22); text-decoration:none; transition:color .2s; }
+.ft-nav a { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.14em; text-transform:uppercase; color:rgba(238,236,232,.55); text-decoration:none; transition:color .2s; }
 .ft-nav a:hover { color:#eeece8; }
-.ft-copy { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.1em; color:rgba(238,236,232,.12); }
+.ft-copy { font-size:clamp(10px,1vw,12px); font-weight:300; letter-spacing:.1em; color:rgba(238,236,232,.55); }
 .nl-block { display:flex; flex-direction:column; gap:10px; max-width:420px; margin-bottom:clamp(24px,3vw,40px); }
-.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.28); }
-.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.4); line-height:1.6; }
+.nl-label { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(238,236,232,.55); }
+.nl-copy { font-size:clamp(12px,1.3vw,14px); color:rgba(238,236,232,.55); line-height:1.6; }
 .nl-form { display:flex; gap:8px; }
 .nl-input { flex:1; background:transparent; border:1px solid rgba(238,236,232,.2); color:#eeece8; padding:12px 16px; font-size:13px; font-family:'Outfit',sans-serif; outline:none; transition:border-color .3s ease; }
 .nl-input:focus { border-color:rgba(238,236,232,.5); }
-.nl-input::placeholder { color:rgba(238,236,232,.3); }
+.nl-input::placeholder { color:rgba(238,236,232,.55); }
 .nl-btn { font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:#000; background:#eeece8; border:none; padding:12px 24px; cursor:pointer; font-family:'Outfit',sans-serif; transition:opacity .2s; }
 .nl-btn:hover { opacity:.85; }
 @media(max-width:480px) { .nl-form { flex-direction:column; } }
 .ft-social { display:flex; gap:20px; align-items:center; }
-.ft-social-link { color:rgba(238,236,232,.3); transition:color .2s; display:flex; align-items:center; }
+.ft-social-link { color:rgba(238,236,232,.55); transition:color .2s; display:flex; align-items:center; }
 .ft-social-link:hover { color:#eeece8; }
 
 /* ─── MOBILE ─── */
@@ -152,11 +152,11 @@ footer {
 <header style="padding:calc(var(--pad) + 100px) var(--pad) clamp(24px,3vw,40px);border-bottom:1px solid rgba(238,236,232,.1);">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;">
     <div>
-      <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;">Blog</p>
+      <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;">Blog</p>
       <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,110px);letter-spacing:.02em;line-height:.85;">NOTES<br>ON THE<br>WORK.</h1>
     </div>
     <div style="padding-bottom:8px;">
-      <p style="font-size:clamp(14px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.5);max-width:480px;">We write about recording, filming and producing classical music. Process, ideas and the thinking behind what we do. For artists, labels and anyone curious about how this work gets made.</p>
+      <p style="font-size:clamp(14px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.65);max-width:480px;">We write about recording, filming and producing classical music. Process, ideas and the thinking behind what we do. For artists, labels and anyone curious about how this work gets made.</p>
     </div>
   </div>
 </header>
@@ -168,10 +168,10 @@ footer {
       <img src="/images/TEAM/team-session-4.jpg" alt="Zip Tie Studio recording session" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);" onmouseenter="this.style.transform='scale(1.04)'" onmouseleave="this.style.transform='scale(1)'">
     </div>
     <div style="display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,3vw,48px);gap:10px;">
-      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Studio · July 2026 · 4 min read</p>
+      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Studio · July 2026 · 4 min read</p>
       <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:.92;color:#eeece8;">INTRODUCING ZIP TIE STUDIO</h2>
-      <p style="font-size:clamp(13px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.45);">Who we are, why we started, and what we believe about how classical music should be recorded and filmed.</p>
-      <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:8px;">Read more →</p>
+      <p style="font-size:clamp(13px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.65);">Who we are, why we started, and what we believe about how classical music should be recorded and filmed.</p>
+      <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-top:8px;">Read more →</p>
     </div>
   </a>
 </section>
@@ -179,38 +179,26 @@ footer {
 <!-- MORE FROM THE BLOG -->
 <section style="padding:clamp(40px,5vw,72px) var(--pad);">
   <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.25);margin-bottom:clamp(24px,3vw,40px);">More from the blog</p>
-  <div class="placeholder-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(238,236,232,.1);">
+  <div class="placeholder-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,420px));gap:clamp(16px,2vw,24px);">
 
-    <a href="/blog/audio-and-video-together/" class="blog-card" style="background:#000;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.03)'" onmouseleave="this.style.background='#000'">
+    <a href="/blog/audio-and-video-together/" class="blog-card" style="background:#000;border:1px solid rgba(238,236,232,.1);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.03)'" onmouseleave="this.style.background='#000'">
       <div style="overflow:hidden;">
         <img src="/images/WORK/Interview_00_00_24_00.jpg" alt="Classical music recording session" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;">
       </div>
       <div style="padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Process · August 2026 · 5 min read</p>
+        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Process · August 2026 · 5 min read</p>
         <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">WHY VIDEO MATTERS FOR CLASSICAL MUSIC NOW</h3>
-        <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.4);">Classical music is discovered on screens now. What that means for artists, ensembles and anyone planning a recording.</p>
-        <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.3);margin-top:4px;">Read more →</p>
+        <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.55);">Classical music is discovered on screens now. What that means for artists, ensembles and anyone planning a recording.</p>
+        <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-top:4px;">Read more →</p>
       </div>
     </a>
-
-    <div style="background:#000;padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0.5;">
-      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Coming Soon · Recording</p>
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">WHAT TO EXPECT FROM A CLASSICAL ALBUM RECORDING SESSION</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.4);">A guide for soloists and ensembles preparing for their first album project. What happens before, during and after the sessions.</p>
-    </div>
-
-    <div style="background:#000;padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;align-items:flex-start;gap:12px;opacity:0.5;">
-      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.3);">Coming Soon · Venues</p>
-      <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">FIVE SCOTTISH VENUES WORTH RECORDING IN</h3>
-      <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.4);">Scotland has some of the finest acoustic spaces in the UK. Here are the venues we return to again and again, and why they work.</p>
-    </div>
 
   </div>
 </section>
 
 <!-- BOTTOM CTA -->
 <section style="padding:clamp(48px,6vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
-  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.28);margin-bottom:16px;">Work with us</p>
+  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;">Work with us</p>
   <h2 class="h-reveal" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,90px);letter-spacing:.02em;line-height:.9;margin-bottom:24px;">HAVE A PROJECT<br>IN MIND?</h2>
   <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 40px;text-decoration:none;transition:opacity .2s;" onmouseenter="this.style.opacity='.82'" onmouseleave="this.style.opacity='1'">Get in Touch</a>
 </section>
@@ -224,6 +212,7 @@ footer {
     <li><a href="/recording-services/">Services</a></li>
     <li><a href="/the-story/">About</a></li>
     <li><a href="/blog/">Blog</a></li>
+    <li><a href="/faq/">FAQs</a></li>
     <li><a href="/contact/">Contact</a></li>
   </ul>
   <div class="ft-social">
