@@ -60,6 +60,9 @@ nav.stuck{padding:16px var(--pad);background:rgba(5,5,5,.92);backdrop-filter:blu
 .case-story-image img{width:100%;height:100%;object-fit:cover;object-position:80% center;}
 .case-projects{padding:clamp(24px,3vw,36px) var(--pad);border-top:1px solid rgba(238,236,232,.1);background:rgba(238,236,232,.02);display:flex;flex-direction:column;gap:clamp(24px,3vw,40px);}
 .case-projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);}
+.case-interview-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,236,232,.1);border-top:1px solid rgba(238,236,232,.1);}
+.case-interview-cell{background:#000;}
+.case-interview-caption{padding:clamp(16px,2vw,24px);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.55);}
 .case-project-card{border:1px solid rgba(238,236,232,.1);overflow:hidden;transition:transform .4s cubic-bezier(0.22,1,0.36,1);}
 .case-project-card:hover{transform:translateY(-4px);}
 .case-project-card-img{overflow:hidden;}
@@ -140,6 +143,7 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
 
   /* Project cards */
   .case-projects-grid{grid-template-columns:1fr;}
+  .case-interview-grid{grid-template-columns:1fr;}
 
   /* Gallery */
   .case-gallery{grid-template-columns:1fr;}
@@ -274,6 +278,21 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
         <p>A short documentary for Scottish Ensemble's partnership with Maggies, the cancer support charity. Warm, human and true to the work both organisations do.</p>
         <a href="https://www.instagram.com/p/DSat5FBD16n/" target="_blank" rel="noopener noreferrer" style="display:inline-block;margin-top:12px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);text-decoration:none;transition:color .2s;" onmouseenter="this.style.color='#eeece8'" onmouseleave="this.style.color='rgba(238,236,232,.3)'">Watch on Instagram &#8594;</a>
       </div>
+    </div>
+  </div>
+
+  <div class="case-interview-grid">
+    <div class="case-interview-cell">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
+        <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/bPplBadw01g?rel=0" title="Jonathan Morton, Artistic Director, on Bach & Blood" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="case-interview-caption">Jonathan Morton, Artistic Director, on Bach &amp; Blood</p>
+    </div>
+    <div class="case-interview-cell">
+      <div style="position:relative;aspect-ratio:16/9;overflow:hidden;">
+        <iframe style="position:absolute;inset:0;width:100%;height:100%;" src="https://www.youtube.com/embed/-ToBtX4mw9w?rel=0" title="David Fennessy, composer, on writing Blood" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+      <p class="case-interview-caption">David Fennessy, composer, on writing Blood</p>
     </div>
   </div>
 </section>
