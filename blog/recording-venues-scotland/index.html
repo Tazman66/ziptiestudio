@@ -3,10 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Classical Music Production | Zip Tie Studio</title>
-<meta name="description" content="Notes on recording, filming and producing classical music. Process, ideas and insights from Zip Tie Studio.">
+<title>Recording Venues in Scotland for Classical Music | Zip Tie Studio</title>
+<meta name="description" content="Four recording venues worth knowing in Scotland, from a small medieval church near Edinburgh to a purpose-built orchestral studio in Glasgow.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://www.ziptiestudio.co.uk/blog/">
+<link rel="canonical" href="https://www.ziptiestudio.co.uk/blog/recording-venues-scotland/">
+<meta property="og:title" content="Recording Venues in Scotland for Classical Music | Zip Tie Studio">
+<meta property="og:description" content="Four recording venues worth knowing in Scotland, from a small medieval church near Edinburgh to a purpose-built orchestral studio in Glasgow.">
+<meta property="og:url" content="https://www.ziptiestudio.co.uk/blog/recording-venues-scotland/">
+<link rel="preload" as="image" href="/images/TEAM/team-session-8.jpg">
 <link rel="icon" type="image/png" href="/images/logos/favicon.png">
 <link rel="apple-touch-icon" href="/images/logos/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,13 +28,9 @@ html, body { background-color: #000000 !important; color: #eeece8 !important; }
 html { scroll-behavior:smooth; }
 
 :root {
-  --ink:   #050505;
-  --off:   #eeece8;
-  --mid:   rgba(238,236,232,.42);
-  --ghost: rgba(238,236,232,.12);
-  --bb:    'Bebas Neue', sans-serif;
-  --tx:    'Outfit', sans-serif;
-  --pad:   clamp(20px, 5vw, 60px);
+  --ink: #050505;
+  --off: #eeece8;
+  --pad: clamp(20px, 5vw, 60px);
 }
 
 body {
@@ -70,6 +70,157 @@ nav.stuck { padding: 16px clamp(20px,5vw,60px); background: rgba(5,5,5,.92); bac
 .mob-nav a { font-family:'Bebas Neue',sans-serif; font-size:56px; letter-spacing:.04em; color:#eeece8; text-decoration:none; transition:color .2s; }
 .mob-nav a:hover { color:rgba(238,236,232,.55); }
 
+/* ─── HERO ─── */
+.hero-wrap {
+  position: relative;
+  overflow: hidden;
+  height: clamp(400px, 50vw, 640px);
+}
+.hero-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8) 0%, rgba(0,0,0,0) 60%);
+}
+.hero-text {
+  position: absolute;
+  bottom: clamp(32px,5vw,64px);
+  left: var(--pad);
+  right: var(--pad);
+  z-index: 1;
+}
+.hero-meta {
+  font-size: 9px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.65);
+  margin-bottom: 12px;
+}
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(36px,6vw,80px);
+  letter-spacing: .02em;
+  line-height: .9;
+  max-width: 800px;
+}
+
+/* ─── POST BODY ─── */
+.post-body {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: clamp(40px,5vw,72px) var(--pad) clamp(60px,8vw,100px);
+}
+
+.post-p {
+  font-size: clamp(16px,1.8vw,19px);
+  line-height: 1.95;
+  color: rgba(238,236,232,.7);
+  margin-bottom: 28px;
+}
+
+.post-p--lead {
+  font-size: clamp(18px,2vw,22px);
+  line-height: 1.85;
+  color: rgba(238,236,232,.8);
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+
+.post-h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(11px,1.2vw,14px);
+  font-weight: 300;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.55);
+  margin: clamp(48px,6vw,72px) 0 20px;
+  border-top: 1px solid rgba(238,236,232,.1);
+  padding-top: 24px;
+}
+
+/* ─── FULL-BLEED IMAGE ─── */
+.post-img-wrap {
+  width: 100vw;
+  margin-left: calc(-1 * var(--pad));
+  height: clamp(240px,28vw,400px);
+  overflow: hidden;
+  margin-top: clamp(40px,5vw,64px);
+  margin-bottom: clamp(40px,5vw,64px);
+}
+.post-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ─── CTA ─── */
+.post-cta {
+  margin-top: clamp(48px,6vw,72px);
+  padding: clamp(32px,4vw,56px);
+  background: rgba(238,236,232,.04);
+  border: 1px solid rgba(238,236,232,.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.post-cta-label {
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.45);
+}
+.post-cta-hl {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(24px,3vw,40px);
+  letter-spacing: .02em;
+  line-height: .9;
+}
+.post-cta-body {
+  font-size: clamp(13px,1.4vw,15px);
+  line-height: 1.7;
+  color: rgba(238,236,232,.65);
+}
+.post-cta-btn {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #000000;
+  background: #eeece8;
+  padding: 14px 32px;
+  text-decoration: none;
+  transition: opacity .2s;
+  width: fit-content;
+}
+.post-cta-btn:hover { opacity: .82; }
+
+/* ─── BACK LINK ─── */
+.back-link-wrap {
+  padding: clamp(24px,3vw,40px) var(--pad);
+  border-top: 1px solid rgba(238,236,232,.1);
+  text-align: center;
+}
+.back-link {
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(238,236,232,.45);
+  text-decoration: none;
+  transition: color .2s;
+}
+.back-link:hover { color: #eeece8; }
+
 /* ─── FOOTER ─── */
 footer {
   padding: clamp(20px,3vw,32px) clamp(20px,5vw,60px);
@@ -100,10 +251,8 @@ footer {
 @media (max-width:768px) {
   .nav-links, .nav-cta { display:none; }
   .ham { display:flex; }
+  .hero-wrap { height: 50svh; }
   footer { flex-direction:column; align-items:flex-start; gap:18px; }
-  header > div { grid-template-columns: 1fr !important; }
-  .featured-link { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
-  .placeholder-grid { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -121,6 +270,9 @@ footer {
 </style>
 </head>
 <body>
+
+<!-- READING PROGRESS -->
+<div id="reading-progress" style="position:fixed;top:0;left:0;height:2px;background:#eeece8;width:0%;z-index:1000;transition:width .1s;"></div>
 
 <a href="#main" class="skip">Skip to main content</a>
 
@@ -149,72 +301,75 @@ footer {
 
 <main id="main">
 
-<!-- PAGE HEADER -->
-<header style="padding:calc(var(--pad) + 100px) var(--pad) clamp(24px,3vw,40px);border-bottom:1px solid rgba(238,236,232,.1);">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center;">
-    <div>
-      <p style="font-size:9px;letter-spacing:.25em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;">Blog</p>
-      <h1 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,8vw,110px);letter-spacing:.02em;line-height:.85;">NOTES<br>ON THE<br>WORK.</h1>
-    </div>
-    <div style="padding-bottom:8px;">
-      <p style="font-size:clamp(14px,1.6vw,18px);line-height:1.8;color:rgba(238,236,232,.65);max-width:480px;">We write about recording, filming and producing classical music. Process, ideas and the thinking behind what we do. For artists, labels and anyone curious about how this work gets made.</p>
-    </div>
+<!-- HERO -->
+<div class="hero-wrap">
+  <img src="/images/TEAM/team-session-8.jpg" alt="Recording session in a Scottish venue" decoding="async">
+  <div class="hero-text">
+    <p class="hero-meta">Campbell Parker · October 2026 · Venues · 5 min read</p>
+    <h1 class="hero-title">RECORDING VENUES WORTH KNOWING IN SCOTLAND</h1>
   </div>
-</header>
+</div>
 
-<!-- FEATURED POST -->
-<section style="border-bottom:1px solid rgba(238,236,232,.1);">
-  <a href="/blog/introducing-zip-tie-studio/" class="featured-link" style="display:grid;grid-template-columns:1fr 1fr;text-decoration:none;color:inherit;min-height:clamp(360px,40vw,520px);align-items:stretch;">
-    <div style="overflow:hidden;">
-      <img src="/images/TEAM/team-session-4.jpg" alt="Zip Tie Studio recording session" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);" onmouseenter="this.style.transform='scale(1.04)'" onmouseleave="this.style.transform='scale(1)'">
-    </div>
-    <div style="display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,3vw,48px);gap:10px;">
-      <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Studio · July 2026 · 4 min read</p>
-      <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,56px);letter-spacing:.02em;line-height:.92;color:#eeece8;">INTRODUCING ZIP TIE STUDIO</h2>
-      <p style="font-size:clamp(13px,1.5vw,16px);line-height:1.75;color:rgba(238,236,232,.65);">Who we are, why we started, and what we believe about how classical music should be recorded and filmed.</p>
-      <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-top:8px;">Read more →</p>
-    </div>
-  </a>
-</section>
+<!-- ARTICLE -->
+<article class="post-body">
 
-<!-- MORE FROM THE BLOG -->
-<section style="padding:clamp(40px,5vw,72px) var(--pad);">
-  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.25);margin-bottom:clamp(24px,3vw,40px);">More from the blog</p>
-  <div class="placeholder-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,420px));gap:clamp(16px,2vw,24px);">
+  <p class="post-p post-p--lead">Choosing where to record is one of the biggest decisions in any project. These are four rooms worth knowing about, from a small stone church to a purpose-built orchestral studio.</p>
 
-    <a href="/blog/audio-and-video-together/" class="blog-card" style="background:#000;border:1px solid rgba(238,236,232,.1);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.03)'" onmouseleave="this.style.background='#000'">
-      <div style="overflow:hidden;">
-        <img src="/images/WORK/Interview_00_00_24_00.jpg" alt="Classical music recording session" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;">
-      </div>
-      <div style="padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Process · August 2026 · 5 min read</p>
-        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">WHY VIDEO MATTERS FOR CLASSICAL MUSIC NOW</h3>
-        <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.55);">Classical music is discovered on screens now. What that means for artists, ensembles and anyone planning a recording.</p>
-        <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-top:4px;">Read more →</p>
-      </div>
-    </a>
+  <h2 class="post-h2">Crichton Collegiate Church, Midlothian</h2>
 
-    <a href="/blog/recording-venues-scotland/" class="blog-card" style="background:#000;border:1px solid rgba(238,236,232,.1);text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:background 0.3s ease;" onmouseenter="this.style.background='rgba(238,236,232,.03)'" onmouseleave="this.style.background='#000'">
-      <div style="overflow:hidden;">
-        <img src="/images/TEAM/team-session-8.jpg" alt="Recording session in a Scottish venue" loading="lazy" decoding="async" style="width:100%;aspect-ratio:16/9;object-fit:cover;display:block;">
-      </div>
-      <div style="padding:clamp(20px,2.5vw,32px);display:flex;flex-direction:column;align-items:flex-start;gap:10px;">
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);">Venues · October 2026 · 5 min read</p>
-        <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,3vw,36px);letter-spacing:.02em;line-height:.95;color:#eeece8;">RECORDING VENUES WORTH KNOWING IN SCOTLAND</h3>
-        <p style="font-size:clamp(13px,1.4vw,15px);line-height:1.7;color:rgba(238,236,232,.55);">Four recording venues across Scotland, from a small medieval church near Edinburgh to a purpose-built orchestral studio in Glasgow.</p>
-        <p style="font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-top:4px;">Read more →</p>
-      </div>
-    </a>
+  <p class="post-p">Founded in 1449 and about half an hour from Edinburgh, <a href="https://www.crichtonchurch.com" target="_blank" rel="noopener" style="color:rgba(238,236,232,.8);text-decoration:underline;text-underline-offset:3px;">Crichton</a> is a small stone church with a serious reputation for sound. The church's own site says it has been used for recordings by a number of musicians and by the BBC, and the musician John Kenny has called it the most beautiful acoustic in Scotland for brass and voice.</p>
 
+  <p class="post-p">It suits solo players and small ensembles best. There is no piano, so anything with keyboard means arranging one in and checking with the trustees first. The church is run by a charitable trust, so bookings go through them directly.</p>
+
+  <h2 class="post-h2">Caird Hall, Dundee</h2>
+
+  <p class="post-p">A Grade A listed concert hall in the centre of Dundee. The main hall at <a href="https://www.leisureandculturedundee.com" target="_blank" rel="noopener" style="color:rgba(238,236,232,.8);text-decoration:underline;text-underline-offset:3px;">Caird Hall</a> seats around 2,150 and has a big, open sound, which makes it a room for larger forces: choirs, orchestras, anything that needs space to speak.</p>
+
+  <p class="post-p">There is no grand piano on site, so if the programme needs one, budget to hire one in. Next door, the smaller Marryat Hall has a good acoustic for chamber groups, but it can't be used for music while the main hall has an event on, so dates need planning around the building's programme.</p>
+
+  <h2 class="post-h2">RSNO Centre, Glasgow</h2>
+
+  <p class="post-p">Opened in 2015 next to the Glasgow Royal Concert Hall, the <a href="https://www.rsno.org.uk/about/hire-us/" target="_blank" rel="noopener" style="color:rgba(238,236,232,.8);text-decoration:underline;text-underline-offset:3px;">RSNO Centre</a> is a purpose-built home for recording in the middle of the city. The auditorium seats 600, the acoustics can be adjusted, and it was designed with Arup acousticians. It holds more than 70 musicians, and there is a control room and break-out recording spaces on site.</p>
+
+  <p class="post-p">Because the building was made for recording, you spend less time working around it. It is also a short walk from Queen Street station, which helps for visiting players and crews. Bookings go through the RSNO's hire team.</p>
+
+  <div class="post-img-wrap">
+    <img src="/images/TEAM/team-session-8.jpg" alt="Recording equipment set up in a concert venue" loading="lazy" decoding="async">
   </div>
-</section>
 
-<!-- BOTTOM CTA -->
-<section style="padding:clamp(48px,6vw,80px) var(--pad);border-top:1px solid rgba(238,236,232,.1);text-align:center;">
-  <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:16px;">Work with us</p>
-  <h2 class="h-reveal" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,6vw,90px);letter-spacing:.02em;line-height:.9;margin-bottom:24px;">HAVE A PROJECT<br>IN MIND?</h2>
-  <a href="/contact/" style="display:inline-block;font-size:11px;font-weight:400;letter-spacing:.2em;text-transform:uppercase;color:#000;background:#eeece8;padding:14px 40px;text-decoration:none;transition:opacity .2s;" onmouseenter="this.style.opacity='.82'" onmouseleave="this.style.opacity='1'">Get in Touch</a>
-</section>
+  <h2 class="post-h2">Clockwork, Maryhill</h2>
+
+  <p class="post-p">A converted church in Maryhill, Glasgow, that runs as a recording studio. It is worth knowing about if you want the feel of a church room with a studio setup around it. It sits at the more expensive end, so ask for a quote early and compare it against the options above.</p>
+
+  <h2 class="post-h2">How to Choose</h2>
+
+  <p class="post-p">No room is the best room. Match the space to the music. Small and quiet for solo and chamber work, a big hall for choirs and orchestras, a purpose-built space when you want the most control and the least risk.</p>
+
+  <p class="post-p">If budget is tight, our post on affordable recording locations in Scotland covers cheaper options. And if you are not sure where to start, tell us what you are recording and we will suggest two or three rooms. It is usually the first conversation we have on a <a href="/recording-services/live-concert-recording/" style="color:rgba(238,236,232,.8);text-decoration:underline;text-underline-offset:3px;">live concert recording</a> or an <a href="/recording-services/cd-album-production/" style="color:rgba(238,236,232,.8);text-decoration:underline;text-underline-offset:3px;">album project</a>.</p>
+
+  <div style="margin-top:clamp(32px,4vw,48px);padding:clamp(28px,3vw,40px);border:1px solid rgba(238,236,232,.1);">
+    <p style="font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.45);margin-bottom:8px;">Enjoyed this?</p>
+    <h3 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(22px,2.8vw,36px);letter-spacing:.02em;line-height:.95;margin-bottom:8px;">GET THE NEXT ONE BY EMAIL.</h3>
+    <p style="font-size:clamp(13px,1.4vw,15px);color:rgba(238,236,232,.65);line-height:1.7;margin-bottom:16px;">A few notes from the studio each year. No noise, unsubscribe anytime.</p>
+    <form action="https://ziptiestudio.us6.list-manage.com/subscribe/post?u=b49018a4ec6b6bc142f7087e9&id=5c797e77e5" method="post" target="_blank" class="nl-form" novalidate>
+      <input type="email" name="EMAIL" placeholder="Email address" required class="nl-input">
+      <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_b49018a4ec6b6bc142f7087e9_5c797e77e5" tabindex="-1" value=""></div>
+      <button type="submit" class="nl-btn">Subscribe</button>
+    </form>
+  </div>
+
+  <div class="post-cta">
+    <p class="post-cta-label">Planning a recording?</p>
+    <h3 class="post-cta-hl h-reveal">NOT SURE WHICH ROOM?</h3>
+    <p class="post-cta-body">Tell us what you are recording and we will suggest two or three venues.</p>
+    <a href="/contact/" class="post-cta-btn">Get in Touch</a>
+  </div>
+
+</article>
+
+<div class="back-link-wrap">
+  <a href="/blog/" class="back-link">← Back to Blog</a>
+</div>
 
 </main>
 
@@ -265,6 +420,16 @@ function toggleMenu(s) {
 ham.addEventListener('click', () => toggleMenu(!open));
 document.querySelectorAll('.mob-l').forEach(l => l.addEventListener('click', () => toggleMenu(false)));
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && open) toggleMenu(false); });
+
+window.addEventListener('scroll', () => {
+  const article = document.querySelector('article');
+  if (!article) return;
+  const scrollTop = window.scrollY;
+  const docHeight = article.offsetHeight;
+  const winHeight = window.innerHeight;
+  const scrollPercent = scrollTop / (docHeight - winHeight + article.offsetTop);
+  document.getElementById('reading-progress').style.width = Math.min(scrollPercent * 100, 100) + '%';
+}, { passive: true });
 
 // Magnetic buttons
 document.querySelectorAll('a[href="/contact/"]').forEach(btn => {
