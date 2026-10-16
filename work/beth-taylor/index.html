@@ -149,6 +149,9 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
   .case-h1{font-size:clamp(40px,13vw,60px);}
 }
 
+.ig-embed{display:block;width:100%;height:640px;border:0;}
+@media(max-width:600px){.ig-embed{height:560px;}}
+
 .js-ready .h-reveal {
   clip-path: inset(0 0 100% 0);
   transition: clip-path 0.9s cubic-bezier(0.16, 1, 0.3, 1);
@@ -238,11 +241,11 @@ footer{padding:clamp(20px,3vw,32px) var(--pad);display:flex;justify-content:spac
     </div>
 
     <div style="display:flex;flex-direction:column;gap:12px;">
-      <div style="position:relative;aspect-ratio:16/9;overflow:hidden;background:rgba(238,236,232,.04);border:1px solid rgba(238,236,232,.1);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
-        <div style="width:48px;height:48px;border-radius:50%;border:1px solid rgba(238,236,232,.2);display:flex;align-items:center;justify-content:center;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="#eeece8"><polygon points="5,3 19,12 5,21"/></svg>
+      <div style="position:relative;overflow:hidden;background:rgba(238,236,232,.04);border:1px solid rgba(238,236,232,.1);">
+        <div style="max-width:400px;width:100%;margin:0 auto;">
+          <iframe class="ig-embed" src="https://www.instagram.com/p/Dd_e88jopXW/embed/" title="Beth Taylor social edit" loading="lazy" allowtransparency="true" scrolling="no" frameborder="0" allowfullscreen></iframe>
+          <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);margin:12px 0;text-align:center;"><a href="https://www.instagram.com/p/Dd_e88jopXW/" target="_blank" rel="noopener" style="color:inherit;">View on Instagram</a></p>
         </div>
-        <p style="font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:rgba(238,236,232,.25);">Coming Soon</p>
       </div>
       <p style="font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:rgba(238,236,232,.45);">Social Edit</p>
     </div>
